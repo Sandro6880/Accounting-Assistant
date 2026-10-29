@@ -1,0 +1,209 @@
+# Accounting app starter: React / TypeScript, Node, Cloudflare and local storage.
+# Future Android and desktop output rules are included below.
+# Merge with existing project rules before using this in an established repo.
+# Ignore rules do not remove tracked files, erase history, or encrypt local data.
+# Commit the active package lockfile, schema migrations, source and dummy fixtures.
+
+# -----------------------------------------------------------------------------
+# Secrets and machine-specific environment values
+# Only reviewed, placeholder-only example/template files should be committed.
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+!.dev.vars.*.example
+!.dev.vars.template
+!.dev.vars.*.template
+.npmrc.local
+.yarnrc.local
+/.secrets/
+/secrets/
+/.credentials/
+/.ssh/
+/credentials.json
+/service-account*.json
+
+# Private keys, signing material and credential stores.
+# Public certificates or wholly synthetic test keys need a reviewed exception.
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# -----------------------------------------------------------------------------
+# Private accounting files: these root folders are reserved for local data.
+# Keep actual financial records outside the source checkout whenever possible.
+# A fixture at tests/fixtures/receipts/example.pdf remains available to commit.
+# -----------------------------------------------------------------------------
+/.local/
+/.local-data/
+/local-data/
+/data/
+/user-data/
+/private/
+/private-data/
+/private-docs/
+/docs/private/
+/receipts/
+/contracts/
+/uploads/
+/imports/
+/exports/
+/backups/
+/local-backups/
+/outputs/
+
+# Explicit private-file naming conventions, at any depth.
+*.private
+*.private.*
+*_PRIVATE.*
+
+# Local databases, journals and dumps. Keep .sql migrations in Git.
+*.db
+*.db-*
+*.db3
+*.db3-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.dump
+*.dmp
+
+# -----------------------------------------------------------------------------
+# Dependencies and package-manager caches
+# Do not ignore pnpm-lock.yaml, package-lock.json, yarn.lock or Cargo.lock.
+# Keep only the lockfiles actually used by the project.
+# -----------------------------------------------------------------------------
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# -----------------------------------------------------------------------------
+# Generated web builds and framework caches
+# Source .js, .ts, .tsx, .d.ts and configuration files remain available to commit.
+# -----------------------------------------------------------------------------
+dist/
+/build/
+/out/
+.vinext/
+.vite/
+.next/
+.nuxt/
+.output/
+.cache/
+.parcel-cache/
+.rollup.cache/
+.turbo/
+*.tsbuildinfo
+
+# Cloudflare local D1/R2/Worker state and portable development runtime state.
+# Keep reviewed wrangler configuration and .openai/hosting.json as source.
+.wrangler/
+.mf/
+.sites-runtime/
+
+# -----------------------------------------------------------------------------
+# Generated test results, coverage, browser sessions and recordings
+# Commit test source, synthetic fixtures and reviewed visual baselines.
+# -----------------------------------------------------------------------------
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+blob-report/
+.auth/
+playwright/.cache/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+/reports/generated/
+/test-artifacts/
+
+# Logs, crash dumps and temporary output.
+*.log
+*.log.*
+*.pid
+*.pid.lock
+*.hprof
+/logs/
+/tmp/
+/temp/
+
+# -----------------------------------------------------------------------------
+# Optional desktop builds: Electron / Tauri
+# Keep native source, Tauri configuration, manifests and Rust lockfiles in Git.
+# -----------------------------------------------------------------------------
+/dist-electron/
+/release/
+/release-builds/
+/artifacts/
+/target/
+**/src-tauri/target/
+
+# Optional Android builds: direct Android, Capacitor or Tauri Android.
+# Keep android source, Gradle scripts and the Gradle wrapper (including its JAR).
+.gradle/
+.kotlin/
+**/android/local.properties
+**/android/**/build/
+**/android/**/.cxx/
+**/android/**/.externalNativeBuild/
+**/android/captures/
+*.apk
+*.aab
+
+# Optional Python utilities: generated caches and virtual environments only.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+/venv/
+
+# -----------------------------------------------------------------------------
+# Local editor state and operating-system clutter
+# Shared VS Code settings/tasks/extensions may be committed after review.
+# -----------------------------------------------------------------------------
+.idea/
+*.iml
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.history/
+*.swp
+*.swo
+*~
+.~lock.*#
+~$*
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# Intentionally no blanket exclusions for PDF, PNG, JPG, CSV, JSON, ZIP or SQL.
+# Those formats can contain legitimate documentation, assets and dummy fixtures.
+# Put private copies in the reserved local-data folders above, not in fixtures.
