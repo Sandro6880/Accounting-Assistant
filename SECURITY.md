@@ -1,6 +1,14 @@
 # Security and development data policy
 
-This is a development policy and target design. The repository's current baseline must be inspected before any control is described as implemented. It is not approved for genuine financial records during development.
+This is the development policy and security target design for version 0.1.0. Genuine financial records are not supported during development.
+
+## Current controls and limits
+
+The starter runs on fictional browser-memory records only. Its adapter and write functions require the known synthetic mode/fixture marker. It validates money, dates and business scope, keeps posted snapshots immutable through the adapter, and appends reversals. It makes no network data calls and does not persist records in browser storage.
+
+There is no password lock, identity boundary, encryption, durable database, upload handling, backup recovery or online synchronization yet. The marker and business checks prevent development mistakes; they do not authenticate a person or protect against developer tools. A person controlling the browser controls this demo. Future controls below are roadmap targets, not implemented capabilities.
+
+Local dev/preview bind to loopback by default. Do not expose the development server as a production service. No credentials or environment variables are needed. Never put secrets in Vite client environment variables or frontend bundles.
 
 ## Data boundary
 
