@@ -11,7 +11,9 @@ import {
   reversePosting,
   totalsFor,
 } from "../src/domain/ledger.ts";
-import type { DraftInput } from "../src/domain/ledger.ts";
+import type { DraftInput, Workspace } from "../src/domain/ledger.ts";
+import { MemoryRepository } from "../src/infrastructure/memory-repository.ts";
+import { AccountingApplication } from "../src/application/accounting.ts";
 
 const business = "demo-consulting";
 const at = "2026-01-20T12:00:00Z";
@@ -261,3 +263,78 @@ test("duplicate record identifiers do not replace existing facts", () =>
       ),
     "duplicate",
   ));
+test("memory snapshots are immutable and failed transactions do not publish changes", () => {
+  const repository = new MemoryRepository(createSyntheticWorkspace());
+  const before = repository.getSnapshot();
+  let notifications = 0;
+  const unsubscribe = repository.subscribe(() => notifications++);
+  assert.throws(() => {
+    (before.entries as unknown as { cents: bigint }[])[0]!.cents = 1n;
+  }, TypeError);
+  assert.throws(() =>
+    repository.transact(() => {
+      throw new Error("Synthetic failure");
+    }),
+  );
+  assert.equal(repository.getSnapshot(), before);
+  assert.equal(notifications, 0);
+  repository.transact((state) =>
+    createDraft(state, business, input, "new-draft", at),
+  );
+  assert.equal(notifications, 1);
+  unsubscribe();
+});
+test("production or ambiguous workspace markers are rejected", () => {
+  for (const mode of ["production", undefined])
+    rejects(
+      () =>
+        new MemoryRepository({
+          ...createSyntheticWorkspace(),
+          mode,
+        } as unknown as Workspace),
+      "synthetic",
+    );
+});
+
+test("repository rejects replacing posted facts or rewriting journal/audit history", () => {
+  const repository = new MemoryRepository(createSyntheticWorkspace());
+  const before = repository.getSnapshot();
+  rejects(
+    () =>
+      repository.transact((state) => ({
+        ...state,
+        entries: state.entries.map((entry) =>
+          entry.id === "sample-income" ? { ...entry, cents: 1n } : entry,
+        ),
+      })),
+    "immutable",
+  );
+  rejects(
+    () =>
+      repository.transact((state) => ({
+        ...state,
+        journal: state.journal.slice(1),
+      })),
+    "immutable",
+  );
+  rejects(
+    () => repository.transact((state) => ({ ...state, audit: [] })),
+    "immutable",
+  );
+  assert.equal(repository.getSnapshot(), before);
+});
+test("application commands use the repository boundary and injected IDs/clock", () => {
+  const repository = new MemoryRepository(createSyntheticWorkspace());
+  const app = new AccountingApplication(
+    repository,
+    () => "app-test",
+    () => at,
+  );
+  const id = app.addDraft(business, input);
+  app.post(business, id, 0);
+  assert.equal(repository.getSnapshot().audit.at(-1)?.at, at);
+  assert.equal(
+    repository.getSnapshot().entries.find((entry) => entry.id === id)?.status,
+    "posted",
+  );
+});
