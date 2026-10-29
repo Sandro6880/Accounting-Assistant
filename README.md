@@ -6,7 +6,7 @@ The goal is to make a recorded amount traceable: annual report → entry or asse
 
 ## Project status
 
-This starter supplies project documentation, the selected license and repository configuration. It contains no application source or Git history. Implementation status must be established from the actual project checkout before a feature is described as working.
+This starter supplies project documentation, the selected license and repository configuration. Currently has a basic foundation for the project with documentation steps ahead.
 
 A documented browser-based reference application informs the plan below. Its capabilities and scripts are starting points to inspect, not evidence that they are already implemented in this repository. P0.C01 establishes the actual starting point. A roadmap item becomes verified only when its implementation and required evidence exist at a recorded revision.
 
@@ -171,7 +171,7 @@ See [SECURITY.md](SECURITY.md) for the threat model and acceptance checks.
 
 ## Development and evidence
 
-Keep genuine commits, authorship and useful task descriptions. Implement one bounded checkpoint at a time, run checks for the changed behavior, record the result and update the roadmap. Do not fabricate run results, releases, users or deployed functionality. Keep existing attribution and comply with dependency and contribution licenses.
+For the Agent: Keep genuine commits, authorship and useful task descriptions. Implement one bounded checkpoint at a time, run checks for the changed behavior, record the result and update the roadmap. Do not fabricate run results, releases, users or deployed functionality. Keep existing attribution and comply with dependency and contribution licenses.
 
 The included [.gitignore](.gitignore) covers environment values, signing keys, local databases and evidence folders, dependency caches, builds, generated test output and optional Android/desktop artifacts. Keep the active lockfile, schema migrations, source, tests and fictional fixtures in Git. [GITIGNORE_SETUP.md](GITIGNORE_SETUP.md) explains reserved root paths and safe setup. Ignore rules do not remove tracked files or past commits, inspect contents, prevent a forced add or encrypt data. Inspect tracked content, history and distributed artifacts as part of repository preparation.
 
