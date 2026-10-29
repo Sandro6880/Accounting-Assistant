@@ -1,6 +1,6 @@
 # Development roadmap
 
-This roadmap expands the product direction in [README.md](README.md). It contains 17 phases and 92 checkpoints. Each checkpoint is initially **Planned and unverified** until inspected source and evidence justify a later state. Capabilities described in the reference baseline are not implementation claims for this checkout and do not automatically prove any acceptance condition.
+This roadmap expands the product direction in [README.md](README.md). It contains 17 phases and 92 checkpoints. Each checkpoint is initially **Planned and unverified** until inspected source and evidence justify a later state. Version 0.1.0 now supplies a runnable synthetic foundation described in README.md. Its focused checks do not automatically prove a full checkpoint acceptance condition.
 
 ## Execution rules
 
@@ -14,8 +14,8 @@ All work, including future identity and hosted prototypes, uses fictional record
 
 - The selected license is **MPL-2.0**, with the complete standard text in [LICENSE](LICENSE). It permits commercial use. Verify rights, attribution and source notices for code and dependencies; do not add a noncommercial condition to the standard license.
 - The full [.gitignore](.gitignore) replaces the additions-only starter. Merge project-specific rules, keep the active lockfile and schema migrations, and follow [GITIGNORE_SETUP.md](GITIGNORE_SETUP.md). Keep real records and credentials out of tracked content and history.
-- The supplied starter contains documentation and configuration. P0.C01 must inspect the actual checkout or establish a minimal runnable foundation when application code is absent. The reference commands do not establish that this checkout is runnable.
-- License text, documentation and ignore-file checks do not complete P0.C07 or certify the repository's history. No checkpoint is marked verified by this refresh.
+- Version 0.1.0 supplies React/TypeScript/Vite source, a synthetic memory adapter, tests and actual local check/progress commands. Installed storage, authentication, encryption and tax mapping remain future work. See docs/ARCHITECTURE.md and docs/VERIFICATION.md. P0.C01 still needs evidence from the actual repository revision.
+- P0.C01 is in progress; all other checkpoint states start planned in project/checkpoints.json. No checkpoint is verified by the starter. Local command results do not certify repository history, devices, production security or legal mappings.
 
 ## Dependencies and provisional effort
 
@@ -23,7 +23,7 @@ The ranges below are provisional engineering estimates for the bounded scopes, i
 
 | Phase | Depends on | Estimate |
 | --- | --- | --- |
-| P0 | Available source or initial scaffold, and owner decisions | 12–24 h |
+| P0 | 0.1.0 checkout and owner decisions | 12–24 h |
 | P1 | P0 | 44–80 h |
 | P2 | P1 | 24–40 h |
 | P3 | P2 | 32–60 h |

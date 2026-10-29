@@ -14,6 +14,7 @@ import {
 import type { DraftInput, Workspace } from "../src/domain/ledger.ts";
 import { MemoryRepository } from "../src/infrastructure/memory-repository.ts";
 import { AccountingApplication } from "../src/application/accounting.ts";
+import { runBrowserChecks } from "../src/verification/browser-checks.ts";
 
 const business = "demo-consulting";
 const at = "2026-01-20T12:00:00Z";
@@ -336,5 +337,13 @@ test("application commands use the repository boundary and injected IDs/clock", 
   assert.equal(
     repository.getSnapshot().entries.find((entry) => entry.id === id)?.status,
     "posted",
+  );
+});
+test("browser checks execute their real isolated assertions", () => {
+  const results = runBrowserChecks();
+  assert.equal(results.length, 9);
+  assert.deepEqual(
+    results.filter((result) => !result.passed),
+    [],
   );
 });

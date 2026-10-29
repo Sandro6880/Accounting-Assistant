@@ -1,0 +1,741 @@
+{
+  "schemaVersion": 1,
+  "checkpoints": [
+    {
+      "id": "P0.C01",
+      "phase": "P0",
+      "summary": "Inspect the authoritative project revision, package scripts and actual implemented behavior. If application code is absent, establish a minimal runnable scaffold and initial domain checks rather than claiming the reference baseline exists. Otherwise reproduce the applicable reference workflow with fictional data.",
+      "proof": "exact revision, pinned toolchain, actual scripts, capability inventory and observed results recorded.",
+      "status": "in-progress",
+      "evidence": null
+    },
+    {
+      "id": "P0.C02",
+      "phase": "P0",
+      "summary": "Compare actual code with planned draft editing, evidence, import, reconciliation and export behavior.",
+      "proof": "each capability is implemented, partial or missing with source evidence.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P0.C03",
+      "phase": "P0",
+      "summary": "Define fictional sole-trader, planning and third-business profiles, EUR reporting and EUR/USD examples. Record the Windows/Android test matrix and bounded phone workflow.",
+      "proof": "no personal business setup or real account data is needed.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P0.C04",
+      "phase": "P0",
+      "summary": "Define the supported Austrian accounting method and synthetic VAT cases, including unknown status. Cover domestic, EU business, direct EU consumer digital and non-EU cases; select the first report/year adapter.",
+      "proof": "a versioned case inventory states support and exclusions.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P0.C05",
+      "phase": "P0",
+      "summary": "Run the Windows/Android platform spike for local save, camera, restart, transfer and notifications.",
+      "proof": "measured behavior and limitations recorded on supported devices.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P0.C06",
+      "phase": "P0",
+      "summary": "Record accepted architecture decisions and the next bounded backlog.",
+      "proof": "dependencies and first ready work packets are explicit.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P0.C07",
+      "phase": "P0",
+      "summary": "Review actual tracked content, genuine history, contributor identity, MPL-2.0 scope and source notices, third-party rights and source/artifact privacy. Confirm the standard LICENSE is present and unchanged.",
+      "proof": "inspected revision, refs, artifacts, rights questions and unresolved items are recorded; a documentation package cannot mark history clean.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C01",
+      "phase": "P1",
+      "summary": "Introduce generic business, legal entity, tax reporting scope, activity, project and personal-income concepts. Seed only fictional profiles.",
+      "proof": "a third business works without code changes, original totals survive migration and cross-business references are rejected.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C02",
+      "phase": "P1",
+      "summary": "Establish accounting rules and workflow contracts in the portable core, extracting them from existing adapters where applicable.",
+      "proof": "the same domain scenarios run without hosted dependencies.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C03",
+      "phase": "P1",
+      "summary": "Add revisions, idempotent commands and storage contract tests.",
+      "proof": "retry, stale edit and failed transaction leave valid state.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C04",
+      "phase": "P1",
+      "summary": "Define financial dates, correction dates and import identities once.",
+      "proof": "date and source-identity fixtures pass.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C05",
+      "phase": "P1",
+      "summary": "Establish stable translation keys and canonical domain identifiers so a language switch cannot change stored categories, currencies or commands.",
+      "proof": "language change preserves canonical stored identifiers.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C06",
+      "phase": "P1",
+      "summary": "Define the small typed module registry, dependency rules, routes, commands and report contributions. Keep the required accounting and security foundation mandatory.",
+      "proof": "registry rejects missing dependencies and retains mandatory controls.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C07",
+      "phase": "P1",
+      "summary": "Implement generic business creation and archival contracts, unknown setup states and effective-dated profile changes. No new business requires a new source-code branch.",
+      "proof": "creation and archive commands preserve identities and history.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P1.C08",
+      "phase": "P1",
+      "summary": "Define a versioned manifest mapping stable checkpoints to meaningful checks and manual evidence. Separate implemented, executed, verified and released states; declare synthetic fixture ownership and workspace requirements.",
+      "proof": "a missing or skipped required check leaves its checkpoint unverified even if all executed tests pass.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P2.C01",
+      "phase": "P2",
+      "summary": "Package the interface, local database and receipt storage in an installed application.",
+      "proof": "installed package opens with its local records offline.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P2.C02",
+      "phase": "P2",
+      "summary": "Implement atomic local commands, schema upgrades and durable error reporting.",
+      "proof": "interrupted writes and upgrades have no partial financial result.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P2.C03",
+      "phase": "P2",
+      "summary": "Add local profile access, lock state and explicit network-dependent actions.",
+      "proof": "unlock and local editing work without cloud credentials.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P2.C04",
+      "phase": "P2",
+      "summary": "Verify offline cold start, restart after save, interrupted write and low-disk behavior.",
+      "proof": "restart and low-disk results distinguish failed and saved work.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P3.C01",
+      "phase": "P3",
+      "summary": "Produce a consistent encrypted backup of structured records, original files, inventories and policy versions.",
+      "proof": "backup inventory includes records originals and policy versions.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P3.C02",
+      "phase": "P3",
+      "summary": "Restore into a separate location and verify counts, hashes, totals and representative evidence.",
+      "proof": "clean restore reproduces totals and original file digests.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P3.C03",
+      "phase": "P3",
+      "summary": "Implement protected key storage, chosen at-rest encryption, local lock and recovery instructions.",
+      "proof": "wrong-key and recovery paths exercised.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P3.C04",
+      "phase": "P3",
+      "summary": "Add pre-migration backups, failed-update recovery and independent backup targets.",
+      "proof": "failed update recovers using an independent backup.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P3.C05",
+      "phase": "P3",
+      "summary": "Implement isolated synthetic workspaces and prototype the future local unlock, timeout, recovery and sensitive-action verification. Keep genuine-record use unavailable in development.",
+      "proof": "wrong credentials, locked commands, direct evidence access and unsafe reset destinations fail using fictional records.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C01",
+      "phase": "P4",
+      "summary": "Deliver saved-draft editing, stale-revision conflict handling and evidence links, including attaching a sample receipt after creating a draft.",
+      "proof": "saved edit conflict and late receipt paths demonstrated.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C02",
+      "phase": "P4",
+      "summary": "Add time records, expected earnings, statements and actual payout tracking with separate statuses.",
+      "proof": "expected work and actual receipts remain distinct.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C03",
+      "phase": "P4",
+      "summary": "Add manual salary overview and evidence without merging it into business revenue.",
+      "proof": "salary fixture leaves business revenue unchanged.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C04",
+      "phase": "P4",
+      "summary": "Add dashboard review queues, accessible forms and explainable validation in English and German.",
+      "proof": "review and validation work by keyboard in both languages.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C05",
+      "phase": "P4",
+      "summary": "Implement an offline language toggle, persisted device preference, translated labels and validation, locale-aware EUR/USD input and the persistent business selector. Verify that switching language or business preserves unsaved forms and their original scope.",
+      "proof": "offline switches preserve parsed money and draft business.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C06",
+      "phase": "P4",
+      "summary": "Deliver the progressive Create business wizard, save-and-resume, planning mode, unresolved setup summary and archive action.",
+      "proof": "new synthetic business saved resumed and archived without code changes.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C07",
+      "phase": "P4",
+      "summary": "Build shared context selectors and module-driven navigation with dependency messages and preserved read-only access to disabled modules' history.",
+      "proof": "optional module toggle retains history and rejects missing prerequisites.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4.C08",
+      "phase": "P4",
+      "summary": "Extend the accounting Test Lab with local check results and checkpoint progress, including revision, fixture version, layer, pass, fail, skipped, blocked and not-run states. Protect dummy reset and keep the browser runner distinct from Node, database and device evidence.",
+      "proof": "seeded result examples cannot count as a real run, and an unimplemented or manually unreviewed capability cannot appear verified.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4A.C01",
+      "phase": "P4A",
+      "summary": "Preserve exact original EUR and USD amounts and their business context. Introduce reviewed EUR valuations without losing statement values.",
+      "proof": "original currency and EUR valuation survive save and restore.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4A.C02",
+      "phase": "P4A",
+      "summary": "Implement positive decimal rates, explicit quote direction, relevant valuation date, source evidence, purpose, rounding policy and immutable calculation snapshots.",
+      "proof": "direct and reciprocal quote fixtures give exact results.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4A.C03",
+      "phase": "P4A",
+      "summary": "Support evidenced offline manual or imported rates. Missing or inapplicable rates create tasks and prevent a false complete result; later rate updates do not rewrite posted values.",
+      "proof": "missing rate blocks completion and refresh preserves history.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4A.C04",
+      "phase": "P4A",
+      "summary": "Reconcile original gross amounts, fees, net payouts, bank conversions and explained residuals. Apply the selected accounting method to any exchange difference.",
+      "proof": "gross fees net and bank receipt conserve amounts.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4A.C05",
+      "phase": "P4A",
+      "summary": "Cover partial settlements, refunds, reversals and actual USD accounts where used. Keep VAT or OSS valuation rules separate from bank settlement and forecasts.",
+      "proof": "partial refund and scheme-specific valuation fixtures pass.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4B.C01",
+      "phase": "P4B",
+      "summary": "Implement document types, indexed metadata, unassigned inbox and private original-file storage with stable references.",
+      "proof": "inbox original and metadata survive restart.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4B.C02",
+      "phase": "P4B",
+      "summary": "Provide business and year filing views, metadata search, original viewing and safe derivative handling.",
+      "proof": "offline search finds the correct original without cross-business leakage.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4B.C03",
+      "phase": "P4B",
+      "summary": "Add contract versions, signed and draft status, amendments, multi-year links and entered renewal, notice and payment dates.",
+      "proof": "two-year contract and amendment retain one original per version.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4B.C04",
+      "phase": "P4B",
+      "summary": "Deliver the previous-years browser with completeness, open or closed state, record totals and drill-down to entries and proof. Integrate later deduction and closing outputs when P8A and P9 pass.",
+      "proof": "year total drills to source entries and evidence with incomplete flags.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4B.C05",
+      "phase": "P4B",
+      "summary": "Add reviewed prior-year imports and opening-position mapping, preserving original dates and flagging incomplete history. Test without inventing missing records.",
+      "proof": "prior-year import preserves dates and avoids duplicate opening income.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P4B.C06",
+      "phase": "P4B",
+      "summary": "Verify retention or hold inheritance, missing-file detection, portable evidence manifests and full archive restoration. Hand contract dates to the P6 obligation interface.",
+      "proof": "restored archive reproduces links holds and the evidence manifest.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P5.C01",
+      "phase": "P5",
+      "summary": "Implement durable EUR/USD captures, business selection and original-file retention on the actual Android device, with both interface languages available offline.",
+      "proof": "offline capture and restart preserve original and business.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P5.C02",
+      "phase": "P5",
+      "summary": "Pair devices and export authenticated encrypted capture packages.",
+      "proof": "untrusted transfer or wrong pairing rejected.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P5.C03",
+      "phase": "P5",
+      "summary": "Preview and accept imports; return acknowledgements and keep unresolved captures visible.",
+      "proof": "import retry creates one draft and acknowledgement is visible.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P5.C04",
+      "phase": "P5",
+      "summary": "Test duplicate packages, interrupted transfer, Android restart, revoked pairing, missing attachments and the installed package's supported-version behavior.",
+      "proof": "interruption missing file and revocation paths preserve recoverable captures.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6.C01",
+      "phase": "P6",
+      "summary": "Implement source-backed obligation definitions, explicit applicability and proof-based completion.",
+      "proof": "applicable and inapplicable obligations retain decision proof.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6.C02",
+      "phase": "P6",
+      "summary": "Add scheduling, permission checks, quiet hours, snooze and a test reminder.",
+      "proof": "permission denial snooze and quiet hours have usable outcomes.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6.C03",
+      "phase": "P6",
+      "summary": "Build weekly review, setup checklist, offline help and adviser questions in English and German, including localized notification text.",
+      "proof": "offline help and notifications render in both languages.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6.C04",
+      "phase": "P6",
+      "summary": "Verify closed-app support where available, reboot recovery, overdue catch-up and calendar export.",
+      "proof": "tested platform behavior and overdue fallback recorded.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6.C05",
+      "phase": "P6",
+      "summary": "Generate chronological bullet timelines from the verified Austrian profile, separating statutory dates, internal milestones, extensions and payment obligations.",
+      "proof": "statutory target and extension dates remain distinguishable.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6.C06",
+      "phase": "P6",
+      "summary": "Add applicable tax-calendar rules, notice-derived due dates and tested EU-related applicability branches.",
+      "proof": "notice and EU applicability fixtures generate the correct tasks.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6A.C01",
+      "phase": "P6A",
+      "summary": "Build a versioned fictional case inventory for intended goods, services, countries, customer types and platform contracts.",
+      "proof": "all selected transaction categories have synthetic examples and explicit exclusions.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6A.C02",
+      "phase": "P6A",
+      "summary": "Implement effective-dated VAT profiles and explicit unknown status. Keep domestic exemption, regular VAT, UID, OSS and cross-border EX scheme facts separate.",
+      "proof": "unknown VAT cannot become a presumed exemption.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6A.C03",
+      "phase": "P6A",
+      "summary": "Validate the applicable service, goods and digital-sale branches, including business or consumer evidence, direction, relevant establishments and exceptions.",
+      "proof": "approved supply and customer-status cases pass.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6A.C04",
+      "phase": "P6A",
+      "summary": "Implement the required reverse-charge and deduction distinctions, ZM applicability, digital-sale location evidence, scheme scope and country or rate summaries.",
+      "proof": "reverse charge ZM deduction and scheme fields reconcile.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6A.C05",
+      "phase": "P6A",
+      "summary": "Record supplier or platform responsibility, fees, refunds and settlement links. Add the required OSS retention and scheme-specific deadline rules.",
+      "proof": "platform gross-to-net and retention cases pass.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P6A.C06",
+      "phase": "P6A",
+      "summary": "Create synthetic examples for each approved initial case and have the tax mapping reviewed before enabling tax-final output. Store the rule version, effective interval and evidence needed for each decision.",
+      "proof": "reviewed mapping and rule versions attached to enabled cases.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P7.C01",
+      "phase": "P7",
+      "summary": "Deliver safe statement import using a documented CSV dialect, limits, preview, mapping and row errors.",
+      "proof": "invalid CSV rows preview clearly and batch commit is atomic.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P7.C02",
+      "phase": "P7",
+      "summary": "Store bank movements independently from posted entries; preserve stable source identifiers.",
+      "proof": "repeat statement import creates no duplicate observed movement.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P7.C03",
+      "phase": "P7",
+      "summary": "Deliver reconciliation with explicit allocation, partial and grouped matches, match-release history and overmatching guards.",
+      "proof": "partial grouped and released allocations reject overmatching.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P7.C04",
+      "phase": "P7",
+      "summary": "Support fictional EUR/USD statements with gross, fee and net amounts, purpose-specific valuation and synthetic settlement.",
+      "proof": "reconciliation preserves original currencies, rejects unsupported ones and creates no duplicate revenue.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8.C01",
+      "phase": "P8",
+      "summary": "Confirm the required domestic, EU business, direct EU consumer digital-sale and non-EU invoice or credit cases against the P6A inventory and current official sources.",
+      "proof": "approved invoice and credit inventory linked to P6A cases.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8.C02",
+      "phase": "P8",
+      "summary": "Implement editable drafts, final immutable snapshots, scoped number series and issue dates.",
+      "proof": "issued snapshots survive changed client details without duplicate numbers.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8.C03",
+      "phase": "P8",
+      "summary": "Add corrections, credit documents, payment terms and linked receipts of money.",
+      "proof": "credit and receipt links conserve the original document amounts.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8.C04",
+      "phase": "P8",
+      "summary": "Define a single issuing device initially; show delivery separately from issuance and payment.",
+      "proof": "single-issuer guard and separate delivery/payment statuses demonstrated.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8A.C01",
+      "phase": "P8A",
+      "summary": "Define the actual initial deduction and asset case inventory with current sources, exclusions, timing and required proof for the verified accounting and VAT profile.",
+      "proof": "case inventory specifies year profile exclusions and source.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8A.C02",
+      "phase": "P8A",
+      "summary": "Add the reviewed deduction decision record: business purpose, source amount, allocation, permitted treatment, year, reason, evidence and rule version.",
+      "proof": "each decision retains business share reason and original proof.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8A.C03",
+      "phase": "P8A",
+      "summary": "Implement the asset register, reviewed cost basis, first-use date, useful life, method and required GWG or AfA cases using effective-dated rules.",
+      "proof": "reviewed asset basis and selected-year GWG/AfA fixtures pass.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8A.C04",
+      "phase": "P8A",
+      "summary": "Add annual schedules, opening assets, prior depreciation and carry-forward; preview effects and prevent double deduction of purchase and depreciation.",
+      "proof": "opening and annual schedules conserve basis without double deduction.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8A.C05",
+      "phase": "P8A",
+      "summary": "Support reviewed corrections and the disposal cases in the first-use inventory. Keep unsupported asset classes and allowances explicitly unavailable.",
+      "proof": "disposal and correction history reconcile and unsupported cases stay blocked.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P8A.C06",
+      "phase": "P8A",
+      "summary": "Connect the deduction and asset results to journal reports, year history, original proof and the P9 annual-preparation contract. Validate synthetic cases before tax-final output.",
+      "proof": "report figure drills to the retained schedule evidence and rule version.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P9.C01",
+      "phase": "P9",
+      "summary": "Integrate P8A deductions, asset roll-forward and the P4B year archive into the annual completeness and reporting workflow; reconcile opening, movement and closing positions for the supported method.",
+      "proof": "opening movements closing and annual deduction totals reconcile.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P9.C02",
+      "phase": "P9",
+      "summary": "Enforce period-close and correction policies across all command paths.",
+      "proof": "all write paths reject an invalid closed-period change.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P9.C03",
+      "phase": "P9",
+      "summary": "Deliver a consistent frozen review export with the journal, records, evidence map, checksums and open issues.",
+      "proof": "frozen review pack matches journal and evidence inventory.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P9.C04",
+      "phase": "P9",
+      "summary": "Deliver a bounded official-format slice: select the applicable Austrian form/year, map reviewed accounting fields, generate its supported structure and validate a frozen preparation snapshot. Include relevant salary and personal inputs when needed rather than assuming business profit is the whole return.",
+      "proof": "selected form/year passes mapping and readiness checks.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P9.C05",
+      "phase": "P9",
+      "summary": "Prepare applicable UVA, ZM, OSS and cross-border small-business reports through separately reviewed field mappings, legal tax-scope memberships and purpose-specific EUR valuations. Reconcile each to its own period and source records; do not reuse E/A timing or bank rates blindly for every scheme.",
+      "proof": "each applicable scheme reconciles to its own scope period and valuation.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P9.C06",
+      "phase": "P9",
+      "summary": "Track schema availability, external validation and authority protocol requirements as explicit states. Show the capability separately for each document: review pack, portal-entry pack, validated upload file or supported direct transmission. Keep automatic generation separate from transmission and settlement.",
+      "proof": "prepared sent accepted and paid states remain independently evidenced.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P10.C01",
+      "phase": "P10",
+      "summary": "Decide hosting ownership, identity, encryption model and operating budget before service activation.",
+      "proof": "hosting identity encryption and cost decision recorded before activation.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P10.C02",
+      "phase": "P10",
+      "summary": "Implement authenticated device enrollment, durable outbox, command acknowledgements and immutable file transfer.",
+      "proof": "lost acknowledgement and duplicate delivery preserve one result.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P10.C03",
+      "phase": "P10",
+      "summary": "Add replay protection, conflict resolution, ownership checks and a complete local resynchronization procedure.",
+      "proof": "revoked or wrong-owner commands fail without losing local evidence.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P10.C04",
+      "phase": "P10",
+      "summary": "Test days offline, lost responses, expired sessions, revoked devices, clock skew and incompatible versions.",
+      "proof": "offline resync and incompatible-version outcomes are recoverable.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P11.C01",
+      "phase": "P11",
+      "summary": "Define actual roles such as owner, contributor, reviewer and read-only adviser.",
+      "proof": "role matrix tied to actual team tasks.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P11.C02",
+      "phase": "P11",
+      "summary": "Enforce permission checks server-side for records, evidence, exports and administrative actions.",
+      "proof": "cross-workspace record file and export access is denied.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P11.C03",
+      "phase": "P11",
+      "summary": "Add invitations, revocation, device management and auditable changes to access.",
+      "proof": "revoked invitation and device access fail and leave an audit trail.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P11.C04",
+      "phase": "P11",
+      "summary": "Configure operational monitoring, recovery exercises, support and appropriate legal/privacy material.",
+      "proof": "restore incident and support procedures rehearsed.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P12.C01",
+      "phase": "P12",
+      "summary": "Run the applicable release checks on supported Windows and Android versions in both interface languages.",
+      "proof": "applicable Windows Android and bilingual release evidence recorded.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P12.C02",
+      "phase": "P12",
+      "summary": "Deliver user help, a recovery guide, supported-version policy and signed installation/update packages.",
+      "proof": "signed package and recovery guide exercised on clean installation.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P12.C03",
+      "phase": "P12",
+      "summary": "Schedule dependency, source-rule and recovery reviews as product operations.",
+      "proof": "maintenance owner and review intervals recorded.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P12.C04",
+      "phase": "P12",
+      "summary": "Provide a read-only archive, open export formats, verified migration and reviewed deletion on retirement.",
+      "proof": "read-only retrieval and open export survive service retirement.",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "P12.C05",
+      "phase": "P12",
+      "summary": "Deliver the documented one-command local runner, JSON results, checkpoint progress and synthetic-data safeguards on a clean checkout.",
+      "proof": "required failures return nonzero, unexecuted evidence stays visible and production paths are rejected. Later genuine-record use additionally requires accepted completion and security/recovery evidence.",
+      "status": "planned",
+      "evidence": null
+    }
+  ]
+}

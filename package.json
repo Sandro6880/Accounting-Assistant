@@ -14,7 +14,10 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test \"tests/*.test.ts\""
+    "test": "node --import tsx --test \"tests/*.test.ts\"",
+    "check": "node scripts/check.mjs",
+    "progress": "node scripts/progress.mjs",
+    "progress:validate": "node scripts/progress.mjs --validate"
   },
   "dependencies": {
     "react": "19.3.1",
