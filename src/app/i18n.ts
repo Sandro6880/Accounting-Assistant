@@ -85,11 +85,13 @@ const en = {
     "92 roadmap checkpoints. Starter checks passing do not mark these requirements complete.",
   planned: "Planned",
   inProgress: "In progress",
+  inReview: "In review",
+  blocked: "Blocked",
   verified: "Verified",
   checkpoints: "Checkpoints",
   proof: "Required proof",
   workingOn:
-    "Current starting point: P0.C01 — reproduce and inspect the runnable foundation.",
+    "P0.C02: capability audit prepared for review. P0.C01 browser verification remains pending.",
   error: "The action could not be completed. Review the input and try again.",
 } as const;
 export type TranslationKey = keyof typeof en;
@@ -178,11 +180,13 @@ const de: Record<TranslationKey, string> = {
     "92 Fahrplan-Checkpoints. Bestandene Starter-Prüfungen bedeuten nicht, dass diese Anforderungen abgeschlossen sind.",
   planned: "Geplant",
   inProgress: "In Arbeit",
+  inReview: "In Prüfung",
+  blocked: "Blockiert",
   verified: "Geprüft",
   checkpoints: "Checkpoints",
   proof: "Erforderlicher Nachweis",
   workingOn:
-    "Aktueller Ausgangspunkt: P0.C01 — die lauffähige Grundlage nachvollziehen und prüfen.",
+    "P0.C02: Funktionsabgleich zur Prüfung vorbereitet. Die Browser-Prüfung für P0.C01 steht weiterhin aus.",
   error:
     "Die Aktion konnte nicht abgeschlossen werden. Eingaben prüfen und erneut versuchen.",
 };

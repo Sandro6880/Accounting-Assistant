@@ -6,19 +6,19 @@ The goal is to make a recorded amount traceable: annual report → entry or asse
 
 ## Project status
 
-This starter supplies project documentation, the selected license and repository configuration. Currently has a basic foundation for the project with documentation steps ahead.
+Version **0.1.0** is a runnable React/TypeScript/Vite application with fictional records in session memory. It includes draft creation, posting, full reversals, separate EUR/USD totals, English/German controls, fictional business creation, an executable browser Test Lab and a roadmap view.
 
-A documented browser-based reference application informs the plan below. Its capabilities and scripts are starting points to inspect, not evidence that they are already implemented in this repository. P0.C01 establishes the actual starting point. A roadmap item becomes verified only when its implementation and required evidence exist at a recorded revision.
+Checkpoint **P0.C01** inspected repository revision `9b7741ccf2d6a6538781c9684d2130a92a99660a` on 31 October 2026. Installation and the core checks passed, including all 24 Node/DOM tests. Its browser journeys remain blocked and unverified. The owner deferred that verification and authorized **P0.C02**, the source-backed capability comparison, which is now **In review**. The other 90 checkpoints remain Planned. See [the baseline evidence](docs/BASELINE.md), [verification record](docs/VERIFICATION.md) and [capability audit](docs/CAPABILITY_AUDIT.md).
 
-| Area | Documented reference baseline to verify | Planned work |
+| Area | Implemented starting point | Planned work |
 | --- | --- | --- |
-| Bookkeeping | Draft creation, posting, full reversal, integer-cent arithmetic and business/private allocation | Saved-draft editing, conflict handling, imports, reconciliation and period controls |
-| Evidence | Receipt validation, private owner-scoped downloads and linked records | Systematic contract archive, recovery, retention and multi-year evidence links |
-| Reporting | Provisional income/expense view and CSV output | Reviewed deductions, assets, VAT cases, year history and supported official mappings |
-| Verification | Domain checks, isolated SQL tests, reference checks and a browser Test Lab | Unified local runner, checkpoint progress, UI/security/device and recovery checks |
-| Platforms | Browser interface and portable local development | Durable installed Windows and Android workflows; optional online sync later |
+| Bookkeeping | Draft creation, posting, linked full reversal and exact bigint cents | Saved-draft editing, business/private allocation, imports, reconciliation and period controls |
+| Evidence | No document model, upload or download adapter yet | Original-file storage, ownership, contracts, recovery and retention |
+| Reporting | Provisional posted totals with EUR and USD kept separate | CSV/review exports, EUR valuations, reviewed deductions, assets and official mappings |
+| Verification | Core runner, JSON results, manifest validation, 24 Node/DOM tests, nine isolated Test Lab assertions and six configured browser journeys | Stronger evidence verification, storage/security/device and recovery checks |
+| Platforms | Loopback browser development and preview; refresh discards records | Durable installed Windows and Android workflows; optional online sync later |
 
-Full tax preparation, installed offline apps, the local production unlock and the unified progress runner are planned. A provisional income/expense report is not a complete statutory return. The launch commands below follow the documented 0.3.1 reference baseline; checkpoint P0.C01 must confirm the actual source, package scripts and behavior before this repository is described as reproducibly runnable.
+Full tax preparation, installed offline apps and production access controls remain planned. Unvalued USD is excluded from EUR totals and makes EUR reporting incomplete. There is no backend, SQL database, receipt archive or financial export in this revision. The commands below match the actual npm scripts and lockfile.
 
 ## Starter files
 
@@ -31,8 +31,14 @@ Full tax preparation, installed offline apps, the local production unlock and th
 | [.gitignore](.gitignore) | Starter exclusions for secrets, local records and generated output |
 | [.env.example](.env.example) | Comment-only configuration template with no live values |
 | [GITIGNORE_SETUP.md](GITIGNORE_SETUP.md) | Ignore-file setup, reserved paths and review commands |
+| [src/](src/) | Domain rules, application use cases, memory adapter and React views |
+| [tests/](tests/) | Node/DOM checks and Playwright browser journeys |
+| [package.json](package.json) / [package-lock.json](package-lock.json) | Pinned runtime dependencies and actual npm scripts |
+| [project/checkpoints.json](project/checkpoints.json) | Current states and evidence for all 92 roadmap IDs |
+| [docs/BASELINE.md](docs/BASELINE.md) | P0.C01 revision, capability inventory, fixture and observed results |
+| [docs/CAPABILITY_AUDIT.md](docs/CAPABILITY_AUDIT.md) | P0.C02 implemented/partial/missing comparison with source and coverage evidence |
 
-Add these files to the project checkout. Merge existing project-specific ignore rules and review any existing license or third-party notices before replacing files. The full `.gitignore` supersedes the earlier additions-only checklist; after merging its contents, remove an obsolete `.gitignore.additions` from the checkout if present. Retain genuine Git history and attribution. A documentation ZIP does not replace that history.
+These files are already part of this repository. Preserve the existing Git history, MPL-2.0 notices and active npm lockfile when applying changes. The full `.gitignore` supersedes the earlier additions-only checklist. A source or update ZIP does not replace repository history.
 
 ## Who it is for
 
@@ -42,69 +48,63 @@ Development, demonstrations and AI-assisted work operate only on synthetic busin
 
 ## Technology and architecture
 
-| Component | Reference technology or planned direction |
+| Component | Current implementation or planned direction |
 | --- | --- |
-| Interface | React and TypeScript |
-| Web runtime | Vinext with API routes and a Cloudflare Worker |
-| Structured storage | Cloudflare D1 and Drizzle migrations in the reference web adapter |
-| Evidence storage | R2 in the reference web adapter; protected local files for the planned installed adapter |
+| Interface | React 19.3.1 and TypeScript 7.0.2 |
+| Web runtime | Vite 8.3.5; client-side application with no API routes or backend |
+| Structured storage | Synthetic `MemoryRepository`; no persistence or migrations |
+| Evidence storage | Not implemented |
 | Installed platform candidate | Tauri 2 with local SQLite, subject to Windows/Android feasibility checks |
-| Verification | Reference Node test runner and isolated SQLite integration checks; planned unified local suite and Test Lab progress |
+| Verification | Node test runner, React/JSDOM interaction checks, Playwright and npm check/progress scripts |
 
 Use one modular domain and application core, with adapters for storage, identity, files, notifications and later synchronization. Financial rules stay outside pages and platform APIs. Typed module capabilities supply navigation and reusable business/year contexts. Required ownership, audit, recovery and validation controls cannot be disabled by hiding a module. Avoid duplicating pages for individual businesses.
 
-The reference hosted adapter does not require connecting to live cloud data during development. P0 records the actual adapter and toolchain decisions for this project. Installed offline durability is separate from running a development server on the same machine.
+No cloud account, backend service, credentials or application environment variables are needed. See [the architecture decisions](docs/ARCHITECTURE.md). Installed offline durability is separate from running a development server on the same machine.
 
 ## Run locally
 
-These commands apply to the documented reference application once its source and scripts are present and verified. A documentation-only checkout has no application to launch; complete P0.C01 first.
-
-Use the toolchain pinned by the actual repository. The reference baseline uses **Node.js 24 LTS**, **pnpm 11.25.0** and `pnpm-lock.yaml`. Confirm `package.json`, its scripts and the lockfile before installing or changing versions. From a compatible source checkout:
+Use **Node.js 24.22.1** (both `.nvmrc` and `.node-version`) and **npm 11.9.0** (`packageManager` in `package.json`). The supported Node range is `>=24.22.1 <25`. From the repository root:
 
 ```sh
-pnpm install --frozen-lockfile
-npm run typecheck
-npm test
-npm run build
-npm run db:local
+npm ci
+npm run check
+npm run progress
 npm run dev
 ```
 
-Open the loopback URL printed by the development server. `db:local` applies the versioned migrations to local emulator state; the synthetic seed is a separate explicit action. Use the application demo action only with its isolated fictional workspace. Do not connect a bank, production database or real document folder.
+Open [http://127.0.0.1:5173](http://127.0.0.1:5173). The app starts with the fictional `synthetic-v1` fixture. Refresh or **Reset demo** discards changes; no records are saved to disk or browser storage. Do not enter genuine financial data.
 
-The portable development profile simulates a local test identity. It is suitable only for the loopback synthetic workspace. It is not the future password-protected production mode, and it must never be exposed as internet authentication. The managed hosted profile uses a gateway identity; deployment elsewhere needs a verified identity adapter.
+For a production-build preview, run `npm run build` followed by `npm run preview`, then open [http://127.0.0.1:4173](http://127.0.0.1:4173). Both servers bind to loopback and use strict ports. There is no `db:local` script or database to initialize.
 
-Local runtime state such as `.wrangler/` and `.sites-runtime/` stays outside source control. Use `.env.example` only as a template if configuration is needed; it contains comments, not live credentials. Check [the security policy](SECURITY.md) before changing access or storage behavior.
+`.env.example` is a comment-only template; no configuration values are needed. No local or hosted identity adapter is implemented. Check [the security policy](SECURITY.md) before changing access or storage behavior.
 
-## Run the documented reference checks
+## Run the actual checks
 
-After P0 confirms the application source and matching package scripts, the reference checks are:
+`npm run check` executes type checking, the Node/DOM suite, the production build and manifest validation. It leaves browser journeys explicitly not-run. The individual scripts are:
 
 ```sh
 npm run typecheck
 npm test
 npm run build
+npm run progress:validate
 ```
 
-For focused checks:
+For browser journeys:
 
 ```sh
-npm run test:domain
-npm run test:integration
-npm run test:docs
+npx playwright install chromium
+npm run check:all
 ```
 
-The reference SQL tests use isolated in-memory SQLite and must not connect to hosted records. The reference browser **Test Lab** runs its own registered accounting checks and can export JSON. Verify which of these are actually present in the checkout. Browser results are client-reported; they do not establish that Node, SQL, authorization or device tests executed.
+Playwright runs three journeys in each of desktop Chromium and Pixel 7 Chromium emulation: draft/post/reversal, business/language switching, and Test Lab/session reset. Mobile emulation does not test an installed Android app. Browser installation and launch were blocked during P0.C01; none of the six journeys is claimed passed. On Linux CI, the supplied workflow installs browser dependencies with `npx playwright install --with-deps chromium`.
 
-This starter's ignore rules were checked with Git against 138 wholly fictional paths. Documentation checks also verify local links, checkpoint IDs and package contents. These checks do not execute or validate application behavior. No application tests were run as part of this documentation-only revision.
+The in-app **Test Lab** executes nine isolated domain assertions. It does not read the local runner's results, export JSON or establish that Node, SQL, security or device tests ran. The `test:domain`, `test:integration` and `test:docs` scripts from earlier reference documentation do not exist in this checkout. The available Node script is `npm test`.
 
-### Planned unified local suite
+### Result reporting and its limits
 
-P1.C08 defines the checkpoint/check manifest, P4.C08 adds progress visibility and P12.C05 delivers the unified runner. The proposed commands `npm run check` and `npm run progress` are not claimed as existing package scripts yet.
+The existing runner writes actual exit codes, command durations, Node version, Git revision/dirty state, selected scope and a checked-source fingerprint to ignored `outputs/checks.json`. `npm run progress` reports checkpoint counts separately and flags stale checked source. `npm run progress -- --json` prints the same progress data as JSON. A later runner invocation replaces `outputs/checks.json`, so retain a run externally when its evidence is needed.
 
-The runner must cover applicable type/static checks, exact-money rules, posting and corrections, isolated storage, evidence handling, business separation, interfaces, security and builds. Required offline-device, restore and legal-mapping reviews remain separately recorded evidence. Failures return a nonzero exit status; unimplemented, skipped, blocked and not-run items remain visible.
-
-Each report records the source revision, runtime, platform, command, fixture version, executed test layer, checkpoint IDs, results and limitations. Human-readable output and JSON must agree. Passing executed tests does not mean all roadmap features are complete. A checkpoint is verified only when its own implementation, checks and required review evidence pass.
+P1.C08 still needs stronger checkpoint/check and manual-evidence contracts; P4.C08 and P12.C05 have further Test Lab/release-runner requirements. The current validator checks evidence structure, not its truth. Installed-device, storage, recovery, security and legal-mapping evidence remains outside the current runner. Passing tests never automatically verifies a checkpoint.
 
 ## Planned accounting workflow
 
@@ -146,6 +146,8 @@ The full [ROADMAP.md](ROADMAP.md) contains **17 phases and 92 stable checkpoints
 Optional public subscriptions, payment execution, payroll and broader legal profiles are future decisions. They are not dependencies for developing the present synthetic accounting workflow.
 
 ### Next bounded work
+
+The current packet is **P0.C02 only**; its [capability audit](docs/CAPABILITY_AUDIT.md) is prepared for review. The owner's continuation decision leaves P0.C01's browser verification pending. The next checkpoint is **P0.C03**, not started in this packet. See [the handoff](docs/AGENT_HANDOFF.md). The T01–T06 ideas below are future packet outlines subject to roadmap dependencies; they do not override checkpoint order.
 
 These planned tasks alone represent **24–36 hours** of useful work, subject to the baseline inspection. They are not completed-task claims or a commitment to charge a fixed duration.
 

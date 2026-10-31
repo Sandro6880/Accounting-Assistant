@@ -18,9 +18,11 @@ test("manifest IDs match the roadmap and no checkpoint is automatically verified
     0,
   );
 });
-test("a future checkpoint cannot become verified without explicit evidence", () => {
+test("a checkpoint cannot become verified without explicit evidence", () => {
   const changed = structuredClone(manifest);
   changed.checkpoints[1].status = "verified";
+  // Pending review evidence may already exist in the checked-in manifest.
+  changed.checkpoints[1].evidence = null;
   assert.throws(
     () => validateManifest(changed, roadmap),
     /Missing verification evidence/,

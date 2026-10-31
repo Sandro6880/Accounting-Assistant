@@ -6,16 +6,82 @@
       "phase": "P0",
       "summary": "Inspect the authoritative project revision, package scripts and actual implemented behavior. If application code is absent, establish a minimal runnable scaffold and initial domain checks rather than claiming the reference baseline exists. Otherwise reproduce the applicable reference workflow with fictional data.",
       "proof": "exact revision, pinned toolchain, actual scripts, capability inventory and observed results recorded.",
-      "status": "in-progress",
-      "evidence": null
+      "status": "blocked",
+      "evidence": {
+        "revision": "9b7741ccf2d6a6538781c9684d2130a92a99660a",
+        "recordedOn": "2026-10-31",
+        "record": "docs/BASELINE.md",
+        "objective": "Inspect and reproduce the actual repository baseline without starting another checkpoint.",
+        "dependencies": ["0.1.0 source checkout"],
+        "fixtureVersion": "synthetic-v1",
+        "sourceFingerprint": "46618ad7ea1b9ee83f65c3ecd9b9b832b70ec7065232c44712d13b97c1a7eb8f",
+        "commands": [
+          "npm ci",
+          "npm run check",
+          "npm run progress",
+          "npx playwright install chromium",
+          "npm run check:all (isolated custom Chromium launcher)",
+          "npm run test:e2e (custom launcher after correcting executable permissions)"
+        ],
+        "results": {
+          "installation": "passed",
+          "typecheck": "passed",
+          "nodeTests": "24 passed; 0 failed; 0 skipped",
+          "build": "passed",
+          "manifest": "92 stable IDs; none verified",
+          "browserInstallation": "blocked: invalid/truncated downloaded ZIP",
+          "browserJourneys": "blocked before interaction: alternative Chromium launch exited with SIGSEGV; extended commands returned nonzero"
+        },
+        "review": "Inspected the starting revision, toolchain, scripts, synthetic fixture, domain/application/memory/UI source and test coverage. Recorded its capability inventory in docs/BASELINE.md. Core/DOM success does not complete browser verification.",
+        "manualEvidence": "Source inspection only; no successful native-browser interaction or device review is claimed.",
+        "limitations": [
+          "Browser journeys have not passed; P0.C01 remains unverified.",
+          "Evidence revision/fingerprint identify the clean starting baseline; later documentation/status runs record their own dirty state and fingerprint.",
+          "No Windows/Android installation, persistence/recovery, production security, legal mapping or history/privacy certification."
+        ],
+        "nextDecision": "Finish P0.C01 on a working Chromium host and review the results before starting P0.C02."
+      }
     },
     {
       "id": "P0.C02",
       "phase": "P0",
       "summary": "Compare actual code with planned draft editing, evidence, import, reconciliation and export behavior.",
       "proof": "each capability is implemented, partial or missing with source evidence.",
-      "status": "planned",
-      "evidence": null
+      "status": "in-review",
+      "evidence": {
+        "revision": "9b7741ccf2d6a6538781c9684d2130a92a99660a",
+        "recordedOn": "2026-10-31",
+        "record": "docs/CAPABILITY_AUDIT.md",
+        "objective": "Classify planned draft editing, evidence, import, reconciliation and export behavior using inspected source and existing test coverage.",
+        "inputTree": "a717c0979147042deeaddb5b109ee5e0f8fbdfb9",
+        "inputTreeKind": "local P0.C01 index snapshot, not a commit",
+        "sourceFingerprint": "d7468a6a1cd7d17cdcc9634de6aa734cb90c6a8589202333f0249fd3864508c6",
+        "dependencies": ["P0.C01 source inventory available; browser verification remains blocked"],
+        "dependencyDecision": "Owner explicitly deferred verification and authorized P0.C02. This supersedes the earlier ordering instruction without changing P0.C01 evidence or verifying that dependency.",
+        "fixtureVersion": "synthetic-v1",
+        "commands": [
+          "git fetch origin",
+          "git ls-files src tests scripts",
+          "npm ci",
+          "npm run check",
+          "npm run progress -- --json"
+        ],
+        "results": {
+          "remoteRevision": "origin/main matches the recorded base revision",
+          "installation": "passed",
+          "inputCoreChecks": "passed: typecheck, 24 Node/DOM tests, build and all 92 manifest IDs",
+          "capabilityComparison": "all five requested areas classified with source evidence; existing implemented/partial foundations and missing journeys are documented",
+          "browserChecks": "deferred by owner; not rerun or claimed passed"
+        },
+        "review": "Source comparison prepared across model, application commands, storage, interface, tooling and existing tests. Saved-draft edits, receipt paths, financial import, reconciliation and financial export are missing; supporting foundations are separately classified. Acceptance review remains deferred.",
+        "manualEvidence": "Source inspection with concrete file/symbol references and test-coverage review in docs/CAPABILITY_AUDIT.md; no browser/device walkthrough is claimed.",
+        "limitations": [
+          "In review is not verified or released; the evidence validator does not prove findings true.",
+          "Input revision/tree/fingerprint identify the pre-audit source with pending P0.C01 changes; final metadata runs record their own dirty state and fingerprint.",
+          "P0.C01 browser verification remains blocked; missing product features were not implemented or tested as though present."
+        ],
+        "nextDecision": "Review P0.C02 when verification resumes. The next separate roadmap checkpoint is P0.C03; it was not started in this packet."
+      }
     },
     {
       "id": "P0.C03",

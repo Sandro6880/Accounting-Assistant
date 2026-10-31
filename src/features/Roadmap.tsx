@@ -30,7 +30,13 @@ export function Roadmap({ t }: ViewContext) {
                   <strong>{item.id}</strong>
                   <span className="tag">
                     {t(
-                      item.status === "in-progress" ? "inProgress" : "planned",
+                      item.status === "in-progress"
+                        ? "inProgress"
+                        : item.status === "blocked"
+                          ? "blocked"
+                          : item.status === "in-review"
+                            ? "inReview"
+                            : "planned",
                     )}
                   </span>
                 </div>
