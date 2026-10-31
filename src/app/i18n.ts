@@ -91,7 +91,7 @@ const en = {
   checkpoints: "Checkpoints",
   proof: "Required proof",
   workingOn:
-    "P0.C02: capability audit prepared for review. P0.C01 browser verification remains pending.",
+    "P0.C03: fictional profiles and platform test plan prepared for review. Earlier verification remains pending.",
   error: "The action could not be completed. Review the input and try again.",
 } as const;
 export type TranslationKey = keyof typeof en;
@@ -186,7 +186,7 @@ const de: Record<TranslationKey, string> = {
   checkpoints: "Checkpoints",
   proof: "Erforderlicher Nachweis",
   workingOn:
-    "P0.C02: Funktionsabgleich zur Prüfung vorbereitet. Die Browser-Prüfung für P0.C01 steht weiterhin aus.",
+    "P0.C03: Fiktive Profile und Plattform-Testplan zur Prüfung vorbereitet. Frühere Nachweise stehen weiterhin aus.",
   error:
     "Die Aktion konnte nicht abgeschlossen werden. Eingaben prüfen und erneut versuchen.",
 };

@@ -88,8 +88,44 @@
       "phase": "P0",
       "summary": "Define fictional sole-trader, planning and third-business profiles, EUR reporting and EUR/USD examples. Record the Windows/Android test matrix and bounded phone workflow.",
       "proof": "no personal business setup or real account data is needed.",
-      "status": "planned",
-      "evidence": null
+      "status": "in-review",
+      "evidence": {
+        "revision": "e681732ec7f301a761efd4427eeea2b706e4172c",
+        "recordedOn": "2026-10-31",
+        "record": "docs/SYNTHETIC_PROFILES.md",
+        "objective": "Define wholly fictional sole-trader, planning and third-business profiles, exact EUR/USD scenarios, platform test matrix and a bounded phone capture target, with owner-side test instructions.",
+        "inputTree": "8f57b216560c636323c37cc104490d6ffbaee8bd",
+        "inputSourceFingerprint": "7697b4c1939f2b6dfdd34f318f6995c9a28520a3d17e37bade1626489a59fb47",
+        "dependencies": ["Owner's checkpoint 1/2 commit; P0.C01/P0.C02 evidence remains pending"],
+        "dependencyDecision": "Owner explicitly authorized the next checkpoint and requested local testing instructions while earlier verification remains deferred.",
+        "fixtureVersion": "synthetic-v1",
+        "catalogVersion": "p0-c03-v1",
+        "catalog": "tests/fixtures/p0-c03/profiles.json",
+        "commands": [
+          "git fetch origin",
+          "npm ci",
+          "npm run check",
+          "node --import tsx --test tests/profiles.test.ts",
+          "npm run progress -- --json"
+        ],
+        "results": {
+          "inputRevision": "origin/main e681732 contains the owner's committed P0.C01/P0.C02 delivery",
+          "installation": "passed",
+          "inputCoreChecks": "passed: original 24 tests, typecheck, build and manifest validation",
+          "focusedCatalogChecks": "2 passed: generic third-business creation, unchanged baseline and exact scoped EUR/USD scenarios",
+          "platformDefinitions": "Windows/Android matrix and phone capture target supplied with availability and execution evidence separated",
+          "ownerTesting": "docs/LOCAL_TESTING.md and a blank manual-result template supplied",
+          "nativeVerification": "Windows/Android manual and installed-device checks not run here; earlier browser verification stays deferred"
+        },
+        "review": "Three fictional profiles and versioned currency cases are defined and exercised through existing application commands. The third profile starts in planning mode with VAT unconfirmed. Baseline fixture, money rules and storage behavior remain unchanged. Definitions and platform acceptance remain in review.",
+        "manualEvidence": "Step-by-step Windows guide with exact expected amounts and a blank result sheet; matrix labels unexecuted or unimplemented native cases honestly.",
+        "limitations": [
+          "Passing core/catalog tests does not verify the checkpoint or certify Windows/Android device behavior.",
+          "No installed app, durable capture, camera, pairing, notifications, tax mapping or production record support is added.",
+          "Input tree/fingerprint identify the committed starting source; final packet runs record their own dirty state and fingerprint."
+        ],
+        "nextDecision": "Review the P0.C03 definitions and collect local results using docs/LOCAL_TESTING.md. The next separate checkpoint is P0.C04; it has not been started."
+      }
     },
     {
       "id": "P0.C04",

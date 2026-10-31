@@ -187,3 +187,9 @@ described above.
 The next roadmap checkpoint is **P0.C03**: fictional business profiles and a
 Windows/Android test matrix. It has not been started. Its eventual continuation
 does not silently clear P0.C01's pending browser verification or P0.C02 review.
+
+Subsequent continuation: the owner authorized the P0.C03 packet. Its
+[fictional profiles and matrix](SYNTHETIC_PROFILES.md), catalog tests and
+[local walkthrough](LOCAL_TESTING.md) now supply that next definition. The audit
+above remains evidence of its original source snapshot; no missing financial
+feature is made implemented by adding a synthetic test catalog.

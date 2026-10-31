@@ -8,14 +8,16 @@ The goal is to make a recorded amount traceable: annual report → entry or asse
 
 Version **0.1.0** is a runnable React/TypeScript/Vite application with fictional records in session memory. It includes draft creation, posting, full reversals, separate EUR/USD totals, English/German controls, fictional business creation, an executable browser Test Lab and a roadmap view.
 
-Checkpoint **P0.C01** inspected repository revision `9b7741ccf2d6a6538781c9684d2130a92a99660a` on 31 October 2026. Installation and the core checks passed, including all 24 Node/DOM tests. Its browser journeys remain blocked and unverified. The owner deferred that verification and authorized **P0.C02**, the source-backed capability comparison, which is now **In review**. The other 90 checkpoints remain Planned. See [the baseline evidence](docs/BASELINE.md), [verification record](docs/VERIFICATION.md) and [capability audit](docs/CAPABILITY_AUDIT.md).
+Checkpoint **P0.C01** recorded the original baseline and 24 passing Node/DOM tests; its browser verification remains blocked and deferred. **P0.C02** is In review with a source-backed capability comparison. The owner then authorized **P0.C03**: fictional profiles, EUR/USD scenarios and the Windows/Android test matrix, now prepared for review. The current core has **26 tests**, including two catalog scenarios; the other 89 checkpoints remain Planned. See [the baseline](docs/BASELINE.md), [verification record](docs/VERIFICATION.md), [audit](docs/CAPABILITY_AUDIT.md) and [profile/matrix definition](docs/SYNTHETIC_PROFILES.md).
+
+For testing on your own Windows machine, follow [LOCAL_TESTING.md](docs/LOCAL_TESTING.md): exact PowerShell commands, all five app views, expected totals, third-business creation, reset and a blank results template. The app still starts with the same two fictional businesses and baseline figures; create Example Workshop through Businesses to exercise the third profile.
 
 | Area | Implemented starting point | Planned work |
 | --- | --- | --- |
 | Bookkeeping | Draft creation, posting, linked full reversal and exact bigint cents | Saved-draft editing, business/private allocation, imports, reconciliation and period controls |
 | Evidence | No document model, upload or download adapter yet | Original-file storage, ownership, contracts, recovery and retention |
 | Reporting | Provisional posted totals with EUR and USD kept separate | CSV/review exports, EUR valuations, reviewed deductions, assets and official mappings |
-| Verification | Core runner, JSON results, manifest validation, 24 Node/DOM tests, nine isolated Test Lab assertions and six configured browser journeys | Stronger evidence verification, storage/security/device and recovery checks |
+| Verification | Core runner, JSON results, manifest validation, 26 Node/DOM tests, nine isolated Test Lab assertions and six configured browser journeys | Stronger evidence verification, storage/security/device and recovery checks |
 | Platforms | Loopback browser development and preview; refresh discards records | Durable installed Windows and Android workflows; optional online sync later |
 
 Full tax preparation, installed offline apps and production access controls remain planned. Unvalued USD is excluded from EUR totals and makes EUR reporting incomplete. There is no backend, SQL database, receipt archive or financial export in this revision. The commands below match the actual npm scripts and lockfile.
@@ -37,6 +39,10 @@ Full tax preparation, installed offline apps and production access controls rema
 | [project/checkpoints.json](project/checkpoints.json) | Current states and evidence for all 92 roadmap IDs |
 | [docs/BASELINE.md](docs/BASELINE.md) | P0.C01 revision, capability inventory, fixture and observed results |
 | [docs/CAPABILITY_AUDIT.md](docs/CAPABILITY_AUDIT.md) | P0.C02 implemented/partial/missing comparison with source and coverage evidence |
+| [docs/SYNTHETIC_PROFILES.md](docs/SYNTHETIC_PROFILES.md) | P0.C03 profiles, currency examples, platform matrix and bounded phone target |
+| [docs/LOCAL_TESTING.md](docs/LOCAL_TESTING.md) | Windows commands and current-app manual testing walkthrough |
+| [docs/TEST_REPORT_TEMPLATE.md](docs/TEST_REPORT_TEMPLATE.md) | Blank result sheet to copy into ignored outputs |
+| [tests/fixtures/p0-c03/profiles.json](tests/fixtures/p0-c03/profiles.json) | Versioned fictional profile/currency catalog exercised through the existing application boundary |
 
 These files are already part of this repository. Preserve the existing Git history, MPL-2.0 notices and active npm lockfile when applying changes. The full `.gitignore` supersedes the earlier additions-only checklist. A source or update ZIP does not replace repository history.
 
@@ -147,7 +153,7 @@ Optional public subscriptions, payment execution, payroll and broader legal prof
 
 ### Next bounded work
 
-The current packet is **P0.C02 only**; its [capability audit](docs/CAPABILITY_AUDIT.md) is prepared for review. The owner's continuation decision leaves P0.C01's browser verification pending. The next checkpoint is **P0.C03**, not started in this packet. See [the handoff](docs/AGENT_HANDOFF.md). The T01–T06 ideas below are future packet outlines subject to roadmap dependencies; they do not override checkpoint order.
+The current packet is **P0.C03 only**; its [fictional profiles and test matrix](docs/SYNTHETIC_PROFILES.md) are prepared for review. P0.C01 browser verification and P0.C02 acceptance remain pending. The next checkpoint is **P0.C04**, not started in this packet. See [the handoff](docs/AGENT_HANDOFF.md) and [local test guide](docs/LOCAL_TESTING.md). The T01–T06 ideas below are future packet outlines subject to roadmap dependencies; they do not override checkpoint order.
 
 These planned tasks alone represent **24–36 hours** of useful work, subject to the baseline inspection. They are not completed-task claims or a commitment to charge a fixed duration.
 

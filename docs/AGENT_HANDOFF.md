@@ -4,43 +4,53 @@ Work on **one checkpoint at a time**, using the repository roadmap. Read root
 AGENTS.md, README.md, ROADMAP.md, SECURITY.md and
 [ARCHITECTURE.md](ARCHITECTURE.md).
 
-## Current checkpoint: P0.C02, in review
+## Current checkpoint: P0.C03, in review
 
-The [capability audit](CAPABILITY_AUDIT.md) compares the actual model, application,
-storage, views, tooling and test coverage with all five requested areas. Each
-finding is Implemented, Partial or Missing with concrete source evidence.
-The comparison is prepared; acceptance/verification is deferred, so P0.C02 is
-In review rather than Verified. No missing product feature was implemented by
-this audit. The current core suite still has 24 tests.
+The [fictional profile definition](SYNTHETIC_PROFILES.md) supplies three profiles,
+exact EUR/USD examples, the Windows/Android matrix and the bounded phone capture
+target. The versioned catalog is `tests/fixtures/p0-c03/profiles.json` and two
+application-level checks in `tests/profiles.test.ts` exercise it. The current
+core suite has 26 tests. Definitions and native-platform acceptance are In
+review rather than Verified.
 
-The inspected Git revision is `9b7741ccf2d6a6538781c9684d2130a92a99660a`, with
-pending P0.C01 changes. The input tree/fingerprint and actual commands are
-recorded in the audit and manifest; these are not claims of a new commit/push.
+The default demo still starts with two businesses and its original totals.
+The third is created through the existing application/Businesses path in an
+isolated synthetic session; no actual business setup or account is needed.
+Money rules, default fixture, storage and missing financial features are
+unchanged. [LOCAL_TESTING.md](LOCAL_TESTING.md) provides owner-side Windows
+commands and the full manual walkthrough. A blank result sheet is included.
+
+The packet starts at the owner's committed revision
+`e681732ec7f301a761efd4427eeea2b706e4172c` (P0.C01/P0.C02). Its input tree and
+fingerprint are recorded in the profile document and manifest. New local
+changes are not claims of another commit or push.
 
 ## Deferred evidence and continuation
 
-The owner explicitly deferred verification and requested the next checkpoint.
-That authorization supersedes the previous instruction to resolve P0.C01
-before the source audit. P0.C01 remains Blocked/unverified with its original
-evidence unchanged. See [BASELINE.md](BASELINE.md) and
+The owner explicitly deferred verification and requested successive next
+checkpoints, one at a time. P0.C01 remains Blocked/unverified and P0.C02 remains
+In review, with their original checkpoint evidence unchanged. This authorization
+supersedes the earlier instruction to resolve P0.C01 before continuing definition
+work. See [BASELINE.md](BASELINE.md) and
 [VERIFICATION.md](VERIFICATION.md) for the browser installation/launch blocker.
 The earlier saved-draft implementation suggestion remains deferred until its
 roadmap dependencies are ready.
 
-When verification resumes, review P0.C02's classifications against its source
-snapshot. Resolve P0.C01's browser evidence on a working Chromium host using
-`npx playwright install chromium` and `npm run check:all`; record actual results
-and freshness. Neither passing core tests nor continuing another source packet
-automatically verifies those checkpoints. Do not rerun blocked browser setup
-as part of unrelated source-only work when its verification remains deferred.
+When verification resumes, review the audit and profile/matrix definitions
+against their recorded source snapshots. Follow the Windows local guide for
+core, native-browser and manual results; keep installed-device cases separate.
+Neither passing core tests nor continuing another definition packet automatically
+verifies earlier checkpoints. Do not rerun blocked browser setup as part of
+unrelated source-only work when its verification remains deferred.
 
-## Next separate checkpoint: P0.C03
+## Next separate checkpoint: P0.C04
 
-On the next request to continue, take **P0.C03 only**: define fictional
-sole-trader, planning and third-business profiles, EUR reporting and EUR/USD
-examples; record the Windows/Android test matrix and bounded phone workflow.
-This packet has not created those profiles or the matrix. Native platform
-spike execution belongs to P0.C05, so do not label a planned device case tested.
+On the next request to continue, take **P0.C04 only**: define the supported
+Austrian accounting method and synthetic VAT cases, including unknown status,
+domestic, EU business, direct EU consumer digital and non-EU cases; select the
+first report/year adapter. Verify current official sources for legal/tax claims.
+The profiles currently keep VAT unconfirmed and do not decide those rules.
+P0.C04 has not been started. Native platform spike execution remains P0.C05.
 
 Use Node 24.22.1 / npm 11.9.0, run applicable checks and report progress
 separately with `npm run progress -- --json`. Preserve pending evidence and all
@@ -49,14 +59,14 @@ the JSON output, manifest and in-app labels expose the current states.
 
 ## Copyable next task
 
-> Read AGENTS.md and the linked project docs. Continue only P0.C03 from
-> ROADMAP.md using wholly fictional profiles and examples. P0.C01 browser
-> verification and P0.C02 acceptance review were deferred by the owner; keep
-> their evidence and statuses visible. Define the synthetic profiles,
-> EUR/EUR-USD cases, platform test matrix and bounded phone workflow required
-> by P0.C03. Record what is planned versus actually exercised. Preserve all
-> stable IDs, genuine history and notices, run applicable checks and stop after
-> this one checkpoint. Do not implement later storage, file or tax features.
+> Read AGENTS.md and the linked project docs. Continue only P0.C04 from
+> ROADMAP.md, using the fictional P0.C03 profiles and current official sources.
+> Earlier verification/reviews remain deferred by the owner; keep their evidence
+> and statuses visible. Define the supported accounting-method/VAT-case inventory
+> with explicit unknown cases, support/exclusions and the first report/year
+> adapter. Record source dates and review limits. Do not use personal account
+> facts or implement later tax outputs. Preserve all stable IDs, run applicable
+> checks and stop after this one checkpoint.
 
 Durable Windows/Android operation, evidence archives, valuations, tax rules,
 online services and full history/privacy review retain their own future

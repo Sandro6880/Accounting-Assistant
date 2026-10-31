@@ -50,10 +50,12 @@ extended-run failure or vice versa. Read its scope and individual stages togethe
 journey evidence. Its baseline packet did not start another checkpoint.
 
 The owner subsequently deferred verification and authorized P0.C02's source
-comparison. That audit is now In review; the other 90 checkpoints remain
-Planned. See [CAPABILITY_AUDIT.md](CAPABILITY_AUDIT.md) for its own scope, evidence
-and checks. P0.C01's original checkpoint evidence and browser blocker are
-unchanged. No new browser result is implied by continuing the source audit.
+comparison, followed by P0.C03's fictional profiles/platform matrix. Those two
+checkpoints are In review; the other 89 remain Planned. See
+[CAPABILITY_AUDIT.md](CAPABILITY_AUDIT.md) and
+[SYNTHETIC_PROFILES.md](SYNTHETIC_PROFILES.md) for their own scopes, evidence and
+checks. P0.C01's original checkpoint evidence and browser blocker are unchanged.
+No new browser result is implied by continuing these definition packets.
 
 `npm run progress -- --json` includes every status count. The existing human
 progress summary prints verified, in-progress and planned counts only; it omits

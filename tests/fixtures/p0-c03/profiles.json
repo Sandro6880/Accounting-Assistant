@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dataMode": "synthetic",
+  "catalogVersion": "p0-c03-v1",
+  "workspaceFixtureVersion": "synthetic-v1",
+  "reportingCurrency": "EUR",
+  "scenarioDate": "2026-02-01",
+  "clock": "2026-02-01T12:00:00.000Z",
+  "profiles": [
+    {
+      "id": "demo-consulting",
+      "name": "Example Consulting",
+      "origin": "baseline",
+      "country": "AT",
+      "legalForm": "sole-trader",
+      "vatStatus": "unconfirmed"
+    },
+    {
+      "id": "demo-studio",
+      "name": "Example Studio",
+      "origin": "baseline",
+      "country": "AT",
+      "legalForm": "planning",
+      "vatStatus": "unconfirmed"
+    },
+    {
+      "id": "demo-workshop",
+      "name": "Example Workshop",
+      "origin": "create",
+      "country": "AT",
+      "legalForm": "planning",
+      "vatStatus": "unconfirmed"
+    }
+  ],
+  "baselineTotals": {
+    "demo-consulting": {
+      "EUR": { "income": "120000", "expenses": "7990", "net": "112010" },
+      "USD": { "income": "25000", "expenses": "0", "net": "25000" }
+    },
+    "demo-studio": {
+      "EUR": { "income": "80000", "expenses": "0", "net": "80000" },
+      "USD": { "income": "0", "expenses": "0", "net": "0" }
+    }
+  },
+  "emptyTotals": {
+    "EUR": { "income": "0", "expenses": "0", "net": "0" },
+    "USD": { "income": "0", "expenses": "0", "net": "0" }
+  },
+  "thirdBusinessCases": [
+    {
+      "id": "third-eur-income",
+      "description": "Fictional workshop service",
+      "kind": "income",
+      "currency": "EUR",
+      "amount": "300.20"
+    },
+    {
+      "id": "third-eur-expense",
+      "description": "Fictional workshop materials",
+      "kind": "expense",
+      "currency": "EUR",
+      "amount": "19.95"
+    },
+    {
+      "id": "third-usd-income",
+      "description": "Fictional workshop USD service",
+      "kind": "income",
+      "currency": "USD",
+      "amount": "40.10"
+    }
+  ],
+  "thirdBusinessPostedTotals": {
+    "EUR": { "income": "30020", "expenses": "1995", "net": "28025" },
+    "USD": { "income": "4010", "expenses": "0", "net": "4010" }
+  }
+}
