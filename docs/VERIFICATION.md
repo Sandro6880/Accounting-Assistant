@@ -109,3 +109,26 @@ stops at missing SDK/NDK. No installer/APK, camera observation, real device
 transfer, delivered notification or native restart/reboot result is claimed.
 Counts: 2 blocked, 3 in review, 87 planned, none verified. Earlier evidence is
 preserved. P0.C06 has not started; gather/review P0.C05 device evidence next.
+
+## Replacement P0.C06+C07 delivery — 1 November 2026
+
+Based on committed checkpoint 5 `cca3fb7b4a9efc0373ff02c11e2e59415651cba7`,
+tree `49a515eb64d3a10c62c8574d11d843e5bd4a2fdc`. Earlier combined ZIP/worktree
+are unavailable; this is a reconstructed replacement, not byte-identical recovery.
+P0.C01–C05 evidence/status is preserved. Only C06/C07 checkpoint objects change.
+
+Twelve ADRs/seven work packets and a fresh bounded review of 14 reachable commits,
+177 blobs (132 UTF-8 texts, 45 binaries) are recorded. Defined pattern checks
+find no matches; standard LICENSE bytes match Mozilla. Unresolved rights,
+dependency, generated-template, signature and excluded-scope questions remain.
+See [REPOSITORY_REVIEW.md](REPOSITORY_REVIEW.md).
+
+Input `npm ci` / `npm run check`: typecheck, 26 Node/DOM tests, build and 92-ID
+validation passed. Separate probe installation/check: ten tests and build passed.
+Final report lives in ignored outputs/checks.json; probe report/fingerprint is
+independent. Package/member integrity and clean-base patch application are
+verified separately. No browser or native/device checks are rerun/claimed here.
+
+Current counts: **2 blocked, 5 in review, 85 planned, none verified**. Financial
+source/tests/scripts/fixture/probe/lockfiles/LICENSE remain unchanged. The EN/DE
+roadmap banner and planning/audit metadata/docs change. No P1 feature is started.

@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "planVersion": "p0-c06-download-reissue-v3",
+  "recordedOn": "2026-11-01",
+  "status": "in-review",
+  "baseRevision": "cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+  "baseTree": "49a515eb64d3a10c62c8574d11d843e5bd4a2fdc",
+  "inputSourceFingerprint": "bb89fa657aa759d2436db63a121d1f769dd52d7603f9eb2a57f2b28be60bddb5",
+  "probeSourceFingerprint": "eb3d1a6a513ede003cbc085b8a266691b8bac7daa04f9defbc961a50c20e1b7e",
+  "reissue": {
+    "reason": "Previous combined archive and worktree are unavailable. Reconstructed from checkpoint 5 and the recorded prior delivery scope; not byte-identical recovery.",
+    "previousPlanVersion": "p0-c06-v2",
+    "scope": "Replacement P0.C06 + P0.C07 delivery only; no next checkpoint implementation."
+  },
+  "dependencyDecision": "Owner previously deferred verification and requested C06+C07. This reissue preserves earlier statuses and records no missing browser/native/rights acceptance.",
+  "acceptedScope": [
+    "One-user synthetic development foundation",
+    "Generic multi-business ownership with separate legal/reporting concepts",
+    "Exact EUR/USD and explicit incomplete EUR reporting",
+    "EN/DE and loopback browser workflow",
+    "Conditional Windows/Android candidate only"
+  ],
+  "decisions": [
+    {
+      "id": "ADR-001",
+      "title": "Retain pinned React/TypeScript/Vite",
+      "status": "implemented-baseline",
+      "direction": [
+        "Loopback development/preview, no backend or credentials; installed/offline packaging remains separate."
+      ]
+    },
+    {
+      "id": "ADR-002",
+      "title": "Portable domain and application boundaries",
+      "status": "implemented-baseline",
+      "direction": [
+        "Rules belong in domain, use cases in application, writes through the repository boundary; platform APIs remain adapters."
+      ]
+    },
+    {
+      "id": "ADR-003",
+      "title": "Exact cents and separate currencies",
+      "status": "implemented-baseline",
+      "direction": [
+        "Use bigint cents, lossless persistence codecs and original EUR/USD. Unvalued USD cannot enter EUR totals."
+      ]
+    },
+    {
+      "id": "ADR-004",
+      "title": "Immutable posted facts and appended corrections",
+      "status": "implemented-baseline",
+      "direction": [
+        "Drafts do not affect totals. Posting adds balanced journal/audit together; reversals append and retain originals. Full command replay remains future work."
+      ]
+    },
+    {
+      "id": "ADR-005",
+      "title": "Synthetic session-memory boundary",
+      "status": "implemented-baseline",
+      "direction": [
+        "Keep wholly fictional data. Refresh/reset loses changes; fixture markers are not authentication, encryption or durable storage."
+      ]
+    },
+    {
+      "id": "ADR-006",
+      "title": "Truthful checks and progress",
+      "status": "implemented-baseline",
+      "direction": [
+        "Keep actual execution, manual verification and release distinct. Tests never auto-promote checkpoints. Browser/device/legal gaps stay visible."
+      ]
+    },
+    {
+      "id": "ADR-007",
+      "title": "Separate business, legal entity and reporting scope",
+      "status": "accepted-planning-direction",
+      "direction": [
+        "Business owns financial/evidence records; a label does not prove a separate taxpayer.",
+        "Model legal entity, effective reporting-scope membership, activity, project and personal income separately. Relationships carry explicit business scope and reject cross-business references.",
+        "Allow unknown setup facts. Preserve existing IDs and exact totals through synthetic schema migration; no new business-specific code branch."
+      ]
+    },
+    {
+      "id": "ADR-008",
+      "title": "Explicit asynchronous transactional command contract",
+      "status": "accepted-planning-direction",
+      "direction": [
+        "Before persistent adapters, define async results, failure/recovery semantics and one atomic commit boundary.",
+        "Scope command identity by workspace/business. Same ID and canonical payload returns stored result; changed payload fails.",
+        "Check ownership and revision inside the transaction. Commit financial state, journal, audit and command receipt atomically; publish/acknowledge only after success.",
+        "Use lossless cents codecs with explicit storage range validation; never pass money through floating point."
+      ]
+    },
+    {
+      "id": "ADR-009",
+      "title": "Immutable originals and recoverable file linking",
+      "status": "accepted-planning-direction",
+      "direction": [
+        "Retain original bytes, digest, business ownership and provenance; derived previews are distinct.",
+        "Stage files with recoverable metadata and defined orphan handling; a database transaction cannot silently make filesystem changes atomic.",
+        "Failed operations retain a recoverable state. Prove consistent backup and separate-location restore before genuine financial use; no silent original deletion."
+      ]
+    },
+    {
+      "id": "ADR-010",
+      "title": "Canonical identifiers and versioned financial context",
+      "status": "accepted-planning-direction",
+      "direction": [
+        "Separate canonical IDs from English/German labels. Financial dates differ from audit timestamps.",
+        "Version profiles, rules, FX valuations and report snapshots; retain the versions used for posted outputs.",
+        "Unknown required facts and unvalued currencies block complete official output; the selected E1a/2026 target remains disabled/unverified."
+      ]
+    },
+    {
+      "id": "ADR-011",
+      "title": "Conditional platform candidates",
+      "status": "conditional-candidate",
+      "direction": [
+        "Tauri/SQLite, native file/camera/notification adapters, cryptography and future hosted providers need their own reviewed decisions and evidence.",
+        "P0.C05 is blocked: no accepted native build/device list. Readback is not fsync, encryption, a financial transaction or recovery proof.",
+        "Notification requests are not delivery; desktop scheduling is unsupported by the probe plugin. Raw transfer is not authenticated pairing or accounting import."
+      ]
+    },
+    {
+      "id": "ADR-012",
+      "title": "Bounded packets and explicit acceptance gates",
+      "status": "accepted-planning-direction",
+      "direction": [
+        "Use existing roadmap IDs, one new checkpoint per continuation. Keep implementation, execution, review and release distinct.",
+        "Owner-authorized bounded continuation may defer an earlier review without verifying it. Phase entry still needs acceptance or a recorded scope exception.",
+        "Re-estimate each packet after evidence. No P1 implementation, production adapter or real-data activation is authorized by this replacement archive."
+      ]
+    }
+  ],
+  "initialBacklog": [
+    {
+      "checkpoint": "P0.C07",
+      "status": "in-review",
+      "title": "Inspect repository/history/license/privacy",
+      "dependencies": [
+        "P0.C06 planning record",
+        "Exact source revision and advertised refs"
+      ],
+      "proof": "Bounded actual inspection with objects, notices, privacy rules, artifacts and unresolved rights questions recorded.",
+      "estimateHours": [
+        3,
+        6
+      ],
+      "remaining": "Owner rights review, template provenance, dependency/binary and excluded-scope questions remain."
+    },
+    {
+      "checkpoint": "P0.C01",
+      "status": "blocked",
+      "title": "Finish browser evidence",
+      "dependencies": [
+        "Working Chromium host"
+      ],
+      "proof": "Execute all six configured browser journeys and retain exact checked-source results.",
+      "estimateHours": [
+        1,
+        3
+      ],
+      "remaining": "Prior installation/launch failures remain; not rerun for this replacement."
+    },
+    {
+      "checkpoint": "P0.C05",
+      "status": "blocked",
+      "title": "Measure supported native devices",
+      "dependencies": [
+        "Windows host",
+        "Physical Android device",
+        "SDK/NDK/native prerequisites"
+      ],
+      "proof": "Actual save/camera/restart/reboot/transport/notification observations and artifact hashes.",
+      "estimateHours": [
+        4,
+        8
+      ],
+      "remaining": "No installer, APK or device pass is supplied."
+    },
+    {
+      "checkpoint": "P1.C01",
+      "status": "planned",
+      "title": "Introduce generic ownership/schema concepts",
+      "dependencies": [
+        "P0 review acceptance or explicit bounded owner continuation",
+        "ADR-007"
+      ],
+      "proof": "Third fictional business, unchanged original totals/IDs and denied cross-business relationships.",
+      "estimateHours": [
+        4,
+        6
+      ],
+      "remaining": "Next in roadmap order after C7; not implemented in this packet."
+    },
+    {
+      "checkpoint": "P1.C02",
+      "status": "planned",
+      "title": "Portable rules and workflow contracts",
+      "dependencies": [
+        "P1.C01 ownership model"
+      ],
+      "proof": "Domain/application scenarios run without hosted/device dependencies.",
+      "estimateHours": [
+        3,
+        6
+      ],
+      "remaining": "Inspect existing rules first; preserve exact money and immutable facts."
+    },
+    {
+      "checkpoint": "P1.C03",
+      "status": "planned",
+      "title": "Transactional/replay storage contracts",
+      "dependencies": [
+        "P1.C01",
+        "P1.C02",
+        "ADR-008"
+      ],
+      "proof": "Retry/conflict/stale edit/failed transaction leave valid state.",
+      "estimateHours": [
+        4,
+        6
+      ],
+      "remaining": "No asynchronous adapter is silently substituted for the current synchronous boundary."
+    },
+    {
+      "checkpoint": "P2.C01",
+      "status": "planned",
+      "title": "Bounded installed Windows foundation",
+      "dependencies": [
+        "P0.C05 accepted candidate",
+        "P1 contracts",
+        "Security/recovery design gates"
+      ],
+      "proof": "Installed package opens its local fictional records offline, with artifact and runtime evidence.",
+      "estimateHours": [
+        6,
+        12
+      ],
+      "remaining": "Candidate only; later P2/P3 work still owns production durability and recovery."
+    }
+  ],
+  "estimateAssumptions": [
+    "Engineering estimates, not elapsed/billed hours or a commitment.",
+    "Existing scaffold/core/fixtures remain the baseline; include code, meaningful tests, bilingual UI when relevant, documentation and evidence.",
+    "Native toolchain/device availability, rights/security/legal review and unexpected failures can change estimates.",
+    "Do not sum this overlapping backlog as a complete project estimate."
+  ],
+  "continuationAfterC7": {
+    "nextCheckpoint": "P1.C01",
+    "phaseEntry": "P0 acceptance or later explicit bounded owner continuation with outstanding gates retained.",
+    "started": false
+  },
+  "runtimeActivation": {
+    "persistentFinancialAdapter": false,
+    "realData": false,
+    "taxOutput": false,
+    "onlineService": false,
+    "supportedDeviceVersions": []
+  }
+}

@@ -12,8 +12,8 @@ its complete **Accounting-Assistant** subfolder. It contains `package.json`,
 `src`, `tests` and `ROADMAP.md`; dependencies are installed in step 2. Open
 PowerShell in that subfolder.
 
-For your existing Git checkout, apply `P0_C05.patch` from the rebuilt ZIP,
-based on checkpoint 4 commit `e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8`.
+For your existing Git checkout, apply `P0_C06_C07.patch` from the replacement ZIP,
+based on checkpoint 5 commit `cca3fb7b4a9efc0373ff02c11e2e59415651cba7`.
 Run `git apply --check` first; preserve `.git` and unrelated work. The full source
 folder has no Git history, so its revision may be null; your checkout supplies
 revision-linked evidence. See `START_HERE.txt` for exact application steps.
@@ -41,8 +41,8 @@ Expected: **26 Node/DOM tests pass**, typecheck/build pass, all **92** roadmap
 IDs validate, and progress reports `localChecks.status: passed` with
 `fresh: true`. Core scope explicitly leaves browser tests `not-run`.
 
-Progress should have two blocked checkpoints (P0.C01/P0.C05), three in review
-(P0.C02/P0.C03/P0.C04), 87 planned and none verified. A successful run does not change
+Progress should have two blocked checkpoints (P0.C01/P0.C05), five in review
+(P0.C02/P0.C03/P0.C04/P0.C06/P0.C07), 85 planned and none verified. A successful run does not change
 those statuses automatically. Use the JSON form; the short human summary omits
 blocked/in-review counts.
 
@@ -169,7 +169,7 @@ expecting the deterministic Node fixture ID `demo-workshop`.
   **Run browser checks**: expect **9/9** pass. These are isolated assertions,
   separate from the 26 Node/DOM tests and 6 Playwright journeys.
 - Open **Roadmap**, expand **P0**, and check P0.C01 Blocked,
-  P0.C02/P0.C03/P0.C04 In review and P0.C05 Blocked. Switch to DE and check translated state labels.
+  P0.C02/P0.C03/P0.C04/P0.C06/P0.C07 In review and P0.C05 Blocked. Switch to DE and check translated state labels.
   Test Lab results must not promote any checkpoint to Verified.
 - Return to EN, click **Reset demo** and confirm. Workshop and its entries
   disappear, leaving the two initial businesses and baseline amounts. The
@@ -228,3 +228,13 @@ is `outputs/p0-c05-checks.json`, separate from the main checks. Preview with
 must be blocked in a plain browser. Follow [PLATFORM_SPIKE.md](PLATFORM_SPIKE.md)
 for installed Windows/Android build and measurement steps. No installer/APK or
 successful native-device result is included in this source packet.
+
+## Replacement C06+C07 checks
+
+Run the core/probe commands above, then inspect Roadmap in EN and DE: 2 blocked,
+5 in review, 85 planned, zero verified. Read ARCHITECTURE.md / NEXT_WORK.md for
+twelve decisions and seven packets, and REPOSITORY_REVIEW.md / THIRD_PARTY_NOTICES
+for inspected scope and unresolved items. The JSON catalogs live under project/.
+This is planning/review content; no new finance screen is expected. Main money,
+businesses and session reset retain the previous expected behavior. A passing
+runner is separate from your acceptance of these records.

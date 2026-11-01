@@ -196,3 +196,11 @@ Final rebuilt source: main fingerprint `bb89fa657aa759d2436db63a121d1f769dd52d76
 fingerprint `eb3d1a6a513ede003cbc085b8a266691b8bac7daa04f9defbc961a50c20e1b7e`. Both runs passed, with base revision
 `e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8` and `gitDirty: true`. These identify
 prepared source inputs, not a native binary or approved device.
+
+## Current continuation after C06/C07
+
+The previous sections record the checkpoint 5 delivery and its blockers. The
+replacement C06/C07 plan is now In review; the Tauri candidate remains
+conditional. This probe source/fingerprint is unchanged and no new native run
+is claimed. Current progress is 2 blocked, 5 in review, 85 planned, zero verified.
+See [ARCHITECTURE.md](ARCHITECTURE.md) and [NEXT_WORK.md](NEXT_WORK.md).

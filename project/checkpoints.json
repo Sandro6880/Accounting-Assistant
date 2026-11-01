@@ -12,7 +12,9 @@
         "recordedOn": "2026-10-31",
         "record": "docs/BASELINE.md",
         "objective": "Inspect and reproduce the actual repository baseline without starting another checkpoint.",
-        "dependencies": ["0.1.0 source checkout"],
+        "dependencies": [
+          "0.1.0 source checkout"
+        ],
         "fixtureVersion": "synthetic-v1",
         "sourceFingerprint": "46618ad7ea1b9ee83f65c3ecd9b9b832b70ec7065232c44712d13b97c1a7eb8f",
         "commands": [
@@ -56,7 +58,9 @@
         "inputTree": "a717c0979147042deeaddb5b109ee5e0f8fbdfb9",
         "inputTreeKind": "local P0.C01 index snapshot, not a commit",
         "sourceFingerprint": "d7468a6a1cd7d17cdcc9634de6aa734cb90c6a8589202333f0249fd3864508c6",
-        "dependencies": ["P0.C01 source inventory available; browser verification remains blocked"],
+        "dependencies": [
+          "P0.C01 source inventory available; browser verification remains blocked"
+        ],
         "dependencyDecision": "Owner explicitly deferred verification and authorized P0.C02. This supersedes the earlier ordering instruction without changing P0.C01 evidence or verifying that dependency.",
         "fixtureVersion": "synthetic-v1",
         "commands": [
@@ -96,7 +100,9 @@
         "objective": "Define wholly fictional sole-trader, planning and third-business profiles, exact EUR/USD scenarios, platform test matrix and a bounded phone capture target, with owner-side test instructions.",
         "inputTree": "8f57b216560c636323c37cc104490d6ffbaee8bd",
         "inputSourceFingerprint": "7697b4c1939f2b6dfdd34f318f6995c9a28520a3d17e37bade1626489a59fb47",
-        "dependencies": ["Owner's checkpoint 1/2 commit; P0.C01/P0.C02 evidence remains pending"],
+        "dependencies": [
+          "Owner's checkpoint 1/2 commit; P0.C01/P0.C02 evidence remains pending"
+        ],
         "dependencyDecision": "Owner explicitly authorized the next checkpoint and requested local testing instructions while earlier verification remains deferred.",
         "fixtureVersion": "synthetic-v1",
         "catalogVersion": "p0-c03-v1",
@@ -142,11 +148,18 @@
         "inputTree": "72c1468e9b5080172e85e088a99caf1fce94e3bb",
         "inputSourceFingerprint": "01a12dcf32075e5a1363f9a641d61d07c8d2d7e5e78177dfb8effa561a66dfdf",
         "objective": "Define the initial Austrian E/A actual-expense method, fictional VAT cases, support/exclusions and first report/year target using current official sources.",
-        "dependencies": ["Owner's checkpoint 3 commit and fictional profile definitions"],
+        "dependencies": [
+          "Owner's checkpoint 3 commit and fictional profile definitions"
+        ],
         "dependencyDecision": "Owner reported the previous delivery working and requested continuation; exact prior test scope was not supplied, so earlier checkpoint evidence/statuses are preserved.",
         "fixtureVersion": "synthetic-v1",
         "sourceReviewDate": "2026-10-31",
-        "commands": ["git fetch origin", "npm ci", "npm run check", "npm run progress -- --json"],
+        "commands": [
+          "git fetch origin",
+          "npm ci",
+          "npm run check",
+          "npm run progress -- --json"
+        ],
         "results": {
           "inputCoreChecks": "passed: 26 Node/DOM tests, typecheck, build and all 92 manifest IDs",
           "officialSources": "12 Austrian/EU guidance/reference URLs with checked dates; not an exhaustive legal consolidation or adviser sign-off",
@@ -229,16 +242,94 @@
       "phase": "P0",
       "summary": "Record accepted architecture decisions and the next bounded backlog.",
       "proof": "dependencies and first ready work packets are explicit.",
-      "status": "planned",
-      "evidence": null
+      "status": "in-review",
+      "evidence": {
+        "revision": "cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+        "inputTree": "49a515eb64d3a10c62c8574d11d843e5bd4a2fdc",
+        "recordedOn": "2026-11-01",
+        "record": "docs/ARCHITECTURE.md",
+        "catalog": "project/architecture-plan.json",
+        "objective": "Reconstruct the missing accepted planning directions and seven bounded work packets without activating new runtime features.",
+        "dependencies": [
+          "Checkpoint 5 committed by owner; earlier browser/device/review evidence remains pending."
+        ],
+        "dependencyDecision": "Owner previously requested C06+C07 with verification deferred; current request repairs that failed delivery only.",
+        "fixtureVersion": "synthetic-v1",
+        "inputSourceFingerprint": "bb89fa657aa759d2436db63a121d1f769dd52d7603f9eb2a57f2b28be60bddb5",
+        "probeSourceFingerprint": "eb3d1a6a513ede003cbc085b8a266691b8bac7daa04f9defbc961a50c20e1b7e",
+        "commands": [
+          "git fetch origin",
+          "git ls-remote --heads --tags origin",
+          "npm ci",
+          "npm run check",
+          "npm run spike:install",
+          "npm run spike:check",
+          "npm run progress -- --json",
+          "Bounded Git object/source/dependency/artifact inspection and clean-base git apply --check"
+        ],
+        "results": {
+          "inputCore": "26 Node/DOM tests, typecheck, build and 92-ID validation passed.",
+          "portableProbe": "Ten tests and separate build passed; device/native results not claimed.",
+          "definitionOrAudit": "Twelve existing ADR IDs and seven roadmap packet IDs retained; conditional native adoption and explicit ownership/transaction/recovery contracts.",
+          "runtime": "Financial source, tests, fixtures, probe, dependencies and LICENSE unchanged; EN/DE roadmap status text updated."
+        },
+        "review": "Planning directions prepared for review, not persistent-adapter implementation or native/legal/device acceptance.",
+        "manualEvidence": "Source/definition review only. No new browser/native-device/identity/rights verification asserted.",
+        "limitations": [
+          "Replacement is reconstructed, not byte-identical to the missing archive.",
+          "Earlier P0.C01-C05 evidence and status are retained; no checkpoint verified/released.",
+          "No P1 implementation, real-data activation, native package or official tax output.",
+          "Final runner reports identify dirty checked source separately; acceptance/release is not inferred from test totals."
+        ],
+        "nextDecision": "Review outstanding P0 findings. P1.C01 is next only after acceptance or a later explicit bounded continuation."
+      }
     },
     {
       "id": "P0.C07",
       "phase": "P0",
       "summary": "Review actual tracked content, genuine history, contributor identity, MPL-2.0 scope and source notices, third-party rights and source/artifact privacy. Confirm the standard LICENSE is present and unchanged.",
       "proof": "inspected revision, refs, artifacts, rights questions and unresolved items are recorded; a documentation package cannot mark history clean.",
-      "status": "planned",
-      "evidence": null
+      "status": "in-review",
+      "evidence": {
+        "revision": "cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+        "inputTree": "49a515eb64d3a10c62c8574d11d843e5bd4a2fdc",
+        "recordedOn": "2026-11-01",
+        "record": "docs/REPOSITORY_REVIEW.md",
+        "catalog": "project/repository-review.json",
+        "objective": "Reissue the missing combined C06+C07 download and retain bounded source-review limitations.",
+        "dependencies": [
+          "Checkpoint 5 committed by owner; earlier browser/device/review evidence remains pending."
+        ],
+        "dependencyDecision": "Owner previously requested C06+C07 with verification deferred; current request repairs that failed delivery only.",
+        "fixtureVersion": "synthetic-v1",
+        "inputSourceFingerprint": "bb89fa657aa759d2436db63a121d1f769dd52d7603f9eb2a57f2b28be60bddb5",
+        "probeSourceFingerprint": "eb3d1a6a513ede003cbc085b8a266691b8bac7daa04f9defbc961a50c20e1b7e",
+        "commands": [
+          "git fetch origin",
+          "git ls-remote --heads --tags origin",
+          "npm ci",
+          "npm run check",
+          "npm run spike:install",
+          "npm run spike:check",
+          "npm run progress -- --json",
+          "Bounded Git object/source/dependency/artifact inspection and clean-base git apply --check"
+        ],
+        "results": {
+          "inputCore": "26 Node/DOM tests, typecheck, build and 92-ID validation passed.",
+          "portableProbe": "Ten tests and separate build passed; device/native results not claimed.",
+          "definitionOrAudit": "14 commits / 177 blobs with bounded source patterns, hashes, license comparison and unresolved questions recorded.",
+          "runtime": "Financial source, tests, fixtures, probe, dependencies and LICENSE unchanged; EN/DE roadmap status text updated."
+        },
+        "review": "Fresh bounded repository audit prepared; rights, dependencies, generated templates, signatures and excluded scopes remain unresolved.",
+        "manualEvidence": "Source/definition review only. No new browser/native-device/identity/rights verification asserted.",
+        "limitations": [
+          "Replacement is reconstructed, not byte-identical to the missing archive.",
+          "Earlier P0.C01-C05 evidence and status are retained; no checkpoint verified/released.",
+          "No P1 implementation, real-data activation, native package or official tax output.",
+          "Final runner reports identify dirty checked source separately; acceptance/release is not inferred from test totals."
+        ],
+        "nextDecision": "Review outstanding P0 findings. P1.C01 is next only after acceptance or a later explicit bounded continuation."
+      }
     },
     {
       "id": "P1.C01",

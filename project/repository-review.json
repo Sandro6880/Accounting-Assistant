@@ -1,0 +1,4405 @@
+{
+  "schemaVersion": 1,
+  "reviewVersion": "p0-c07-download-reissue-v2",
+  "recordedOn": "2026-11-01",
+  "status": "in-review",
+  "scope": "Fresh bounded audit for a replacement C06+C07 download, not recovery of the missing archive bytes.",
+  "repository": "https://github.com/Sandro6880/Accounting-Assistant",
+  "baseRevision": "cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+  "baseTree": "49a515eb64d3a10c62c8574d11d843e5bd4a2fdc",
+  "baseSourceFingerprint": "bb89fa657aa759d2436db63a121d1f769dd52d7603f9eb2a57f2b28be60bddb5",
+  "probeSourceFingerprint": "eb3d1a6a513ede003cbc085b8a266691b8bac7daa04f9defbc961a50c20e1b7e",
+  "nonShallow": true,
+  "advertisedRefs": [
+    "cca3fb7b4a9efc0373ff02c11e2e59415651cba7\trefs/heads/main"
+  ],
+  "localRefsAtInput": [
+    "refs/heads/main e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8",
+    "refs/heads/work/p0-c05-rebuilt e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8",
+    "refs/heads/work/p0-c06-c07-download-reissue cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+    "refs/remotes/origin/HEAD cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+    "refs/remotes/origin/main cca3fb7b4a9efc0373ff02c11e2e59415651cba7"
+  ],
+  "counts": {
+    "commits": 14,
+    "trackedFiles": 134,
+    "historicalPaths": 134,
+    "uniqueReachableBlobs": 177,
+    "utf8BlobsScanned": 132,
+    "binaryBlobsHashed": 45,
+    "binaryFiles": 50
+  },
+  "history": [
+    {
+      "commit": "59614ef8077b24014e8652efdbe76aa8c096de0b",
+      "parents": [],
+      "authorDate": "2026-10-29T11:00:39+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "GitHub",
+        "emailSha256": "3c205d8fc749f72977b9331e3179773c315bb1f4860c366de2abe9ec9337730b",
+        "emailClass": "other-not-exported"
+      },
+      "signatureMarker": "E"
+    },
+    {
+      "commit": "4e723a6d7829189b898ac7a434d735646a6fef70",
+      "parents": [
+        "59614ef8077b24014e8652efdbe76aa8c096de0b"
+      ],
+      "authorDate": "2026-10-29T11:24:56+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "2e0e3112429cc43f68b501b64818ba78ae44f481",
+      "parents": [
+        "4e723a6d7829189b898ac7a434d735646a6fef70"
+      ],
+      "authorDate": "2026-10-29T11:26:14+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "8fb90ad7c9a84132531d4d414c8ed85c1be8a746",
+      "parents": [
+        "2e0e3112429cc43f68b501b64818ba78ae44f481"
+      ],
+      "authorDate": "2026-10-29T14:18:07+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "595be800044bd952d8e6b086c04b5c7a0ccfe5ef",
+      "parents": [
+        "8fb90ad7c9a84132531d4d414c8ed85c1be8a746"
+      ],
+      "authorDate": "2026-10-29T14:18:55+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "170f8b42dc09d978051c6c28e70be490e4cd86e5",
+      "parents": [
+        "595be800044bd952d8e6b086c04b5c7a0ccfe5ef"
+      ],
+      "authorDate": "2026-10-29T14:20:54+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "a94b2301442a77717f07d56449ab0373d9c7d542",
+      "parents": [
+        "170f8b42dc09d978051c6c28e70be490e4cd86e5"
+      ],
+      "authorDate": "2026-10-29T15:24:30+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "7b9a10eb05c73169b0a0e3db723a54161ca76ffa",
+      "parents": [
+        "a94b2301442a77717f07d56449ab0373d9c7d542"
+      ],
+      "authorDate": "2026-10-29T15:37:50+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "e2ff5dc0866e9404ed76a037cee620eec88f54a7",
+      "parents": [
+        "7b9a10eb05c73169b0a0e3db723a54161ca76ffa"
+      ],
+      "authorDate": "2026-10-29T15:43:01+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "9b7741ccf2d6a6538781c9684d2130a92a99660a",
+      "parents": [
+        "e2ff5dc0866e9404ed76a037cee620eec88f54a7"
+      ],
+      "authorDate": "2026-10-29T15:57:08+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "GitHub",
+        "emailSha256": "3c205d8fc749f72977b9331e3179773c315bb1f4860c366de2abe9ec9337730b",
+        "emailClass": "other-not-exported"
+      },
+      "signatureMarker": "E"
+    },
+    {
+      "commit": "e681732ec7f301a761efd4427eeea2b706e4172c",
+      "parents": [
+        "9b7741ccf2d6a6538781c9684d2130a92a99660a"
+      ],
+      "authorDate": "2026-10-31T21:44:46+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "ca8e73d876c881b8631e20b5e6ff212c62e1b2f2",
+      "parents": [
+        "e681732ec7f301a761efd4427eeea2b706e4172c"
+      ],
+      "authorDate": "2026-10-31T22:30:04+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8",
+      "parents": [
+        "ca8e73d876c881b8631e20b5e6ff212c62e1b2f2"
+      ],
+      "authorDate": "2026-11-01T09:12:45+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    },
+    {
+      "commit": "cca3fb7b4a9efc0373ff02c11e2e59415651cba7",
+      "parents": [
+        "e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8"
+      ],
+      "authorDate": "2026-11-01T09:34:05+01:00",
+      "author": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "committer": {
+        "label": "Sandro6880",
+        "emailSha256": "88bd93b83a82e7984bbaff4c2ad65356953f52efd8fc24a13fde93f2658587f5",
+        "emailClass": "github-noreply"
+      },
+      "signatureMarker": "N"
+    }
+  ],
+  "trackedInputs": [
+    {
+      "path": ".editorconfig",
+      "mode": "100644",
+      "type": "blob",
+      "object": "192c070cf03df5d7af0521a1073c0919cb46f742",
+      "size": 156,
+      "sha256": "251db34e2e35b25bcd7888df2be0f92d56e0e204a405e1374e691710ed583827",
+      "utf8": true
+    },
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "object": "0aa9f055b0ef79a2add95dec211a2a81c01c1fbd",
+      "size": 539,
+      "sha256": "25baaa1e870fcb538e4ba6b487136e34b087ae86f4d274ee649211f0e315241f",
+      "utf8": true
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "mode": "100644",
+      "type": "blob",
+      "object": "2eb03b2094aff143ef4bd7807bc355aad2008d03",
+      "size": 916,
+      "sha256": "e9276c4d4413bb6bb72f0804c336952ed5ce02a1030bcf17dc709c1e5722caf0",
+      "utf8": true
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "object": "7a5a163a1923bd1e09c92e261ac9ab254ee2af33",
+      "size": 5244,
+      "sha256": "ff0ab691a9b6090d2c62e774df0d30267246b0b94d58e1ef6b2480bafa3511ab",
+      "utf8": true
+    },
+    {
+      "path": ".node-version",
+      "mode": "100644",
+      "type": "blob",
+      "object": "ce62013c39aed63f656bb7ae41bdd45d81163ffe",
+      "size": 8,
+      "sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "utf8": true
+    },
+    {
+      "path": ".nvmrc",
+      "mode": "100644",
+      "type": "blob",
+      "object": "ce62013c39aed63f656bb7ae41bdd45d81163ffe",
+      "size": 8,
+      "sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "utf8": true
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "6eb82357b1129a5736df92d88f29c6f17dc57c27",
+      "size": 2062,
+      "sha256": "3b532f9968ccd96579bedfd30e5a2e37fda385149c8bba3863f3452a72374d40",
+      "utf8": true
+    },
+    {
+      "path": "COMMIT_GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "2f4a5a62ff396b6a2391d21ddbe8b83dcca9d603",
+      "size": 4790,
+      "sha256": "7ec52ee08045fe7f16634bb7be04953bbc2453ead6863a7e346f0737ceeec0aa",
+      "utf8": true
+    },
+    {
+      "path": "GITIGNORE_SETUP.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "0332749d2951cadc28635a596736c241b4509ad6",
+      "size": 3114,
+      "sha256": "40921302c4c13a4538f835067c4f04c77f51487f354e0dc6a4047e592c6e7f4d",
+      "utf8": true
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "object": "d0a1fa1482eea82e19510e7920cbe3a03e41f691",
+      "size": 16726,
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "utf8": true
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "eb5d5329ea18ae253ec42d98c22f4a19479fc49d",
+      "size": 18512,
+      "sha256": "e014779fdd60d58d4ca6c2af8e7a808b73fe7dadc2567c1a052fb6a10c449665",
+      "utf8": true
+    },
+    {
+      "path": "ROADMAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "6581de3ba90ce9d5b4ccf0d88fafe78f06ce3567",
+      "size": 27081,
+      "sha256": "a4930c7f6c0cfc691fe7e6bf3439f7aff866a1aa9c3cd884fb0eb5592ac045e5",
+      "utf8": true
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "919537ceb4b29050c87a2eca968c3ce9e4ee33a2",
+      "size": 7725,
+      "sha256": "8df00345098f73fef89523b2d881493e8b6699fe503b52e2424fbd684357e372",
+      "utf8": true
+    },
+    {
+      "path": "docs/ACCOUNTING_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "a543188a6528b0b50f273359e51875e94dff28c3",
+      "size": 14031,
+      "sha256": "4f921aa949b8829b8a1f19a8cda39d4fac24dff913e32b1166bc0639a42c964b",
+      "utf8": true
+    },
+    {
+      "path": "docs/AGENT_HANDOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "337b103c4bde5fd89fa3861152e4b900b771003d",
+      "size": 3574,
+      "sha256": "a19f423b24d86f3d02ece8c25283407f6d97c81f544a2ba95bbde94d2cce2acc",
+      "utf8": true
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "4171dcd36c29bbbe7d883f50944cdde683adf3d2",
+      "size": 4247,
+      "sha256": "f39b9558977c883ff83f6994d0e62bc52772a484e714c63ac2d2104fa45427aa",
+      "utf8": true
+    },
+    {
+      "path": "docs/BASELINE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "3cba117672bb78843e613699682eef66fbfd26e5",
+      "size": 11168,
+      "sha256": "e683991dafc240f55da85d33afd39a28abd428399986a63123776c02e2607396",
+      "utf8": true
+    },
+    {
+      "path": "docs/CAPABILITY_AUDIT.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "3bb8e2e79a2a54bc9e2799809a49b796266bafd8",
+      "size": 16582,
+      "sha256": "06b0cca4d70b3dc348f7a077dec4804532044adadd2f9bf90d579fac6c56aa15",
+      "utf8": true
+    },
+    {
+      "path": "docs/LOCAL_TESTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "d949cae4e1cf2929eeaa5d9e79a253389714a817",
+      "size": 11147,
+      "sha256": "d5fb472c0444dbd52581cf7f41105136279afdad574e9f99f85e9a5a37445e72",
+      "utf8": true
+    },
+    {
+      "path": "docs/PLATFORM_SPIKE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "3a58e8923f5c911458ccd4fce9007c65b5fc2a3a",
+      "size": 11492,
+      "sha256": "88b8121da21c8357b5b12417a05b2e1a3db6d801010848d84f8a65c5cbcfbc40",
+      "utf8": true
+    },
+    {
+      "path": "docs/PLATFORM_SPIKE_RESULTS_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9790d6eb791591d1ad68a1110b5472a6789b7ee5",
+      "size": 2979,
+      "sha256": "1c493de30b06d88a6b13fb7e868442ba02e7cc418915fe4927db8395b9c5a43a",
+      "utf8": true
+    },
+    {
+      "path": "docs/SYNTHETIC_PROFILES.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "cebe44c046ca30adac7e79aa59360d366454e998",
+      "size": 12204,
+      "sha256": "98737454107744770c14892384256c2af77b9669b224f5a59597ad5b75e0c474",
+      "utf8": true
+    },
+    {
+      "path": "docs/TEST_REPORT_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f0a87e9626aaa7917083ff5a526b29a2fff61435",
+      "size": 2836,
+      "sha256": "9454ee0d364639f8641cfd3d2f872231d120997df56f1df78f44f19b0a507a8e",
+      "utf8": true
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "e584924286bc9d7ca89ddb6dcfcd305082b5776b",
+      "size": 6199,
+      "sha256": "219ed51c7ec9d1fdcceb79951186b9afbbf9d236df3fdf4d1dbcf298b19bdbba",
+      "utf8": true
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "object": "196e61084ae6e3e0d13c26a8e730075c916f1759",
+      "size": 500,
+      "sha256": "25df632d2b75fdbe1ffe9d3d1fb538afd5b2ccef2764c9f4a167e639bd6eb193",
+      "utf8": true
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "0bfe721eebb47952805fcbeba89f92cee80f327a",
+      "size": 84511,
+      "sha256": "2682e24363c6db5abff2e7ebb25a099b74d672ce22ed3a9d4e35c441c97a5864",
+      "utf8": true
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "d0e1e71ac1053808110fe129b31b886c4637dfeb",
+      "size": 1344,
+      "sha256": "edb7f342025a997c2e16431b1f4c55a790973569e7c60dafc440ed1ab22ff812",
+      "utf8": true
+    },
+    {
+      "path": "playwright.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f5de5997f04f72f63cb6857c1f408f7df418f73a",
+      "size": 1079,
+      "sha256": "7173ad87c2dee49fffa8e3b8b333bfd49b0b2c726adbbc1b50ba23fc3ea0e387",
+      "utf8": true
+    },
+    {
+      "path": "project/accounting-scope.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "4cb4a9c2816187530a744ecfa6fe6d19d1bcd8a8",
+      "size": 24401,
+      "sha256": "373b1188322efb93d85cf0afe6688871c8ef9a2efa680f9b43bad2bb1ab7f567",
+      "utf8": true
+    },
+    {
+      "path": "project/checkpoints.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b3bffc9b9f401441d0aa362757fc6333f00b8be3",
+      "size": 47169,
+      "sha256": "8b8946907c38e425cb9907b8c536b90883059acf16d44b88d8c78422fee6813f",
+      "utf8": true
+    },
+    {
+      "path": "scripts/check.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c0ffd3739711fc4c2df629e7b618ff3b601e6c97",
+      "size": 3109,
+      "sha256": "2967f32f88fec2f47c35d12379865c9c29c9899f85dd2e96756afb30ae36d5f2",
+      "utf8": true
+    },
+    {
+      "path": "scripts/progress-lib.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b19ec6cc78ddf779d6a093515e456f3f4fccf84f",
+      "size": 2739,
+      "sha256": "e9779f98e730e388f296df5336a864c6aac0689a0a84f13da52d2c419110e4be",
+      "utf8": true
+    },
+    {
+      "path": "scripts/progress.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "7b3f82c85e4a69a9c84a9475cda3d759b16ac2f2",
+      "size": 2100,
+      "sha256": "293d4c9fda20f93a59a5916a0d5100b2b0df1ec45acb62ddfab5807b45c12b14",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b96906f6a7fd451d3317ddcb6a12413eacf3f39c",
+      "size": 57,
+      "sha256": "d3e5769245bf7a30443b95c5a6b6583426cb76a4a4403207055ab00e908fa82f",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "object": "0720d1364154dbc4c72058b077d8a45c1de93966",
+      "size": 3904,
+      "sha256": "2dcff78fc6941dfcbcfd50238775b3cf7c05971739980722239c0cc469f140da",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "object": "15500ffde1168fddc2046db187443f9f4681d6b9",
+      "size": 3267,
+      "sha256": "868497e626839759905cc0fe4a65f6dbc5feca0cd38e68ac5d6691292888945f",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "7d655a4eb83cbc5f58247037b4c3364a90e784bf",
+      "size": 33504,
+      "sha256": "5d7ba42b469650c55371283b41a7ee0ee8fd745f0577a8b902634311ed1cd83e",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "87753a1ccade7da8a44f7809ffe03ab9292e06e9",
+      "size": 831,
+      "sha256": "7accbdcf81de0dc7cf51366307534c515c8bd701a47dc30028d2ba87398294e7",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/rust-toolchain.toml",
+      "mode": "100644",
+      "type": "blob",
+      "object": "a455478f9d1c9962e9bd1d4bfdab1fe40dd731a1",
+      "size": 86,
+      "sha256": "a095b975fe9113ba585431913c05881ca609715d2651af7d88612369f998067f",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/scripts/android-prepare.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "4c741aa363b4c4c8ce33807a521301802f5c1d67",
+      "size": 2815,
+      "sha256": "fe6e95c8ff4d1d87c6994908798618409dac417cb4b0d56c0bd470e8660d82bb",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/scripts/check.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9958caa083dcf473b76df791c4c7fabd50f9e5ae",
+      "size": 2369,
+      "sha256": "27abbabd6d87ec01b87e56962f4ead46b825d97e64f92249c00ac149c8c5646b",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/scripts/fingerprint.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "6f6434ace4e6b4c9279f7ce2ccd8fb47accca02c",
+      "size": 1342,
+      "sha256": "6ad4f620f4e7f110637cb80cded4b8af3cad740723843f8e5e55ed827dc34ba4",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/Cargo.lock",
+      "mode": "100644",
+      "type": "blob",
+      "object": "ddf485c6cd46dbe2a31d54a1be2600755b35bd24",
+      "size": 117409,
+      "sha256": "ae108fd7f57847e96c3a65d014e9d449a06ae28346590c560c83070a7a40b14f",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "object": "fa74d5a716ca2cd220afa81c38fa9704061e6093",
+      "size": 515,
+      "sha256": "61c2171097896a2dfcdce1fdfeda869a580f7dc47b3efb63176cd01da1d74eb5",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/build.rs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "a4f7df5e1c05394a07ca5851515e35ce4241d9c1",
+      "size": 71,
+      "sha256": "41cba3cb2453b10bd2da2428c6fc57c676cd087ac53ff2cff09cb5073ce12ada",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/capabilities/probe.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f5ef744fb07f794f837faf0ddc076456ce3e28c3",
+      "size": 630,
+      "sha256": "f2e865a7ceb0123aa0d1fc7c6090f6563107e0543d5eaef625e3b5047c8d40cc",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/128x128.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b2edde16684e18efd1d56856506e62c6afecdfb8",
+      "size": 1201,
+      "sha256": "421a8bde4c6c206744afbe319ebd803eba7b2b23216a53af69f73f5158f596b2",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/128x128@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "d651472a92c77ba05ea99999b02ae61d0b638de0",
+      "size": 2208,
+      "sha256": "c745e125b78bbc4db4da014d49c2d51c11dda45715d25416acd6710133f34e53",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/32x32.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "6e644201c102170170c3ae179689b617f51a6fac",
+      "size": 375,
+      "sha256": "add421d1407f0042247ba360b0e683018fa78e843bbf3e07f023d56d882988b5",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/64x64.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "67d7b8a2a19344d47ff0b6527a5c78e7724a3168",
+      "size": 709,
+      "sha256": "3ffa9b1083f33ce027fa22dfa3e9bd0f9f48c7b192161bbc1a6446004201580e",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square107x107Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b4e3c5537f4218e7b66f9c334eb5c26ab4e06336",
+      "size": 1047,
+      "sha256": "1a65f85d9ccb0a7022ca24ef597056041bf61fb5a685870d7ae397ae948edbb5",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square142x142Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "55e2a30db31ec61ec67e0fe90affe17932ac28c3",
+      "size": 1357,
+      "sha256": "6da245d560e52baedf18ce5c22776924949be73d6a09cb09a86c6443bec1641a",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square150x150Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "bb8693f01f7603325cdf8c6dd1e6cd2b8c902585",
+      "size": 1464,
+      "sha256": "c35e687a8f909f7ebc3a3a6f8976362f1e2038ea13fdd705d3dfcf2b6413e6ac",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square284x284Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "5ae12c611bc1e7612925f9c7d60070b60bf82271",
+      "size": 2595,
+      "sha256": "4ca0378e7b5edbe95262f9480718a7599bd5faa7553e0f365ba4c147b2d5e402",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square30x30Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "4d2fd98193ba129a46aab007a31d53c8fc82184d",
+      "size": 429,
+      "sha256": "55e2d50ae28c6d9b6e5d43fa2ea8fc057fc61a62a8814729ac4a57d4c6f34142",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square310x310Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9826b6e3024f4f268fb31e3a09331c095fae8b5f",
+      "size": 2802,
+      "sha256": "6218f71d81989b65fb98f97f98137d62389c25549fc6e1eae8ae287bce6b99fd",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square44x44Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b747d10d855144052f11ee82d023bfa8c3480daf",
+      "size": 556,
+      "sha256": "8fa3bf18eabb1b9d62c9a2500d1238e8f38ef0f72288a47d0ba8455f9bbb82cf",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square71x71Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c9c521ff59c0ceae0aeea898bf3ed5a9f4015678",
+      "size": 801,
+      "sha256": "284a27889af0c8b7b6ae4ccf67b82159ef241ea036ad04dc09fdb90d52dc866a",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/Square89x89Logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "aa9d78e8f0fd6f52103f1cb26846a60ad511be0f",
+      "size": 881,
+      "sha256": "2f0e1a7743f4f8421a1f9a4d57db7d1534917dfc58f2c8b2361e685a5cb3e719",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/StoreLogo.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "5766b9a92897170d97dcf44f404e98c728a46fb3",
+      "size": 589,
+      "sha256": "ddfbc40df35837dadbaa646cb007df2537fb6ee8fee93069d575abee6e1af867",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml",
+      "mode": "100644",
+      "type": "blob",
+      "object": "2ffbf24b68988bd935f5c695a59753fcb1a5de0e",
+      "size": 261,
+      "sha256": "760d4b8a06bf7163dd010c33ad2cac9e4a75fa0177afaba042f83e311eef0c3e",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "46cefa9aaa75c8630bd9e0b57b93d53654c9bf73",
+      "size": 1403,
+      "sha256": "f9ae1cf3e62e4eb79e4c4a3c3d66213476758238ae03ea1122e81c61e92956a6",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "a0930e46188d9cffebd7dd79a1a99b275d374ac9",
+      "size": 1530,
+      "sha256": "b0538182b2cd4a7e3655ff3a0d7a088c97a1013f0760ba04ed4e981e1ba36e3b",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "dcd47bb50c41d366780153b424aa2f1f2160f70a",
+      "size": 1059,
+      "sha256": "08feedc4ed2676d1aa52dfe5859304c96feedbd23eda3e168f0697b87948fa84",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "539ee892020bd3280d65b430c5d79d2eb277fe0e",
+      "size": 1032,
+      "sha256": "52e9bdcc7d6cdcf24576ec51938eefeaf8c95ff4a4bb8dcdba0fc39928ea40b9",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "5d3b5f7fa6f99150c0981db923503a723290b95b",
+      "size": 1011,
+      "sha256": "ec6817d5b03a8d18f0cd266ee83c6dc5b16c3294cfc1388fcf35582c1b2cdc80",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f4807c631fd8f5677afd141490421118a7480044",
+      "size": 805,
+      "sha256": "275655240cf26f212d2896c9a14e3843f08ee7c88551b7727abd3d9728f9d22c",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "e8a159e91be901f9bbeba4ae09be6ff4258e6d35",
+      "size": 1958,
+      "sha256": "dde4f3486de8ac8ec1edcb482a837bc92cc4cb6d84d7471a1cf9a31026eae8c8",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "772936b9a80479237f3483f3d9c264bcd330d086",
+      "size": 1964,
+      "sha256": "0958d1762dc622b74d3d6b04dc246bd2e0273603284fd5b736dbd5eb3f38aa20",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "cf330dbb7f586c84226d3f461f62b9ba409cdf52",
+      "size": 1163,
+      "sha256": "d82af95abeee48bd6e63ac108285bd944773cdee3238c2f04f9adb9d719cdd9f",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "6606d7158af084fe332e8e9af9bf1c1914766d79",
+      "size": 2712,
+      "sha256": "834befd8b9de134d92e7e783203e8fd9977d33ef6b5bd148c89c707922f542f0",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "1208e47ee989613befdda5f670afff6d4e87d01b",
+      "size": 2954,
+      "sha256": "6a0ffc3fde6cf8f44c55f307e978e7ce660f5cc4ea2302eabf47ebf7fbeea6d2",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "63e12ee8eb497a11ab3a751c6a85b3ce1ada81ce",
+      "size": 1497,
+      "sha256": "cdac85bd64f114da98f816d3fd9eb9c8409b4f77ed071e5cf176d1ce2aef6688",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c7efb476c726c154ad4a70cd3e7a0dd272cad854",
+      "size": 3614,
+      "sha256": "9f976824bc97ef0f0058dbdb207e9a434c0688e4f13524816f6aea1e5a5722bb",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "18bfb0da0ce06bb1ac0dd39fd27edadbfab40bad",
+      "size": 3937,
+      "sha256": "cacf8bc709117c711f5123d9cbadab4798013269acfb995af732d84de5101623",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "8b1e746b35ed0d2cbf176c0aee58a21613db8315",
+      "size": 2038,
+      "sha256": "fa2c4d3fbc3a03e2850c30d073edb9625f2c5f15e139cdd8aac28b6e265ad3ff",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/android/values/ic_launcher_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "object": "16cdd5aab85549c6464236aa56e2ec77f8fcc4c3",
+      "size": 118,
+      "sha256": "b1c42868a1777ed1cf61108b506ffc91d0a826318d8516e36cf8f76fab8c4ced",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/icon.icns",
+      "mode": "100644",
+      "type": "blob",
+      "object": "433feadecc00312fe7cf973d3dd010bfbe6df4f4",
+      "size": 29777,
+      "sha256": "35b1a63fd17b274efb47b8bde410d06fe238decd1d4419c7415d46dffbc2aceb",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/icon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "object": "e04423edfbb0590bb2170cbf6d8f2926daa31b32",
+      "size": 5181,
+      "sha256": "62e7cf6992a7e2aac5e6240b3eae066f49064062b66d12f4d1e5a7e6387f2329",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "d5f6062be76e4990501816f038cb837398d38e82",
+      "size": 4748,
+      "sha256": "e9da532f4470519e0bfa4f39597fc44b99a9fe01fc2c32a32bdb76494e13f7f9",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "cb681e95eb6638e07c4eb3c998ca25ea46b79dd3",
+      "size": 317,
+      "sha256": "d0988c104c485dccec00f88fcd6f6ecf6c67f5cb30aa5a1e23a805298e6baa70",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "908b54ef113dac1899c5669af4ee97042e193c9e",
+      "size": 469,
+      "sha256": "a2c953a920c0498016b14e4c476b6c51635524eb2ddaa7bdcda397b618622be3",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "908b54ef113dac1899c5669af4ee97042e193c9e",
+      "size": 469,
+      "sha256": "a2c953a920c0498016b14e4c476b6c51635524eb2ddaa7bdcda397b618622be3",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "28927ce4989b91127f0eeb5ac3e47078ac4c9e74",
+      "size": 657,
+      "sha256": "8a0a8ae534a0e7fb7455baf7a7a41689e8e5172628c5775bfc53cd515c9e2c1a",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "2cee49470340a66c4ce1c2a49347b136a5dcacbb",
+      "size": 416,
+      "sha256": "4ffe40ed5b2371b7ec0db56b117dd6918a1b8811dd909fbd6c8451bbfda876d7",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "65b61c82f2990803fe4ad2d76937f5a5e123027e",
+      "size": 647,
+      "sha256": "b1bbdedf77d6f461397c8216b61f1db146c4fa71043b7cadc2fa8f1c5e06263e",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "65b61c82f2990803fe4ad2d76937f5a5e123027e",
+      "size": 647,
+      "sha256": "b1bbdedf77d6f461397c8216b61f1db146c4fa71043b7cadc2fa8f1c5e06263e",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c56264d3820985dc8ea3bbebf05300cfdf2b6bbd",
+      "size": 869,
+      "sha256": "0556d222b4ba53532bb599821b6440bcb487f073cc663f7c8bd11734f9f5b75f",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "908b54ef113dac1899c5669af4ee97042e193c9e",
+      "size": 469,
+      "sha256": "a2c953a920c0498016b14e4c476b6c51635524eb2ddaa7bdcda397b618622be3",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "da0c8428f9203b4812cb60ac378565111adb624f",
+      "size": 802,
+      "sha256": "7294effb2ee384fdf698a6838ef85cd89777a8e642af5179b6169e71fd29b379",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "da0c8428f9203b4812cb60ac378565111adb624f",
+      "size": 802,
+      "sha256": "7294effb2ee384fdf698a6838ef85cd89777a8e642af5179b6169e71fd29b379",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "eadcd23d39fe31338465fa895f9f2d7e870333fe",
+      "size": 1184,
+      "sha256": "985e8713cdd8b2d5a6b6d53171a0127acfc7e5f5c318651ba7cfb70e98b8523f",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-512@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "26c5f33363d45db19ccf7fdd779bc70af0ec20ac",
+      "size": 11405,
+      "sha256": "eb736a8395a886c0b81b8fcfb7f3d0debfa5859444de546fb87ab66d7cd1c42e",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "eadcd23d39fe31338465fa895f9f2d7e870333fe",
+      "size": 1184,
+      "sha256": "985e8713cdd8b2d5a6b6d53171a0127acfc7e5f5c318651ba7cfb70e98b8523f",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "aba2bdcb4312c3277a49ee36590fd31bc4b25a33",
+      "size": 1616,
+      "sha256": "81df11961417bf119d37123634e988fb650aa50c1f6e2203b05326d50de6a287",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "0a8048d9e89ea0447ef7c113ee2758cb009a7f53",
+      "size": 745,
+      "sha256": "a5e1879bb114aaa3893a1d1c0eb857a811aff4959764bbf8a2ae474aec1e376f",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "797be5fb7a65cc6a613fe18f91d40173e82548fc",
+      "size": 1393,
+      "sha256": "b138ea137f039d08d9ca7b7cc5e8a04ac86aaa73fc9fd8ef395fe87433f1483c",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "mode": "100644",
+      "type": "blob",
+      "object": "550e44d308ad6722bb4b79f2dcf3bb7b05806a00",
+      "size": 1541,
+      "sha256": "8c78be11609f8951447812aa96645de6b7cfe384ccc9fade90f080a890bb8093",
+      "utf8": false
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/icons/source.svg",
+      "mode": "100644",
+      "type": "blob",
+      "object": "e7b52e1e0772e632b2e60276da7990870d5cc2d9",
+      "size": 316,
+      "sha256": "82171f2156e4b03c362bb243eaebada073c6cc4e946d5dfa1aa747f648ca506e",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/src/lib.rs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "04d1c6b49436e1de9efc5e6f8c3c3087822fd53a",
+      "size": 579,
+      "sha256": "3a40fb6d502e0b721595a7a81b926e80345b5f2d6cdb5d52057515e64b62113f",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/src/main.rs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "09d3c9c51de133aa341e8701824524e21d174b73",
+      "size": 154,
+      "sha256": "7f4c2a039fffda9b6a405420abef8083b7bf4aa098a3225b862a90d918979a1e",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src-tauri/tauri.conf.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "63a5bf491cf07d7ad0ff0dedeabc05adddb8505b",
+      "size": 796,
+      "sha256": "84dacfb4be467c0854f774e067509e95cdf2162ea5d0b3f988316b7fea28f260",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src/i18n.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9e10b56cb8469349e8718f45c4a4bf06e0d64107",
+      "size": 7879,
+      "sha256": "716ca74c2b5fbbc925c218b189a7c785a6cee07156cc97994334c7ed1a26f17f",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src/main.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "ea73180fea35973e3fd6c1f7bb65a616f5e943f2",
+      "size": 10040,
+      "sha256": "c0d9d2219fd19eb301f996ce5c018543e5c975e1b70f5ba25075136b020d72b7",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src/native.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "1444765fbe3b9d408de9369bd0001fc146078ae0",
+      "size": 2950,
+      "sha256": "c33d2f2355a067914677910d3e71b87e85241cc5c1656b86346bfe8263630085",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src/protocol.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "817b2e2e7da6e553b079dd144acdc1a0a102635e",
+      "size": 7481,
+      "sha256": "4850eb9cf3b489e2c2c24d644339079ce03a5ef5ceafb68527497d5fe5111d50",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/src/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "object": "51a594e31dacd6e50ef12632d86ee5aa4beb476c",
+      "size": 1523,
+      "sha256": "cccd6042ad35980f55fc54d9f5f07b7aa5f52847deb5f7fe42b4eba8b3d855eb",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/tests/protocol.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c863a7cf21965f500755b0f6f4d8f4b5acffb4a8",
+      "size": 9111,
+      "sha256": "0bfc0412220a2a37be228d9fa4d04aead0d7cf1cfcbba097484235302c399531",
+      "utf8": true
+    },
+    {
+      "path": "spikes/p0-c05/vite.config.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c1f62c20ecff2371aa3ca95f98b7667d21407404",
+      "size": 324,
+      "sha256": "6e3190e707050dac28ab4eaaac638bd1f031e99e195f6b230c9ee8d215880746",
+      "utf8": true
+    },
+    {
+      "path": "src/app/App.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "6220ce2c5a764b9c24d471f38a1c1400ac5cb08a",
+      "size": 4428,
+      "sha256": "a8096d0c42ca664bf9a87f7666f47b15877527d9c67f8d0f654eed41c1aa0604",
+      "utf8": true
+    },
+    {
+      "path": "src/app/context.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "d530c65c11fdfb078fce657898b34e5cb2378c9e",
+      "size": 459,
+      "sha256": "6493742eb21684798816dfda7fb8dbc6e4be7e309e0d7fbf84b779cdc17fdf8b",
+      "utf8": true
+    },
+    {
+      "path": "src/app/i18n.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9220f96dedf4e1cbeba335d60ea987e4402c8b49",
+      "size": 9381,
+      "sha256": "08257a121fe1e7bd0f6d030cb1797659a695c27f7dd3dcdf16f41ac003996fed",
+      "utf8": true
+    },
+    {
+      "path": "src/app/modules.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "970daa93abafe802d89de6ef46fede8eced334db",
+      "size": 727,
+      "sha256": "594b95d1f887e97a9106ffed9507440af3db4b3d59852eb596662743d689b6fc",
+      "utf8": true
+    },
+    {
+      "path": "src/application/accounting.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c6068ea1709dc852487dd7f2c00980eca39e1c4f",
+      "size": 1570,
+      "sha256": "c168cfbfa0838513ccb3e2b6d56dc9e91930d894f0ca345161665c39850424f8",
+      "utf8": true
+    },
+    {
+      "path": "src/demo/fixture.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9ec53e6021be4e6f980a1066f4b63e30a34c36ee",
+      "size": 2366,
+      "sha256": "1b498528294c1c331f3822d24ef5ebc1a70dbecf3cd39208723fd550b2e94793",
+      "utf8": true
+    },
+    {
+      "path": "src/domain/ledger.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "9210a2851302d931729e4f8bea0ec7acd13c6e4d",
+      "size": 8201,
+      "sha256": "83a7b9343a72b963ffe2ab692ff18e51d76631386121400ecdb22acdbee47ac0",
+      "utf8": true
+    },
+    {
+      "path": "src/domain/money.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "e00611e078b9de9b7e6dafec5e561a2cc838c514",
+      "size": 1404,
+      "sha256": "38db53f9ad64b104f1f049c2817635346847b7355745bc6ce80afb6fc54f4517",
+      "utf8": true
+    },
+    {
+      "path": "src/features/Businesses.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "483913ae1de8df7e2065a4258d4327f2961fc27c",
+      "size": 2079,
+      "sha256": "1f292a1d8839e7f4fe566ded9188300d5152aa9f60382da710f9e4be5165e888",
+      "utf8": true
+    },
+    {
+      "path": "src/features/Entries.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "aab9ff6bfa2aa89b78b91871ece105483162c6b0",
+      "size": 7929,
+      "sha256": "501dde3be6f7bd92ae038d018860ba691e2573ad2758bf208afbc391faa738b0",
+      "utf8": true
+    },
+    {
+      "path": "src/features/Overview.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "a7aff77a8a51b2818fb3f49e48112a74dfe9bac0",
+      "size": 2394,
+      "sha256": "a7567a8cecb0fa4cfd4ccf9f85afeec26cb0625830b5535f431862202da3d078",
+      "utf8": true
+    },
+    {
+      "path": "src/features/Roadmap.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "ede244916cb881b560c95b8692aa9a88931dc0c2",
+      "size": 1799,
+      "sha256": "c32c7c838c35bcb1b586fc3dd2695a7f762ed250b71f922287335559b8c91e03",
+      "utf8": true
+    },
+    {
+      "path": "src/features/TestLab.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b740a233defcaef0b413816345fa51bb7a251ef9",
+      "size": 1653,
+      "sha256": "c3eefb33475eb976bfab4c56554d55b0256740cda1df8d28185626eac334c61e",
+      "utf8": true
+    },
+    {
+      "path": "src/infrastructure/memory-repository.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "fcbd0117e2b50c05663533ed859e3ad1f57a8561",
+      "size": 1256,
+      "sha256": "e552eed3a61e3c547514d22aa63c8287572f828afbf8f9a57221d1d8d1f2b6cd",
+      "utf8": true
+    },
+    {
+      "path": "src/main.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f6873b212426fdf06f8d323f8e30c8391b132152",
+      "size": 354,
+      "sha256": "6912b3d6bfc66fc6c0ba27487acde4d867efa88bc44f4f6140cfdee90e397820",
+      "utf8": true
+    },
+    {
+      "path": "src/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "object": "b60028871c8be1e204bd8b0a5579d0d77d7d9f1e",
+      "size": 10587,
+      "sha256": "db9a645b3d75f54b37f5135e844dc447e79a7b0e9160c6e93536423cdf026747",
+      "utf8": true
+    },
+    {
+      "path": "src/verification/browser-checks.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "da16a2864ee7dd324666f60f45d23d429276714a",
+      "size": 3879,
+      "sha256": "a59f63ad5cd45dd0c8adcfafb9d48883f094bb0a7f216e795c224c1c801930be",
+      "utf8": true
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "05985ca36baed72c17c0a6be07843c5c8a31ba48",
+      "size": 9666,
+      "sha256": "74376da53d4c076cab60624180dcf06fd0dee3f064649b608edadac1c3171519",
+      "utf8": true
+    },
+    {
+      "path": "tests/e2e/workflow.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "397137234b8d2511d1e820441f5e95e5bbcbf270",
+      "size": 3677,
+      "sha256": "04e0020310ab24e15562a10609ac6df59969ea92e9546d6ae2a2a7a258236a7b",
+      "utf8": true
+    },
+    {
+      "path": "tests/fixtures/p0-c03/profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f614ae79edbfc85608c2513c1ced2d168e66f8d8",
+      "size": 2041,
+      "sha256": "6779fcb0863d1044e5be1df6e562d5a6b3cd492cd53c702a991db0889857e26d",
+      "utf8": true
+    },
+    {
+      "path": "tests/interface.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "1ea23eb41fc4ccf75ef38df2ba710fd4ff808741",
+      "size": 4860,
+      "sha256": "3885d38fc75cbd7580c4c51f25b042d9c508b68f746476e70971f059fc52f74e",
+      "utf8": true
+    },
+    {
+      "path": "tests/profiles.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "f269d3eae5560c261ae3506874e6898e9456f0a1",
+      "size": 5529,
+      "sha256": "fca7b1e5223e235355d61a5d1108ec5b0eafb2d76a8fee3b823aeabd3e7280c5",
+      "utf8": true
+    },
+    {
+      "path": "tests/progress.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "4204147de53a4d53409f9a5ca1a592bd4316a4a4",
+      "size": 1563,
+      "sha256": "6ee70f4201ef2c6c6f3c7daf9fb9833a671e582cd699641f7cf660b339b79e0d",
+      "utf8": true
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "object": "85ca334fe4f8bc1a83a48f915ec706cd318c012e",
+      "size": 630,
+      "sha256": "9c704d3f21d6a0b3bb9cb72c4c6d2ab341acf1739686bda82a0455112458527e",
+      "utf8": true
+    },
+    {
+      "path": "vite.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "object": "c88a7f829694ed841e5090b03761918b26aa82d7",
+      "size": 330,
+      "sha256": "e5e548b7ddb75a47ac7d21cf4d41a0a8248b2421d8f6f3a6c83e5da786e72cd4",
+      "utf8": true
+    }
+  ],
+  "reachableBlobs": [
+    {
+      "object": "0332749d2951cadc28635a596736c241b4509ad6",
+      "size": 3114,
+      "sha256": "40921302c4c13a4538f835067c4f04c77f51487f354e0dc6a4047e592c6e7f4d",
+      "utf8Scanned": true,
+      "paths": [
+        "GITIGNORE_SETUP.md"
+      ]
+    },
+    {
+      "object": "04d1c6b49436e1de9efc5e6f8c3c3087822fd53a",
+      "size": 579,
+      "sha256": "3a40fb6d502e0b721595a7a81b926e80345b5f2d6cdb5d52057515e64b62113f",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/src/lib.rs"
+      ]
+    },
+    {
+      "object": "05985ca36baed72c17c0a6be07843c5c8a31ba48",
+      "size": 9666,
+      "sha256": "74376da53d4c076cab60624180dcf06fd0dee3f064649b608edadac1c3171519",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/domain.test.ts"
+      ]
+    },
+    {
+      "object": "0720d1364154dbc4c72058b077d8a45c1de93966",
+      "size": 3904,
+      "sha256": "2dcff78fc6941dfcbcfd50238775b3cf7c05971739980722239c0cc469f140da",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/README.md"
+      ]
+    },
+    {
+      "object": "0763c2fdb6c3621713ce5c51c373b2bdb026ad80",
+      "size": 935,
+      "sha256": "261d4aa4956874525ad27234a64028f6ddd7800ac22387c196423b0d7b121284",
+      "utf8Scanned": true,
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "object": "0919d9273d59ba085651264f7c2b640075188926",
+      "size": 1878,
+      "sha256": "50ed6791f9d72750fc49d0116ece48b73ae78b717c016024b3ba466fece27815",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/AGENT_HANDOFF.md"
+      ]
+    },
+    {
+      "object": "09d3c9c51de133aa341e8701824524e21d174b73",
+      "size": 154,
+      "sha256": "7f4c2a039fffda9b6a405420abef8083b7bf4aa098a3225b862a90d918979a1e",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/src/main.rs"
+      ]
+    },
+    {
+      "object": "0a66747efc6c1353d71f89a989f99425041dffa4",
+      "size": 1695,
+      "sha256": "d7aa74301b2c734ae9d0e4d0246d799a8d2f44ee49dbc43846e787c206485cb4",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/VERIFICATION.md"
+      ]
+    },
+    {
+      "object": "0a8048d9e89ea0447ef7c113ee2758cb009a7f53",
+      "size": 745,
+      "sha256": "a5e1879bb114aaa3893a1d1c0eb857a811aff4959764bbf8a2ae474aec1e376f",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-76x76@1x.png"
+      ]
+    },
+    {
+      "object": "0aa9f055b0ef79a2add95dec211a2a81c01c1fbd",
+      "size": 539,
+      "sha256": "25baaa1e870fcb538e4ba6b487136e34b087ae86f4d274ee649211f0e315241f",
+      "utf8Scanned": true,
+      "paths": [
+        ".env.example"
+      ]
+    },
+    {
+      "object": "0bfe721eebb47952805fcbeba89f92cee80f327a",
+      "size": 84511,
+      "sha256": "2682e24363c6db5abff2e7ebb25a099b74d672ce22ed3a9d4e35c441c97a5864",
+      "utf8Scanned": true,
+      "paths": [
+        "package-lock.json"
+      ]
+    },
+    {
+      "object": "11a7aa91bd3c84683cf3172952e1c5671626beb6",
+      "size": 27305,
+      "sha256": "c833897cb6c151f85005097fb97ed2e614aba614d03a7e304ea9d9e2f9582db5",
+      "utf8Scanned": true,
+      "paths": [
+        "ROADMAP.md"
+      ]
+    },
+    {
+      "object": "1208e47ee989613befdda5f670afff6d4e87d01b",
+      "size": 2954,
+      "sha256": "6a0ffc3fde6cf8f44c55f307e978e7ce660f5cc4ea2302eabf47ebf7fbeea6d2",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png"
+      ]
+    },
+    {
+      "object": "1212800757ae2748ff722ed81357483d45f95507",
+      "size": 2711,
+      "sha256": "2c789cf6d990b3381cafb044893d7109793874e1cf7c5f0baaa39c6261b7f91a",
+      "utf8Scanned": true,
+      "paths": [
+        "scripts/progress-lib.mjs"
+      ]
+    },
+    {
+      "object": "12288ff7771d5735d230bd4cabfada78ecc0c357",
+      "size": 1560,
+      "sha256": "df0a85302d4316cb1dc9dbbbeca47a1ad6b6fe188060a46825b9e5612d0fdf34",
+      "utf8Scanned": true,
+      "paths": [
+        "src/features/Roadmap.tsx"
+      ]
+    },
+    {
+      "object": "1444765fbe3b9d408de9369bd0001fc146078ae0",
+      "size": 2950,
+      "sha256": "c33d2f2355a067914677910d3e71b87e85241cc5c1656b86346bfe8263630085",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src/native.mjs"
+      ]
+    },
+    {
+      "object": "15500ffde1168fddc2046db187443f9f4681d6b9",
+      "size": 3267,
+      "sha256": "868497e626839759905cc0fe4a65f6dbc5feca0cd38e68ac5d6691292888945f",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/index.html"
+      ]
+    },
+    {
+      "object": "16cdd5aab85549c6464236aa56e2ec77f8fcc4c3",
+      "size": 118,
+      "sha256": "b1c42868a1777ed1cf61108b506ffc91d0a826318d8516e36cf8f76fab8c4ced",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/values/ic_launcher_background.xml"
+      ]
+    },
+    {
+      "object": "18bfb0da0ce06bb1ac0dd39fd27edadbfab40bad",
+      "size": 3937,
+      "sha256": "cacf8bc709117c711f5123d9cbadab4798013269acfb995af732d84de5101623",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png"
+      ]
+    },
+    {
+      "object": "192c070cf03df5d7af0521a1073c0919cb46f742",
+      "size": 156,
+      "sha256": "251db34e2e35b25bcd7888df2be0f92d56e0e204a405e1374e691710ed583827",
+      "utf8Scanned": true,
+      "paths": [
+        ".editorconfig"
+      ]
+    },
+    {
+      "object": "196e61084ae6e3e0d13c26a8e730075c916f1759",
+      "size": 500,
+      "sha256": "25df632d2b75fdbe1ffe9d3d1fb538afd5b2ccef2764c9f4a167e639bd6eb193",
+      "utf8Scanned": true,
+      "paths": [
+        "index.html"
+      ]
+    },
+    {
+      "object": "1b55ce5ecf0f26d2acbde0a96d90c4f2cd0b8fb5",
+      "size": 16055,
+      "sha256": "4d59a5bbeef67181a0669beae67ca57cf25afde2d053475ba2d078d50ba3b02b",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "1e828a42c3a08b0a22eaae53ac4b0aa0a41a3586",
+      "size": 18012,
+      "sha256": "1f205b2710ecd45872e4fc25b04b38b70ce6eccd71369f19d8472fcfd14a70f8",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "1ea23eb41fc4ccf75ef38df2ba710fd4ff808741",
+      "size": 4860,
+      "sha256": "3885d38fc75cbd7580c4c51f25b042d9c508b68f746476e70971f059fc52f74e",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/interface.test.ts"
+      ]
+    },
+    {
+      "object": "21bab4d4d8daaba8fd6a06ff46d577f22770c54c",
+      "size": 9216,
+      "sha256": "80db8acba2ac3445ade467f4971facae4e955032e6a92d7e21b70ae9eea06231",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/i18n.ts"
+      ]
+    },
+    {
+      "object": "26c5f33363d45db19ccf7fdd779bc70af0ec20ac",
+      "size": 11405,
+      "sha256": "eb736a8395a886c0b81b8fcfb7f3d0debfa5859444de546fb87ab66d7cd1c42e",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-512@2x.png"
+      ]
+    },
+    {
+      "object": "28927ce4989b91127f0eeb5ac3e47078ac4c9e74",
+      "size": 657,
+      "sha256": "8a0a8ae534a0e7fb7455baf7a7a41689e8e5172628c5775bfc53cd515c9e2c1a",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@3x.png"
+      ]
+    },
+    {
+      "object": "2cee49470340a66c4ce1c2a49347b136a5dcacbb",
+      "size": 416,
+      "sha256": "4ffe40ed5b2371b7ec0db56b117dd6918a1b8811dd909fbd6c8451bbfda876d7",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@1x.png"
+      ]
+    },
+    {
+      "object": "2eb03b2094aff143ef4bd7807bc355aad2008d03",
+      "size": 916,
+      "sha256": "e9276c4d4413bb6bb72f0804c336952ed5ce02a1030bcf17dc709c1e5722caf0",
+      "utf8Scanned": true,
+      "paths": [
+        ".github/workflows/checks.yml"
+      ]
+    },
+    {
+      "object": "2f4a5a62ff396b6a2391d21ddbe8b83dcca9d603",
+      "size": 4790,
+      "sha256": "7ec52ee08045fe7f16634bb7be04953bbc2453ead6863a7e346f0737ceeec0aa",
+      "utf8Scanned": true,
+      "paths": [
+        "COMMIT_GUIDE.md"
+      ]
+    },
+    {
+      "object": "2ffbf24b68988bd935f5c695a59753fcb1a5de0e",
+      "size": 261,
+      "sha256": "760d4b8a06bf7163dd010c33ad2cac9e4a75fa0177afaba042f83e311eef0c3e",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml"
+      ]
+    },
+    {
+      "object": "337b103c4bde5fd89fa3861152e4b900b771003d",
+      "size": 3574,
+      "sha256": "a19f423b24d86f3d02ece8c25283407f6d97c81f544a2ba95bbde94d2cce2acc",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/AGENT_HANDOFF.md"
+      ]
+    },
+    {
+      "object": "345ef4f00cc819d9b61e8ba462d7c15e5ff75a68",
+      "size": 875,
+      "sha256": "10f08fdf3ad14d616f8a080b8f05989f47a58dbd1dd63e5f6c2b4025dbb94786",
+      "utf8Scanned": true,
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "object": "352fad3b4c6e8f3f6868e27d95382d0cc6a99cc8",
+      "size": 27275,
+      "sha256": "5bd72377ac1047252079df9bae496812449bf953cec6d8df7cedacbfd9423ca0",
+      "utf8Scanned": true,
+      "paths": [
+        "ROADMAP.md"
+      ]
+    },
+    {
+      "object": "397137234b8d2511d1e820441f5e95e5bbcbf270",
+      "size": 3677,
+      "sha256": "04e0020310ab24e15562a10609ac6df59969ea92e9546d6ae2a2a7a258236a7b",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/e2e/workflow.spec.ts"
+      ]
+    },
+    {
+      "object": "3a58e8923f5c911458ccd4fce9007c65b5fc2a3a",
+      "size": 11492,
+      "sha256": "88b8121da21c8357b5b12417a05b2e1a3db6d801010848d84f8a65c5cbcfbc40",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/PLATFORM_SPIKE.md"
+      ]
+    },
+    {
+      "object": "3b1238462a5e95781908c035a25c68bb3c318d31",
+      "size": 3411,
+      "sha256": "96c92a6af2eef77bf5aa64ab5b3d6f61c65ee4fc9104057acc7bedb6d3766b71",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/AGENT_HANDOFF.md"
+      ]
+    },
+    {
+      "object": "3bb8e2e79a2a54bc9e2799809a49b796266bafd8",
+      "size": 16582,
+      "sha256": "06b0cca4d70b3dc348f7a077dec4804532044adadd2f9bf90d579fac6c56aa15",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/CAPABILITY_AUDIT.md"
+      ]
+    },
+    {
+      "object": "3cba117672bb78843e613699682eef66fbfd26e5",
+      "size": 11168,
+      "sha256": "e683991dafc240f55da85d33afd39a28abd428399986a63123776c02e2607396",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/BASELINE.md"
+      ]
+    },
+    {
+      "object": "409a25bedd1ff49e8f930919790ac0f44cdd8958",
+      "size": 43057,
+      "sha256": "8d7f40bdc85dab5312e6b004e6438b97918a0b90c20c49aede715fc304178cac",
+      "utf8Scanned": true,
+      "paths": [
+        "project/checkpoints.json"
+      ]
+    },
+    {
+      "object": "4171dcd36c29bbbe7d883f50944cdde683adf3d2",
+      "size": 4247,
+      "sha256": "f39b9558977c883ff83f6994d0e62bc52772a484e714c63ac2d2104fa45427aa",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "object": "4204147de53a4d53409f9a5ca1a592bd4316a4a4",
+      "size": 1563,
+      "sha256": "6ee70f4201ef2c6c6f3c7daf9fb9833a671e582cd699641f7cf660b339b79e0d",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/progress.test.ts"
+      ]
+    },
+    {
+      "object": "433feadecc00312fe7cf973d3dd010bfbe6df4f4",
+      "size": 29777,
+      "sha256": "35b1a63fd17b274efb47b8bde410d06fe238decd1d4419c7415d46dffbc2aceb",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/icon.icns"
+      ]
+    },
+    {
+      "object": "456c5da1f4cea48e577167d386ba1612b224a804",
+      "size": 9365,
+      "sha256": "00832de565eea0b6527cca01133a3ac3bc82332693f008bd08d8aecb77775e66",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/i18n.ts"
+      ]
+    },
+    {
+      "object": "46cefa9aaa75c8630bd9e0b57b93d53654c9bf73",
+      "size": 1403,
+      "sha256": "f9ae1cf3e62e4eb79e4c4a3c3d66213476758238ae03ea1122e81c61e92956a6",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png"
+      ]
+    },
+    {
+      "object": "483913ae1de8df7e2065a4258d4327f2961fc27c",
+      "size": 2079,
+      "sha256": "1f292a1d8839e7f4fe566ded9188300d5152aa9f60382da710f9e4be5165e888",
+      "utf8Scanned": true,
+      "paths": [
+        "src/features/Businesses.tsx"
+      ]
+    },
+    {
+      "object": "491450a64aed9e5bf826617d32f04b80347533cf",
+      "size": 16216,
+      "sha256": "34463eafdc46664ab56b82aaeb4d3823030c441707dfd73ca496c7b9a9b80d05",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/CAPABILITY_AUDIT.md"
+      ]
+    },
+    {
+      "object": "4c0282aad956c6dcf08b5de000c5a4e16df4f123",
+      "size": 3997,
+      "sha256": "e4450deccb3a29617b5bf01bb61964113eb076245d86153160018f0bf2960f29",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/AGENT_HANDOFF.md"
+      ]
+    },
+    {
+      "object": "4c741aa363b4c4c8ce33807a521301802f5c1d67",
+      "size": 2815,
+      "sha256": "fe6e95c8ff4d1d87c6994908798618409dac417cb4b0d56c0bd470e8660d82bb",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/scripts/android-prepare.mjs"
+      ]
+    },
+    {
+      "object": "4cb4a9c2816187530a744ecfa6fe6d19d1bcd8a8",
+      "size": 24401,
+      "sha256": "373b1188322efb93d85cf0afe6688871c8ef9a2efa680f9b43bad2bb1ab7f567",
+      "utf8Scanned": true,
+      "paths": [
+        "project/accounting-scope.json"
+      ]
+    },
+    {
+      "object": "4d2fd98193ba129a46aab007a31d53c8fc82184d",
+      "size": 429,
+      "sha256": "55e2d50ae28c6d9b6e5d43fa2ea8fc057fc61a62a8814729ac4a57d4c6f34142",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square30x30Logo.png"
+      ]
+    },
+    {
+      "object": "50d7592e07183333cb5e03f453a17612fe960ef9",
+      "size": 473,
+      "sha256": "075bf1791b22a8799369a0e9f32c9db88306945ad3b18ec070c1e0591f09ec84",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/App.tsx"
+      ]
+    },
+    {
+      "object": "51a594e31dacd6e50ef12632d86ee5aa4beb476c",
+      "size": 1523,
+      "sha256": "cccd6042ad35980f55fc54d9f5f07b7aa5f52847deb5f7fe42b4eba8b3d855eb",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src/style.css"
+      ]
+    },
+    {
+      "object": "539ee892020bd3280d65b430c5d79d2eb277fe0e",
+      "size": 1032,
+      "sha256": "52e9bdcc7d6cdcf24576ec51938eefeaf8c95ff4a4bb8dcdba0fc39928ea40b9",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png"
+      ]
+    },
+    {
+      "object": "54051eda5c46fcf8784b67aa03f5b615e3580796",
+      "size": 9399,
+      "sha256": "bc15fba297ef83f73737c9eb63b67794b66499b6ff66f4bcd256777166693fea",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/i18n.ts"
+      ]
+    },
+    {
+      "object": "550e44d308ad6722bb4b79f2dcf3bb7b05806a00",
+      "size": 1541,
+      "sha256": "8c78be11609f8951447812aa96645de6b7cfe384ccc9fade90f080a890bb8093",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png"
+      ]
+    },
+    {
+      "object": "55e2a30db31ec61ec67e0fe90affe17932ac28c3",
+      "size": 1357,
+      "sha256": "6da245d560e52baedf18ce5c22776924949be73d6a09cb09a86c6443bec1641a",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square142x142Logo.png"
+      ]
+    },
+    {
+      "object": "5766b9a92897170d97dcf44f404e98c728a46fb3",
+      "size": 589,
+      "sha256": "ddfbc40df35837dadbaa646cb007df2537fb6ee8fee93069d575abee6e1af867",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/StoreLogo.png"
+      ]
+    },
+    {
+      "object": "5ae12c611bc1e7612925f9c7d60070b60bf82271",
+      "size": 2595,
+      "sha256": "4ca0378e7b5edbe95262f9480718a7599bd5faa7553e0f365ba4c147b2d5e402",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square284x284Logo.png"
+      ]
+    },
+    {
+      "object": "5d3b5f7fa6f99150c0981db923503a723290b95b",
+      "size": 1011,
+      "sha256": "ec6817d5b03a8d18f0cd266ee83c6dc5b16c3294cfc1388fcf35582c1b2cdc80",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png"
+      ]
+    },
+    {
+      "object": "5fa689f8081617da83309f5b1ca072b5c863002d",
+      "size": 40003,
+      "sha256": "60fec8930623b617a03dd7c52553ea3ba82cab7862a6b1e7488966b8c38a9382",
+      "utf8Scanned": true,
+      "paths": [
+        "project/checkpoints.json"
+      ]
+    },
+    {
+      "object": "604f60bd8b8e4f1c33bb7399c196121d5cba8760",
+      "size": 16622,
+      "sha256": "c49fa64421846642c1fbb9328bc30a5f898cfcae9cee9bc651f4c528f653931e",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "61714e0bc10b84d61c3af4838216d82cc57d9c3d",
+      "size": 4575,
+      "sha256": "db2d46554ac63189ad2d44f965a87f1321d88fa4a4b89ecb5a4070f4b2055eca",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/AGENT_HANDOFF.md"
+      ]
+    },
+    {
+      "object": "61ec52f06b7d0b5cd91faea2cb1156ec60668de8",
+      "size": 3484,
+      "sha256": "93c2ed0ee184388bf0b0c243221a5877392c25c0e78ba2f095e671a3e09f138e",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "object": "6220ce2c5a764b9c24d471f38a1c1400ac5cb08a",
+      "size": 4428,
+      "sha256": "a8096d0c42ca664bf9a87f7666f47b15877527d9c67f8d0f654eed41c1aa0604",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/App.tsx"
+      ]
+    },
+    {
+      "object": "63a5bf491cf07d7ad0ff0dedeabc05adddb8505b",
+      "size": 796,
+      "sha256": "84dacfb4be467c0854f774e067509e95cdf2162ea5d0b3f988316b7fea28f260",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/tauri.conf.json"
+      ]
+    },
+    {
+      "object": "63e12ee8eb497a11ab3a751c6a85b3ce1ada81ce",
+      "size": 1497,
+      "sha256": "cdac85bd64f114da98f816d3fd9eb9c8409b4f77ed071e5cf176d1ce2aef6688",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png"
+      ]
+    },
+    {
+      "object": "6581de3ba90ce9d5b4ccf0d88fafe78f06ce3567",
+      "size": 27081,
+      "sha256": "a4930c7f6c0cfc691fe7e6bf3439f7aff866a1aa9c3cd884fb0eb5592ac045e5",
+      "utf8Scanned": true,
+      "paths": [
+        "ROADMAP.md"
+      ]
+    },
+    {
+      "object": "65b61c82f2990803fe4ad2d76937f5a5e123027e",
+      "size": 647,
+      "sha256": "b1bbdedf77d6f461397c8216b61f1db146c4fa71043b7cadc2fa8f1c5e06263e",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@2x.png"
+      ]
+    },
+    {
+      "object": "6606d7158af084fe332e8e9af9bf1c1914766d79",
+      "size": 2712,
+      "sha256": "834befd8b9de134d92e7e783203e8fd9977d33ef6b5bd148c89c707922f542f0",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png"
+      ]
+    },
+    {
+      "object": "66c30323839b102f460b5fe606602c29dc30ad7f",
+      "size": 16126,
+      "sha256": "363665bccabd9e53b8500c62b04f3f3ff359128925c2a94cf294a714d26bd8c2",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "67d7b8a2a19344d47ff0b6527a5c78e7724a3168",
+      "size": 709,
+      "sha256": "3ffa9b1083f33ce027fa22dfa3e9bd0f9f48c7b192161bbc1a6446004201580e",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/64x64.png"
+      ]
+    },
+    {
+      "object": "6abc09ba3401c5996dfcbeee16d9f81da867ba40",
+      "size": 470,
+      "sha256": "5b555d9af2a3ac4f2a5e5c98ff347888645b3aa9b9b1d0e2ec1860457721b710",
+      "utf8Scanned": true,
+      "paths": [
+        "src/styles.css"
+      ]
+    },
+    {
+      "object": "6e644201c102170170c3ae179689b617f51a6fac",
+      "size": 375,
+      "sha256": "add421d1407f0042247ba360b0e683018fa78e843bbf3e07f023d56d882988b5",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/32x32.png"
+      ]
+    },
+    {
+      "object": "6eaf4ab953065fe34c4b8aef4e11b072360c466f",
+      "size": 5085,
+      "sha256": "606c2c1f9e224f98dd1976bbc32bc31e3cf873abb32468dccd3681f093154248",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/VERIFICATION.md"
+      ]
+    },
+    {
+      "object": "6eb82357b1129a5736df92d88f29c6f17dc57c27",
+      "size": 2062,
+      "sha256": "3b532f9968ccd96579bedfd30e5a2e37fda385149c8bba3863f3452a72374d40",
+      "utf8Scanned": true,
+      "paths": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "object": "6f6434ace4e6b4c9279f7ce2ccd8fb47accca02c",
+      "size": 1342,
+      "sha256": "6ad4f620f4e7f110637cb80cded4b8af3cad740723843f8e5e55ed827dc34ba4",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/scripts/fingerprint.mjs"
+      ]
+    },
+    {
+      "object": "772936b9a80479237f3483f3d9c264bcd330d086",
+      "size": 1964,
+      "sha256": "0958d1762dc622b74d3d6b04dc246bd2e0273603284fd5b736dbd5eb3f38aa20",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png"
+      ]
+    },
+    {
+      "object": "797be5fb7a65cc6a613fe18f91d40173e82548fc",
+      "size": 1393,
+      "sha256": "b138ea137f039d08d9ca7b7cc5e8a04ac86aaa73fc9fd8ef395fe87433f1483c",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-76x76@2x.png"
+      ]
+    },
+    {
+      "object": "7a5a163a1923bd1e09c92e261ac9ab254ee2af33",
+      "size": 5244,
+      "sha256": "ff0ab691a9b6090d2c62e774df0d30267246b0b94d58e1ef6b2480bafa3511ab",
+      "utf8Scanned": true,
+      "paths": [
+        ".gitignore"
+      ]
+    },
+    {
+      "object": "7b3f82c85e4a69a9c84a9475cda3d759b16ac2f2",
+      "size": 2100,
+      "sha256": "293d4c9fda20f93a59a5916a0d5100b2b0df1ec45acb62ddfab5807b45c12b14",
+      "utf8Scanned": true,
+      "paths": [
+        "scripts/progress.mjs"
+      ]
+    },
+    {
+      "object": "7c040ce8f3e5148f73a414044ad56b727bdc3944",
+      "size": 6873,
+      "sha256": "93c14f74e58e921520d0d65cb417d885f0f1518fc7cc948004d9e5c51f8ba6f2",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/domain.test.ts"
+      ]
+    },
+    {
+      "object": "7d655a4eb83cbc5f58247037b4c3364a90e784bf",
+      "size": 33504,
+      "sha256": "5d7ba42b469650c55371283b41a7ee0ee8fd745f0577a8b902634311ed1cd83e",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/package-lock.json"
+      ]
+    },
+    {
+      "object": "817b2e2e7da6e553b079dd144acdc1a0a102635e",
+      "size": 7481,
+      "sha256": "4850eb9cf3b489e2c2c24d644339079ce03a5ef5ceafb68527497d5fe5111d50",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src/protocol.mjs"
+      ]
+    },
+    {
+      "object": "83ca8f656afec331dd20729cf48c46003493766e",
+      "size": 448,
+      "sha256": "fdbe58ab5862db734f5b79146871551fe9957730975f72ccead2524124723c69",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/modules.ts"
+      ]
+    },
+    {
+      "object": "85ca334fe4f8bc1a83a48f915ec706cd318c012e",
+      "size": 630,
+      "sha256": "9c704d3f21d6a0b3bb9cb72c4c6d2ab341acf1739686bda82a0455112458527e",
+      "utf8Scanned": true,
+      "paths": [
+        "tsconfig.json"
+      ]
+    },
+    {
+      "object": "8637a8df43af70f6b413d9bddb4834103fc588cc",
+      "size": 6789,
+      "sha256": "6b1ffac7e3e8c558b8c13d5a51be374dd82fec96190ddd596d41e6833ff7f36e",
+      "utf8Scanned": true,
+      "paths": [
+        "SECURITY.md"
+      ]
+    },
+    {
+      "object": "87753a1ccade7da8a44f7809ffe03ab9292e06e9",
+      "size": 831,
+      "sha256": "7accbdcf81de0dc7cf51366307534c515c8bd701a47dc30028d2ba87398294e7",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/package.json"
+      ]
+    },
+    {
+      "object": "8b1e746b35ed0d2cbf176c0aee58a21613db8315",
+      "size": 2038,
+      "sha256": "fa2c4d3fbc3a03e2850c30d073edb9625f2c5f15e139cdd8aac28b6e265ad3ff",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png"
+      ]
+    },
+    {
+      "object": "908b54ef113dac1899c5669af4ee97042e193c9e",
+      "size": 469,
+      "sha256": "a2c953a920c0498016b14e4c476b6c51635524eb2ddaa7bdcda397b618622be3",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@2x.png",
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@1x.png"
+      ]
+    },
+    {
+      "object": "919537ceb4b29050c87a2eca968c3ce9e4ee33a2",
+      "size": 7725,
+      "sha256": "8df00345098f73fef89523b2d881493e8b6699fe503b52e2424fbd684357e372",
+      "utf8Scanned": true,
+      "paths": [
+        "SECURITY.md"
+      ]
+    },
+    {
+      "object": "9210a2851302d931729e4f8bea0ec7acd13c6e4d",
+      "size": 8201,
+      "sha256": "83a7b9343a72b963ffe2ab692ff18e51d76631386121400ecdb22acdbee47ac0",
+      "utf8Scanned": true,
+      "paths": [
+        "src/domain/ledger.ts"
+      ]
+    },
+    {
+      "object": "9220f96dedf4e1cbeba335d60ea987e4402c8b49",
+      "size": 9381,
+      "sha256": "08257a121fe1e7bd0f6d030cb1797659a695c27f7dd3dcdf16f41ac003996fed",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/i18n.ts"
+      ]
+    },
+    {
+      "object": "9322687a4a9d15fcc884102e9cdedb4e71632e74",
+      "size": 11626,
+      "sha256": "a63fa4adbf7f8a5a1cbdee3da2984ffba846a2f25805b48d1aa61f13e1d9619c",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/SYNTHETIC_PROFILES.md"
+      ]
+    },
+    {
+      "object": "970daa93abafe802d89de6ef46fede8eced334db",
+      "size": 727,
+      "sha256": "594b95d1f887e97a9106ffed9507440af3db4b3d59852eb596662743d689b6fc",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/modules.ts"
+      ]
+    },
+    {
+      "object": "9790d6eb791591d1ad68a1110b5472a6789b7ee5",
+      "size": 2979,
+      "sha256": "1c493de30b06d88a6b13fb7e868442ba02e7cc418915fe4927db8395b9c5a43a",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/PLATFORM_SPIKE_RESULTS_TEMPLATE.md"
+      ]
+    },
+    {
+      "object": "9826b6e3024f4f268fb31e3a09331c095fae8b5f",
+      "size": 2802,
+      "sha256": "6218f71d81989b65fb98f97f98137d62389c25549fc6e1eae8ae287bce6b99fd",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square310x310Logo.png"
+      ]
+    },
+    {
+      "object": "9958caa083dcf473b76df791c4c7fabd50f9e5ae",
+      "size": 2369,
+      "sha256": "27abbabd6d87ec01b87e56962f4ead46b825d97e64f92249c00ac149c8c5646b",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/scripts/check.mjs"
+      ]
+    },
+    {
+      "object": "9e10b56cb8469349e8718f45c4a4bf06e0d64107",
+      "size": 7879,
+      "sha256": "716ca74c2b5fbbc925c218b189a7c785a6cee07156cc97994334c7ed1a26f17f",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src/i18n.mjs"
+      ]
+    },
+    {
+      "object": "9ec53e6021be4e6f980a1066f4b63e30a34c36ee",
+      "size": 2366,
+      "sha256": "1b498528294c1c331f3822d24ef5ebc1a70dbecf3cd39208723fd550b2e94793",
+      "utf8Scanned": true,
+      "paths": [
+        "src/demo/fixture.ts"
+      ]
+    },
+    {
+      "object": "a0930e46188d9cffebd7dd79a1a99b275d374ac9",
+      "size": 1530,
+      "sha256": "b0538182b2cd4a7e3655ff3a0d7a088c97a1013f0760ba04ed4e981e1ba36e3b",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png"
+      ]
+    },
+    {
+      "object": "a455478f9d1c9962e9bd1d4bfdab1fe40dd731a1",
+      "size": 86,
+      "sha256": "a095b975fe9113ba585431913c05881ca609715d2651af7d88612369f998067f",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/rust-toolchain.toml"
+      ]
+    },
+    {
+      "object": "a4f7df5e1c05394a07ca5851515e35ce4241d9c1",
+      "size": 71,
+      "sha256": "41cba3cb2453b10bd2da2428c6fc57c676cd087ac53ff2cff09cb5073ce12ada",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/build.rs"
+      ]
+    },
+    {
+      "object": "a543188a6528b0b50f273359e51875e94dff28c3",
+      "size": 14031,
+      "sha256": "4f921aa949b8829b8a1f19a8cda39d4fac24dff913e32b1166bc0639a42c964b",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/ACCOUNTING_SCOPE.md"
+      ]
+    },
+    {
+      "object": "a7aff77a8a51b2818fb3f49e48112a74dfe9bac0",
+      "size": 2394,
+      "sha256": "a7567a8cecb0fa4cfd4ccf9f85afeec26cb0625830b5535f431862202da3d078",
+      "utf8Scanned": true,
+      "paths": [
+        "src/features/Overview.tsx"
+      ]
+    },
+    {
+      "object": "aa0039b6cac9603516a5b1f15b8f13609943123e",
+      "size": 10233,
+      "sha256": "ea666402cbe1f0208e42d680bb93fa1185c09fe7fd422a96abb4d46fae8505b2",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/LOCAL_TESTING.md"
+      ]
+    },
+    {
+      "object": "aa9d78e8f0fd6f52103f1cb26846a60ad511be0f",
+      "size": 881,
+      "sha256": "2f0e1a7743f4f8421a1f9a4d57db7d1534917dfc58f2c8b2361e685a5cb3e719",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square89x89Logo.png"
+      ]
+    },
+    {
+      "object": "aab9ff6bfa2aa89b78b91871ece105483162c6b0",
+      "size": 7929,
+      "sha256": "501dde3be6f7bd92ae038d018860ba691e2573ad2758bf208afbc391faa738b0",
+      "utf8Scanned": true,
+      "paths": [
+        "src/features/Entries.tsx"
+      ]
+    },
+    {
+      "object": "aba2bdcb4312c3277a49ee36590fd31bc4b25a33",
+      "size": 1616,
+      "sha256": "81df11961417bf119d37123634e988fb650aa50c1f6e2203b05326d50de6a287",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-60x60@3x.png"
+      ]
+    },
+    {
+      "object": "b19ec6cc78ddf779d6a093515e456f3f4fccf84f",
+      "size": 2739,
+      "sha256": "e9779f98e730e388f296df5336a864c6aac0689a0a84f13da52d2c419110e4be",
+      "utf8Scanned": true,
+      "paths": [
+        "scripts/progress-lib.mjs"
+      ]
+    },
+    {
+      "object": "b2edde16684e18efd1d56856506e62c6afecdfb8",
+      "size": 1201,
+      "sha256": "421a8bde4c6c206744afbe319ebd803eba7b2b23216a53af69f73f5158f596b2",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/128x128.png"
+      ]
+    },
+    {
+      "object": "b3bffc9b9f401441d0aa362757fc6333f00b8be3",
+      "size": 47169,
+      "sha256": "8b8946907c38e425cb9907b8c536b90883059acf16d44b88d8c78422fee6813f",
+      "utf8Scanned": true,
+      "paths": [
+        "project/checkpoints.json"
+      ]
+    },
+    {
+      "object": "b4e3c5537f4218e7b66f9c334eb5c26ab4e06336",
+      "size": 1047,
+      "sha256": "1a65f85d9ccb0a7022ca24ef597056041bf61fb5a685870d7ae397ae948edbb5",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square107x107Logo.png"
+      ]
+    },
+    {
+      "object": "b60028871c8be1e204bd8b0a5579d0d77d7d9f1e",
+      "size": 10587,
+      "sha256": "db9a645b3d75f54b37f5135e844dc447e79a7b0e9160c6e93536423cdf026747",
+      "utf8Scanned": true,
+      "paths": [
+        "src/styles.css"
+      ]
+    },
+    {
+      "object": "b73f3ee395a79f84dc8513f8e6114535caa3d23b",
+      "size": 1453,
+      "sha256": "b758387cc348e4319de7147bd4c43e54fc92388bfd512009d50a65227ca2996d",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/progress.test.ts"
+      ]
+    },
+    {
+      "object": "b740a233defcaef0b413816345fa51bb7a251ef9",
+      "size": 1653,
+      "sha256": "c3eefb33475eb976bfab4c56554d55b0256740cda1df8d28185626eac334c61e",
+      "utf8Scanned": true,
+      "paths": [
+        "src/features/TestLab.tsx"
+      ]
+    },
+    {
+      "object": "b747d10d855144052f11ee82d023bfa8c3480daf",
+      "size": 556,
+      "sha256": "8fa3bf18eabb1b9d62c9a2500d1238e8f38ef0f72288a47d0ba8455f9bbb82cf",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square44x44Logo.png"
+      ]
+    },
+    {
+      "object": "b96906f6a7fd451d3317ddcb6a12413eacf3f39c",
+      "size": 57,
+      "sha256": "d3e5769245bf7a30443b95c5a6b6583426cb76a4a4403207055ab00e908fa82f",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/.gitignore"
+      ]
+    },
+    {
+      "object": "bb8693f01f7603325cdf8c6dd1e6cd2b8c902585",
+      "size": 1464,
+      "sha256": "c35e687a8f909f7ebc3a3a6f8976362f1e2038ea13fdd705d3dfcf2b6413e6ac",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square150x150Logo.png"
+      ]
+    },
+    {
+      "object": "bbc476149fc449847f3ce2b28032d132fc283a69",
+      "size": 10648,
+      "sha256": "5880cdbfcf95386013dfcb220023fa7f6eb6b10bd9bfdf0808bd18b5380906a7",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/LOCAL_TESTING.md"
+      ]
+    },
+    {
+      "object": "be02558c033289bc5ad744cf9a0737dc0aab8115",
+      "size": 9364,
+      "sha256": "2740c1b229de549286071b38743efc20d7caffa66fe5fbff0c62e3e244f3f06c",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/domain.test.ts"
+      ]
+    },
+    {
+      "object": "beebd46092ac44dbd90aee98b0d1ff71bd4c4057",
+      "size": 36963,
+      "sha256": "fdc7dbe292904a01b4b4b9dbd1bde07cadb3874b44842b3abb3fdb03567125cc",
+      "utf8Scanned": true,
+      "paths": [
+        "project/checkpoints.json"
+      ]
+    },
+    {
+      "object": "c0fa58e99fed365364ed1d5837d2106e28e307f3",
+      "size": 22,
+      "sha256": "bab2818348dfc9c936fdaa45ba0877fa0101ea701b161bd8ae48eb4f3112bcfa",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "c0ffd3739711fc4c2df629e7b618ff3b601e6c97",
+      "size": 3109,
+      "sha256": "2967f32f88fec2f47c35d12379865c9c29c9899f85dd2e96756afb30ae36d5f2",
+      "utf8Scanned": true,
+      "paths": [
+        "scripts/check.mjs"
+      ]
+    },
+    {
+      "object": "c1f62c20ecff2371aa3ca95f98b7667d21407404",
+      "size": 324,
+      "sha256": "6e3190e707050dac28ab4eaaac638bd1f031e99e195f6b230c9ee8d215880746",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/vite.config.mjs"
+      ]
+    },
+    {
+      "object": "c56264d3820985dc8ea3bbebf05300cfdf2b6bbd",
+      "size": 869,
+      "sha256": "0556d222b4ba53532bb599821b6440bcb487f073cc663f7c8bd11734f9f5b75f",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-29x29@3x.png"
+      ]
+    },
+    {
+      "object": "c6068ea1709dc852487dd7f2c00980eca39e1c4f",
+      "size": 1570,
+      "sha256": "c168cfbfa0838513ccb3e2b6d56dc9e91930d894f0ca345161665c39850424f8",
+      "utf8Scanned": true,
+      "paths": [
+        "src/application/accounting.ts"
+      ]
+    },
+    {
+      "object": "c7efb476c726c154ad4a70cd3e7a0dd272cad854",
+      "size": 3614,
+      "sha256": "9f976824bc97ef0f0058dbdb207e9a434c0688e4f13524816f6aea1e5a5722bb",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png"
+      ]
+    },
+    {
+      "object": "c863a7cf21965f500755b0f6f4d8f4b5acffb4a8",
+      "size": 9111,
+      "sha256": "0bfc0412220a2a37be228d9fa4d04aead0d7cf1cfcbba097484235302c399531",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/tests/protocol.test.mjs"
+      ]
+    },
+    {
+      "object": "c88a7f829694ed841e5090b03761918b26aa82d7",
+      "size": 330,
+      "sha256": "e5e548b7ddb75a47ac7d21cf4d41a0a8248b2421d8f6f3a6c83e5da786e72cd4",
+      "utf8Scanned": true,
+      "paths": [
+        "vite.config.ts"
+      ]
+    },
+    {
+      "object": "c9c521ff59c0ceae0aeea898bf3ed5a9f4015678",
+      "size": 801,
+      "sha256": "284a27889af0c8b7b6ae4ccf67b82159ef241ea036ad04dc09fdb90d52dc866a",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/Square71x71Logo.png"
+      ]
+    },
+    {
+      "object": "ca72a8bfb2719efa72499c662d4d8a713814a77a",
+      "size": 4347,
+      "sha256": "73e78ca38cfd03cb7c1a235ab17187f1433e751161b55892ad10972a7ff72e4e",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/VERIFICATION.md"
+      ]
+    },
+    {
+      "object": "cb681e95eb6638e07c4eb3c998ca25ea46b79dd3",
+      "size": 317,
+      "sha256": "d0988c104c485dccec00f88fcd6f6ecf6c67f5cb30aa5a1e23a805298e6baa70",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-20x20@1x.png"
+      ]
+    },
+    {
+      "object": "ce62013c39aed63f656bb7ae41bdd45d81163ffe",
+      "size": 8,
+      "sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "utf8Scanned": true,
+      "paths": [
+        ".node-version",
+        ".nvmrc"
+      ]
+    },
+    {
+      "object": "cebe44c046ca30adac7e79aa59360d366454e998",
+      "size": 12204,
+      "sha256": "98737454107744770c14892384256c2af77b9669b224f5a59597ad5b75e0c474",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/SYNTHETIC_PROFILES.md"
+      ]
+    },
+    {
+      "object": "cf330dbb7f586c84226d3f461f62b9ba409cdf52",
+      "size": 1163,
+      "sha256": "d82af95abeee48bd6e63ac108285bd944773cdee3238c2f04f9adb9d719cdd9f",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png"
+      ]
+    },
+    {
+      "object": "d0a1fa1482eea82e19510e7920cbe3a03e41f691",
+      "size": 16726,
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "utf8Scanned": true,
+      "paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "object": "d0e1e71ac1053808110fe129b31b886c4637dfeb",
+      "size": 1344,
+      "sha256": "edb7f342025a997c2e16431b1f4c55a790973569e7c60dafc440ed1ab22ff812",
+      "utf8Scanned": true,
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "object": "d1a80266e17b2379412f41da26b02aff4eca4503",
+      "size": 9339,
+      "sha256": "608dc77d5eee40b5d25081820e4fb8bb080f504642b93bf6f9d6312a8a8ddd04",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/i18n.ts"
+      ]
+    },
+    {
+      "object": "d530c65c11fdfb078fce657898b34e5cb2378c9e",
+      "size": 459,
+      "sha256": "6493742eb21684798816dfda7fb8dbc6e4be7e309e0d7fbf84b779cdc17fdf8b",
+      "utf8Scanned": true,
+      "paths": [
+        "src/app/context.ts"
+      ]
+    },
+    {
+      "object": "d5f6062be76e4990501816f038cb837398d38e82",
+      "size": 4748,
+      "sha256": "e9da532f4470519e0bfa4f39597fc44b99a9fe01fc2c32a32bdb76494e13f7f9",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/icon.png"
+      ]
+    },
+    {
+      "object": "d651472a92c77ba05ea99999b02ae61d0b638de0",
+      "size": 2208,
+      "sha256": "c745e125b78bbc4db4da014d49c2d51c11dda45715d25416acd6710133f34e53",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/128x128@2x.png"
+      ]
+    },
+    {
+      "object": "d66ee0d1dc2c16660f4f7374d4c47280da223fc8",
+      "size": 32173,
+      "sha256": "62cee197bd828601f913b5565a18a07a56456c74c103221e49e80b692609baf7",
+      "utf8Scanned": true,
+      "paths": [
+        "project/checkpoints.json"
+      ]
+    },
+    {
+      "object": "d707bde4f3adf69dd7e8c21e1c696c47d5fcb249",
+      "size": 2594,
+      "sha256": "ebecc24d2a0ce8cf14084df3964776cfc44b8d6e6f987fb66046bea988a373d6",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/TEST_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "object": "d7c0c0a6ec5557943fa1f11cf8c919a5dbcfcbe6",
+      "size": 26556,
+      "sha256": "f281436a99a1d861889210d4cb45ecf10e055997fcc6b3a5c9feedb532acf5e1",
+      "utf8Scanned": true,
+      "paths": [
+        "ROADMAP.md"
+      ]
+    },
+    {
+      "object": "d949cae4e1cf2929eeaa5d9e79a253389714a817",
+      "size": 11147,
+      "sha256": "d5fb472c0444dbd52581cf7f41105136279afdad574e9f99f85e9a5a37445e72",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/LOCAL_TESTING.md"
+      ]
+    },
+    {
+      "object": "da0c8428f9203b4812cb60ac378565111adb624f",
+      "size": 802,
+      "sha256": "7294effb2ee384fdf698a6838ef85cd89777a8e642af5179b6169e71fd29b379",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@2x.png"
+      ]
+    },
+    {
+      "object": "da16a2864ee7dd324666f60f45d23d429276714a",
+      "size": 3879,
+      "sha256": "a59f63ad5cd45dd0c8adcfafb9d48883f094bb0a7f216e795c224c1c801930be",
+      "utf8Scanned": true,
+      "paths": [
+        "src/verification/browser-checks.ts"
+      ]
+    },
+    {
+      "object": "dcd47bb50c41d366780153b424aa2f1f2160f70a",
+      "size": 1059,
+      "sha256": "08feedc4ed2676d1aa52dfe5859304c96feedbd23eda3e168f0697b87948fa84",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png"
+      ]
+    },
+    {
+      "object": "ddf485c6cd46dbe2a31d54a1be2600755b35bd24",
+      "size": 117409,
+      "sha256": "ae108fd7f57847e96c3a65d014e9d449a06ae28346590c560c83070a7a40b14f",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/Cargo.lock"
+      ]
+    },
+    {
+      "object": "e00611e078b9de9b7e6dafec5e561a2cc838c514",
+      "size": 1404,
+      "sha256": "38db53f9ad64b104f1f049c2817635346847b7355745bc6ce80afb6fc54f4517",
+      "utf8Scanned": true,
+      "paths": [
+        "src/domain/money.ts"
+      ]
+    },
+    {
+      "object": "e04423edfbb0590bb2170cbf6d8f2926daa31b32",
+      "size": 5181,
+      "sha256": "62e7cf6992a7e2aac5e6240b3eae066f49064062b66d12f4d1e5a7e6387f2329",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/icon.ico"
+      ]
+    },
+    {
+      "object": "e2f4eb4cd942b4eeea289b907fc2e0f6de17a7c3",
+      "size": 27208,
+      "sha256": "4218343253c983053b367eeb71cf68e79d3f188b85fbe94668a82073f6c2c86f",
+      "utf8Scanned": true,
+      "paths": [
+        "ROADMAP.md"
+      ]
+    },
+    {
+      "object": "e3d4161de7e451e067b9a20c01e6c8cfdb423eff",
+      "size": 1172,
+      "sha256": "ea4525bbc34fda289d20a3fad87d5854def86ef56c08e879c2d2c0d28e20b7e8",
+      "utf8Scanned": true,
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "object": "e584924286bc9d7ca89ddb6dcfcd305082b5776b",
+      "size": 6199,
+      "sha256": "219ed51c7ec9d1fdcceb79951186b9afbbf9d236df3fdf4d1dbcf298b19bdbba",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/VERIFICATION.md"
+      ]
+    },
+    {
+      "object": "e7b52e1e0772e632b2e60276da7990870d5cc2d9",
+      "size": 316,
+      "sha256": "82171f2156e4b03c362bb243eaebada073c6cc4e946d5dfa1aa747f648ca506e",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/source.svg"
+      ]
+    },
+    {
+      "object": "e8a159e91be901f9bbeba4ae09be6ff4258e6d35",
+      "size": 1958,
+      "sha256": "dde4f3486de8ac8ec1edcb482a837bc92cc4cb6d84d7471a1cf9a31026eae8c8",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png"
+      ]
+    },
+    {
+      "object": "e905aaf6354d54010352436509422a3eb351f732",
+      "size": 1250,
+      "sha256": "4fa6c436ef6dc189e5548b2511b2cd802a4b1f4387b2c90149bbc0c46130f4b1",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/domain.test.ts"
+      ]
+    },
+    {
+      "object": "ea73180fea35973e3fd6c1f7bb65a616f5e943f2",
+      "size": 10040,
+      "sha256": "c0d9d2219fd19eb301f996ce5c018543e5c975e1b70f5ba25075136b020d72b7",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src/main.mjs"
+      ]
+    },
+    {
+      "object": "eadcd23d39fe31338465fa895f9f2d7e870333fe",
+      "size": 1184,
+      "sha256": "985e8713cdd8b2d5a6b6d53171a0127acfc7e5f5c318651ba7cfb70e98b8523f",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-40x40@3x.png",
+        "spikes/p0-c05/src-tauri/icons/ios/AppIcon-60x60@2x.png"
+      ]
+    },
+    {
+      "object": "eb5d5329ea18ae253ec42d98c22f4a19479fc49d",
+      "size": 18512,
+      "sha256": "e014779fdd60d58d4ca6c2af8e7a808b73fe7dadc2567c1a052fb6a10c449665",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "ec708fa9038e743b8c0650fa9e6b418de55ffc76",
+      "size": 11894,
+      "sha256": "285cc37bbf7651fee3b183905031b4cdd0a0ecfcbb04b4348757d1ac5d616520",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/SYNTHETIC_PROFILES.md"
+      ]
+    },
+    {
+      "object": "ece72098d0e22345146eaa2c5ea410e1a60c90f1",
+      "size": 26704,
+      "sha256": "2873513c2f8b6fd05954a1b675dfe5a5dff4f95f094f88432e4fa16a23965a79",
+      "utf8Scanned": true,
+      "paths": [
+        "ROADMAP.md"
+      ]
+    },
+    {
+      "object": "edb38297e1c2160b9236626991a2667c9f43c8e8",
+      "size": 2430,
+      "sha256": "50c0e8439a08f9a431b3e4d5eece16d3389de2d06e3c2b87bfe60fcc68c7950c",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/TEST_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "object": "ede244916cb881b560c95b8692aa9a88931dc0c2",
+      "size": 1799,
+      "sha256": "c32c7c838c35bcb1b586fc3dd2695a7f762ed250b71f922287335559b8c91e03",
+      "utf8Scanned": true,
+      "paths": [
+        "src/features/Roadmap.tsx"
+      ]
+    },
+    {
+      "object": "ee4efee576179dce72c59915c5be4056815690ea",
+      "size": 1084,
+      "sha256": "c372176efe492c8917558409212319c0796314725a7c7477385c10723d5dd44b",
+      "utf8Scanned": true,
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "object": "f0a87e9626aaa7917083ff5a526b29a2fff61435",
+      "size": 2836,
+      "sha256": "9454ee0d364639f8641cfd3d2f872231d120997df56f1df78f44f19b0a507a8e",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/TEST_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "object": "f269d3eae5560c261ae3506874e6898e9456f0a1",
+      "size": 5529,
+      "sha256": "fca7b1e5223e235355d61a5d1108ec5b0eafb2d76a8fee3b823aeabd3e7280c5",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/profiles.test.ts"
+      ]
+    },
+    {
+      "object": "f4807c631fd8f5677afd141490421118a7480044",
+      "size": 805,
+      "sha256": "275655240cf26f212d2896c9a14e3843f08ee7c88551b7727abd3d9728f9d22c",
+      "utf8Scanned": false,
+      "paths": [
+        "spikes/p0-c05/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png"
+      ]
+    },
+    {
+      "object": "f5de5997f04f72f63cb6857c1f408f7df418f73a",
+      "size": 1079,
+      "sha256": "7173ad87c2dee49fffa8e3b8b333bfd49b0b2c726adbbc1b50ba23fc3ea0e387",
+      "utf8Scanned": true,
+      "paths": [
+        "playwright.config.ts"
+      ]
+    },
+    {
+      "object": "f5ef744fb07f794f837faf0ddc076456ce3e28c3",
+      "size": 630,
+      "sha256": "f2e865a7ceb0123aa0d1fc7c6090f6563107e0543d5eaef625e3b5047c8d40cc",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/capabilities/probe.json"
+      ]
+    },
+    {
+      "object": "f614ae79edbfc85608c2513c1ced2d168e66f8d8",
+      "size": 2041,
+      "sha256": "6779fcb0863d1044e5be1df6e562d5a6b3cd492cd53c702a991db0889857e26d",
+      "utf8Scanned": true,
+      "paths": [
+        "tests/fixtures/p0-c03/profiles.json"
+      ]
+    },
+    {
+      "object": "f6873b212426fdf06f8d323f8e30c8391b132152",
+      "size": 354,
+      "sha256": "6912b3d6bfc66fc6c0ba27487acde4d867efa88bc44f4f6140cfdee90e397820",
+      "utf8Scanned": true,
+      "paths": [
+        "src/main.tsx"
+      ]
+    },
+    {
+      "object": "f8ee08982eeac16eb4365541c01fb9c9ba24b74f",
+      "size": 17670,
+      "sha256": "c5d632315c8c006c660da9b5619429b72982d3e581b5c7ac62bcfec48ce5657f",
+      "utf8Scanned": true,
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "object": "fa74d5a716ca2cd220afa81c38fa9704061e6093",
+      "size": 515,
+      "sha256": "61c2171097896a2dfcdce1fdfeda869a580f7dc47b3efb63176cd01da1d74eb5",
+      "utf8Scanned": true,
+      "paths": [
+        "spikes/p0-c05/src-tauri/Cargo.toml"
+      ]
+    },
+    {
+      "object": "fcbd0117e2b50c05663533ed859e3ad1f57a8561",
+      "size": 1256,
+      "sha256": "e552eed3a61e3c547514d22aa63c8287572f828afbf8f9a57221d1d8d1f2b6cd",
+      "utf8Scanned": true,
+      "paths": [
+        "src/infrastructure/memory-repository.ts"
+      ]
+    },
+    {
+      "object": "ff8668ae12d0aad2cd906977dfc2a536827822b3",
+      "size": 4462,
+      "sha256": "c37197faa4051c7a0452f78eb1c156dac5089978a5691496caa36ebd3cfbc8c0",
+      "utf8Scanned": true,
+      "paths": [
+        "docs/VERIFICATION.md"
+      ]
+    }
+  ],
+  "unreachableInputObjects": [
+    {
+      "type": "blob",
+      "object": "ef31b3e5ff1ab7cfa270a8645c20d90e3cfbe6ab",
+      "size": 11117,
+      "contentReviewed": false
+    }
+  ],
+  "unreachableScope": "Pre-edit fsck found this object. Its content was excluded, retained and not exported. Later index writes can create more unreachable objects.",
+  "license": {
+    "path": "LICENSE",
+    "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+    "upstream": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+    "byteIdenticalToUpstream": true,
+    "distinctHistoricalBlobs": [
+      "d0a1fa1482eea82e19510e7920cbe3a03e41f691"
+    ],
+    "revisionsWithLicense": 13,
+    "firstPresentCommit": "4e723a6d7829189b898ac7a434d735646a6fef70",
+    "sourceNoticeMissing": [
+      "spikes/p0-c05/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml",
+      "spikes/p0-c05/src-tauri/icons/android/values/ic_launcher_background.xml"
+    ]
+  },
+  "privacy": {
+    "rules": [
+      "private-key-header",
+      "github-token-shape",
+      "aws-access-id-shape",
+      "google-api-key-shape",
+      "stripe-secret-shape",
+      "url-user-password",
+      "quoted-sensitive-assignment"
+    ],
+    "hits": [],
+    "fictionalPositiveControls": {
+      "private-key-header": true,
+      "github-token-shape": true,
+      "aws-access-id-shape": true,
+      "google-api-key-shape": true,
+      "stripe-secret-shape": true,
+      "url-user-password": true,
+      "quoted-sensitive-assignment": true
+    },
+    "privateHistoricalPaths": [],
+    "ignoreChecks": [
+      {
+        "path": ".env.audit-check",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": "fictional.key",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": "fictional.sqlite",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": "receipts/fictional.pdf",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": "backups/fictional.zip",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": "outputs/fictional.json",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": "node_modules/fictional.js",
+        "expectedIgnored": true,
+        "passed": true
+      },
+      {
+        "path": ".env.example",
+        "expectedIgnored": false,
+        "passed": true
+      },
+      {
+        "path": "tests/fixtures/receipts/fictional.pdf",
+        "expectedIgnored": false,
+        "passed": true
+      },
+      {
+        "path": "package-lock.json",
+        "expectedIgnored": false,
+        "passed": true
+      },
+      {
+        "path": "spikes/p0-c05/src-tauri/Cargo.lock",
+        "expectedIgnored": false,
+        "passed": true
+      }
+    ],
+    "limits": [
+      "No entropy, obfuscation, binary OCR, malware or comprehensive real-record detection.",
+      "No access to private folders, real documents, accounts or credential stores."
+    ]
+  },
+  "npmLockMetadata": [
+    {
+      "path": "package-lock.json",
+      "sha256": "2682e24363c6db5abff2e7ebb25a099b74d672ce22ed3a9d4e35c441c97a5864",
+      "entries": [
+        {
+          "path": "",
+          "version": "0.1.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/@asamuzakjp/css-color",
+          "version": "7.1.9",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@asamuzakjp/dom-selector",
+          "version": "10.0.5",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@babel/code-frame",
+          "version": "7.29.7",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@babel/helper-validator-identifier",
+          "version": "7.29.7",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@babel/runtime",
+          "version": "7.29.10",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@bramus/specificity",
+          "version": "2.4.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@csstools/color-helpers",
+          "version": "6.1.2",
+          "license": "MIT-0"
+        },
+        {
+          "path": "node_modules/@csstools/css-calc",
+          "version": "3.4.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@csstools/css-color-parser",
+          "version": "4.2.6",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@csstools/css-parser-algorithms",
+          "version": "4.0.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@csstools/css-syntax-patches-for-csstree",
+          "version": "1.1.15",
+          "license": "MIT-0"
+        },
+        {
+          "path": "node_modules/@csstools/css-tokenizer",
+          "version": "4.0.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/aix-ppc64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/android-arm",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/android-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/android-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/darwin-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/darwin-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/freebsd-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/freebsd-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-arm",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-ia32",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-loong64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-mips64el",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-ppc64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-riscv64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-s390x",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/linux-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/netbsd-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/netbsd-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/openbsd-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/openbsd-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/openharmony-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/sunos-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/win32-arm64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/win32-ia32",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@esbuild/win32-x64",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@exodus/bytes",
+          "version": "1.16.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@oxc-project/types",
+          "version": "0.155.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@playwright/test",
+          "version": "1.62.1",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-android-arm-eabi",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-android-arm64",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-darwin-arm64",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-darwin-x64",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-freebsd-x64",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-arm64-gnu",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-arm64-musl",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-s390x-gnu",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-x64-gnu",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-x64-musl",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-openharmony-arm64",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-win32-arm64-msvc",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-win32-x64-msvc",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/pluginutils",
+          "version": "1.0.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@testing-library/dom",
+          "version": "10.4.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@testing-library/react",
+          "version": "16.3.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@types/aria-query",
+          "version": "5.0.4",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@types/jsdom",
+          "version": "27.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@types/node",
+          "version": "26.6.6",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@types/react",
+          "version": "19.3.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@types/react-dom",
+          "version": "19.3.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@types/tough-cookie",
+          "version": "4.0.5",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-aix-ppc64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-darwin-arm64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-darwin-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-freebsd-arm64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-freebsd-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-arm",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-arm64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-loong64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-mips64el",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-ppc64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-riscv64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-s390x",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-linux-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-netbsd-arm64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-netbsd-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-openbsd-arm64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-openbsd-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-sunos-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-win32-arm64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@typescript/typescript-win32-x64",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/@vitejs/plugin-react",
+          "version": "6.1.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/ansi-regex",
+          "version": "5.0.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/ansi-styles",
+          "version": "5.2.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/aria-query",
+          "version": "5.3.0",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/bidi-js",
+          "version": "1.1.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/css-tree",
+          "version": "3.2.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/csstype",
+          "version": "3.2.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/data-urls",
+          "version": "8.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/decimal.js",
+          "version": "10.6.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/dequal",
+          "version": "2.0.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/detect-libc",
+          "version": "2.1.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/dom-accessibility-api",
+          "version": "0.5.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/entities",
+          "version": "6.0.1",
+          "license": "BSD-2-Clause"
+        },
+        {
+          "path": "node_modules/esbuild",
+          "version": "0.28.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/fdir",
+          "version": "6.5.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/fsevents",
+          "version": "2.3.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/html-encoding-sniffer",
+          "version": "7.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/is-potential-custom-element-name",
+          "version": "1.0.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/js-tokens",
+          "version": "4.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/jsdom",
+          "version": "30.1.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/jsdom/node_modules/entities",
+          "version": "8.1.0",
+          "license": "BSD-2-Clause"
+        },
+        {
+          "path": "node_modules/jsdom/node_modules/parse5",
+          "version": "8.0.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/lightningcss",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-android-arm64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-darwin-arm64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-darwin-x64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-freebsd-x64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-arm-gnueabihf",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-arm64-gnu",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-arm64-musl",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-x64-gnu",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-x64-musl",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-win32-arm64-msvc",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-win32-x64-msvc",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lru-cache",
+          "version": "11.5.3",
+          "license": "BlueOak-1.0.0"
+        },
+        {
+          "path": "node_modules/lz-string",
+          "version": "1.5.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/mdn-data",
+          "version": "2.27.1",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "node_modules/nanoid",
+          "version": "3.3.20",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/parse5",
+          "version": "7.3.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/picocolors",
+          "version": "1.1.1",
+          "license": "ISC"
+        },
+        {
+          "path": "node_modules/picomatch",
+          "version": "4.0.7",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/playwright",
+          "version": "1.62.1",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/playwright-core",
+          "version": "1.62.1",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/playwright/node_modules/fsevents",
+          "version": "2.3.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/postcss",
+          "version": "8.5.32",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/pretty-format",
+          "version": "27.5.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/punycode",
+          "version": "2.3.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/react",
+          "version": "19.3.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/react-dom",
+          "version": "19.3.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/react-is",
+          "version": "17.0.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/require-from-string",
+          "version": "2.0.2",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/rolldown",
+          "version": "1.2.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/saxes",
+          "version": "6.0.0",
+          "license": "ISC"
+        },
+        {
+          "path": "node_modules/scheduler",
+          "version": "0.28.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/source-map-js",
+          "version": "1.2.2",
+          "license": "BSD-3-Clause"
+        },
+        {
+          "path": "node_modules/tinyglobby",
+          "version": "0.2.17",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/tldts",
+          "version": "7.4.19",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/tldts-core",
+          "version": "7.4.20",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/tough-cookie",
+          "version": "6.0.2",
+          "license": "BSD-3-Clause"
+        },
+        {
+          "path": "node_modules/tr46",
+          "version": "7.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/tsx",
+          "version": "4.23.15",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/typescript",
+          "version": "7.0.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/undici",
+          "version": "8.12.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/undici-types",
+          "version": "8.9.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/vite",
+          "version": "8.3.5",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/w3c-xmlserializer",
+          "version": "6.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/webidl-conversions",
+          "version": "8.0.1",
+          "license": "BSD-2-Clause"
+        },
+        {
+          "path": "node_modules/whatwg-mimetype",
+          "version": "5.0.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/whatwg-url",
+          "version": "17.3.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/xml-name-validator",
+          "version": "5.0.0",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/xmlchars",
+          "version": "2.2.0",
+          "license": "MIT"
+        }
+      ],
+      "missingLicense": 0,
+      "licenseCounts": {
+        "MPL-2.0": 13,
+        "MIT": 106,
+        "MIT-0": 2,
+        "Apache-2.0": 27,
+        "BSD-2-Clause": 3,
+        "BlueOak-1.0.0": 1,
+        "CC0-1.0": 1,
+        "ISC": 2,
+        "BSD-3-Clause": 2
+      },
+      "dependencyEntriesExcludingRoot": 156
+    },
+    {
+      "path": "spikes/p0-c05/package-lock.json",
+      "sha256": "5d7ba42b469650c55371283b41a7ee0ee8fd745f0577a8b902634311ed1cd83e",
+      "entries": [
+        {
+          "path": "",
+          "version": "0.0.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/@oxc-project/types",
+          "version": "0.156.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-android-arm-eabi",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-android-arm64",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-darwin-arm64",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-darwin-x64",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-freebsd-x64",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-arm64-gnu",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-arm64-musl",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-s390x-gnu",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-x64-gnu",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-linux-x64-musl",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-openharmony-arm64",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-win32-arm64-msvc",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/binding-win32-x64-msvc",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@rolldown/pluginutils",
+          "version": "1.0.1",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/api",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-darwin-arm64",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-darwin-x64",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-linux-arm-gnueabihf",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-linux-arm64-gnu",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-linux-arm64-musl",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-linux-riscv64-gnu",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-linux-x64-gnu",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-linux-x64-musl",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-win32-arm64-msvc",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-win32-ia32-msvc",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/cli-win32-x64-msvc",
+          "version": "2.12.4",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "path": "node_modules/@tauri-apps/plugin-fs",
+          "version": "2.7.1",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "path": "node_modules/@tauri-apps/plugin-notification",
+          "version": "2.8.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "path": "node_modules/detect-libc",
+          "version": "2.1.2",
+          "license": "Apache-2.0"
+        },
+        {
+          "path": "node_modules/fdir",
+          "version": "6.5.0",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/fsevents",
+          "version": "2.3.3",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/lightningcss",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-android-arm64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-darwin-arm64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-darwin-x64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-freebsd-x64",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-arm-gnueabihf",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-arm64-gnu",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-arm64-musl",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-x64-gnu",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-linux-x64-musl",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-win32-arm64-msvc",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/lightningcss-win32-x64-msvc",
+          "version": "1.33.0",
+          "license": "MPL-2.0"
+        },
+        {
+          "path": "node_modules/nanoid",
+          "version": "3.3.20",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/picocolors",
+          "version": "1.1.1",
+          "license": "ISC"
+        },
+        {
+          "path": "node_modules/picomatch",
+          "version": "4.0.7",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/postcss",
+          "version": "8.5.32",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/rolldown",
+          "version": "1.2.16",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/source-map-js",
+          "version": "1.2.2",
+          "license": "BSD-3-Clause"
+        },
+        {
+          "path": "node_modules/tinyglobby",
+          "version": "0.2.17",
+          "license": "MIT"
+        },
+        {
+          "path": "node_modules/vite",
+          "version": "8.3.5",
+          "license": "MIT"
+        }
+      ],
+      "missingLicense": 0,
+      "licenseCounts": {
+        "MPL-2.0": 13,
+        "MIT": 25,
+        "Apache-2.0 OR MIT": 13,
+        "MIT OR Apache-2.0": 2,
+        "Apache-2.0": 1,
+        "ISC": 1,
+        "BSD-3-Clause": 1
+      },
+      "dependencyEntriesExcludingRoot": 55
+    }
+  ],
+  "nativeDependencies": {
+    "lockedRegistryPackages": 453,
+    "directMetadataChecked": [
+      {
+        "name": "tauri",
+        "version": "2.12.5",
+        "license": "Apache-2.0 OR MIT",
+        "checksum": "5fb0244332cfb9cee7e2a568bf5da29a36ed8fdbd717f6f47a66b6b7b358c072",
+        "checksumMatchesLock": true,
+        "source": "https://crates.io/api/v1/crates/tauri/2.12.5"
+      },
+      {
+        "name": "tauri-build",
+        "version": "2.7.4",
+        "license": "Apache-2.0 OR MIT",
+        "checksum": "adddb0e648752aaac5da9c3c3c6a68e1e87cab55e3b757b18a9441ef8c3ac614",
+        "checksumMatchesLock": true,
+        "source": "https://crates.io/api/v1/crates/tauri-build/2.7.4"
+      },
+      {
+        "name": "tauri-plugin-fs",
+        "version": "2.7.1",
+        "license": "Apache-2.0 OR MIT",
+        "checksum": "5d58eb1d4984e535f47a642ffec09a2da6f5c18a12b5902d12126cb7626d628b",
+        "checksumMatchesLock": true,
+        "source": "https://crates.io/api/v1/crates/tauri-plugin-fs/2.7.1"
+      },
+      {
+        "name": "tauri-plugin-notification",
+        "version": "2.8.0",
+        "license": "Apache-2.0 OR MIT",
+        "checksum": "5bc6c194a95a535abdfbe3bc1af9a43935b8b9b29c216b8e71af8b59132703cf",
+        "checksumMatchesLock": true,
+        "source": "https://crates.io/api/v1/crates/tauri-plugin-notification/2.8.0"
+      }
+    ],
+    "remainingLicenseTextsNotReviewed": 449
+  },
+  "workflow": {
+    "references": [
+      "actions/checkout@v7",
+      "actions/setup-node@v7"
+    ],
+    "commitPinned": false,
+    "externalActionImplementationReviewed": false
+  },
+  "assets": {
+    "generator": "Pinned Tauri icon tooling from the simple tracked geometric source SVG.",
+    "binaryVariants": "Hashed and inventoried; not all individually rendered or OCR/malware inspected.",
+    "generatedXmlProvenancePending": [
+      "spikes/p0-c05/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml",
+      "spikes/p0-c05/src-tauri/icons/android/values/ic_launcher_background.xml"
+    ]
+  },
+  "priorArtifacts": [
+    {
+      "name": "Accounting_Assistant_P0_C05_Rebuilt.zip",
+      "available": true,
+      "size": 483102,
+      "sha256": "20588b7bceb54a7e845c6d5e701ffd00a7b1fb6f00ff89ac34d0ebfaead85536",
+      "members": 136,
+      "crc": "passed",
+      "excludedPaths": [],
+      "patternHits": []
+    },
+    {
+      "name": "earlier C04/C05/C06 and combined C06+C07 ZIPs",
+      "available": false,
+      "inspected": false
+    }
+  ],
+  "openItems": [
+    {
+      "id": "RIGHTS-01",
+      "question": "Owner confirmation of contribution rights and applicable agreements is still required; no private agreement inspected."
+    },
+    {
+      "id": "DEPS-01",
+      "question": "Review native transitive license texts and target binary contents before a binary release."
+    },
+    {
+      "id": "ASSET-01",
+      "question": "Confirm terms/provenance of the two generated Android XML templates; no speculative license header applied."
+    },
+    {
+      "id": "IDENTITY-01",
+      "question": "Git labels are not identity proof. Local signature markers include uncheckable and unsigned commits."
+    },
+    {
+      "id": "ARTIFACT-01",
+      "question": "Missing archives, hidden/deleted refs, forks, caches and external action code remain outside inspected scope."
+    },
+    {
+      "id": "OBJECT-01",
+      "question": "One pre-edit unreachable blob is inventoried but its content is outside this reachable-history review."
+    },
+    {
+      "id": "RELEASE-01",
+      "question": "Browser, actual-device, recovery, security and tax/legal acceptance gates remain open."
+    }
+  ],
+  "readiness": "Bounded planning/source review can continue only within owner authorization; no clean-history, rights, legal, device or release certification."
+}

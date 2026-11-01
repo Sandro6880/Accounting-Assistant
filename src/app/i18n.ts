@@ -91,7 +91,7 @@ const en = {
   checkpoints: "Checkpoints",
   proof: "Required proof",
   workingOn:
-    "P0.C05: separate platform probe prepared. Windows/Android device measurements remain blocked. See the testing guide.",
+    "P0.C06/C07: architecture and repository review prepared. Earlier browser/device checks and rights questions remain open. See the testing guide.",
   error: "The action could not be completed. Review the input and try again.",
 } as const;
 export type TranslationKey = keyof typeof en;
@@ -186,7 +186,7 @@ const de: Record<TranslationKey, string> = {
   checkpoints: "Checkpoints",
   proof: "Erforderlicher Nachweis",
   workingOn:
-    "P0.C05: Getrennter Plattformtest vorbereitet. Windows-/Android-Gerätemessungen sind noch blockiert. Siehe Testanleitung.",
+    "P0.C06/C07: Architektur- und Repository-Prüfung vorbereitet. Frühere Browser-/Gerätetests und Rechtefragen bleiben offen. Siehe Testanleitung.",
   error:
     "Die Aktion konnte nicht abgeschlossen werden. Eingaben prüfen und erneut versuchen.",
 };

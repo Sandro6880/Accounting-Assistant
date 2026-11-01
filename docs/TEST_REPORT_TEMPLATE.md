@@ -50,3 +50,15 @@ For the separate P0.C05 probe, use
 [PLATFORM_SPIKE_RESULTS_TEMPLATE.md](PLATFORM_SPIKE_RESULTS_TEMPLATE.md).
 Its native operations are experiments; the accounting app's financial storage
 and future platform availability above are unchanged.
+
+## Optional C06/C07 review record — blank
+
+- Delivery filename and SHA-256:
+- Checked revision / source fingerprint:
+- Twelve architecture directions and seven packet dependencies reviewed:
+- Repository inspected/excluded boundaries and unresolved items reviewed:
+- Contribution rights confirmation and supporting scope (no private documents):
+- Core/probe commands, actual results and environment:
+- EN/DE Roadmap counts observed:
+- Remaining browser/device/legal/rights/recovery blockers:
+- Owner acceptance decision (do not infer from tests):

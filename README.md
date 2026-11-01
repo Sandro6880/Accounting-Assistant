@@ -8,7 +8,16 @@ The goal is to make a recorded amount traceable: annual report → entry or asse
 
 Version **0.1.0** is a runnable React/TypeScript/Vite application with fictional records in session memory. It includes draft creation, posting, full reversals, separate EUR/USD totals, English/German controls, fictional business creation, an executable browser Test Lab and a roadmap view.
 
-**P0.C01** retains its deferred browser-verification blocker. **P0.C02/P0.C03/P0.C04** remain In review. The current **P0.C05** packet supplies a separate synthetic Tauri platform probe, ten portable probe tests and a Windows/Android device guide. The existing accounting core still has 26 tests. P0.C05 is Blocked pending native compilation and actual device measurements; no installer/APK or native pass is claimed. The other 87 checkpoints remain Planned, with none verified. See [the spike guide](docs/PLATFORM_SPIKE.md) and [verification](docs/VERIFICATION.md).
+**P0.C01** retains its deferred browser blocker; **P0.C05** retains its native
+build/device blocker. **P0.C02/P0.C03/P0.C04/P0.C06/P0.C07** are In review.
+The rebuilt P0.C06+C07 packet records twelve architecture decisions, seven bounded
+backlog packets and an actual limited repository/history/license/privacy review.
+Counts: **2 blocked, 5 in review, 85 planned, none verified**. The accounting core
+retains 26 tests; the separate probe retains ten portable tests. No new financial
+feature or native device pass is claimed. See [architecture](docs/ARCHITECTURE.md),
+[repository review](docs/REPOSITORY_REVIEW.md) and [next work](docs/NEXT_WORK.md).
+The former combined download is unavailable; this is a reconstructed replacement,
+not a byte-identical archive recovery.
 
 For testing on your own Windows machine, follow [LOCAL_TESTING.md](docs/LOCAL_TESTING.md): exact PowerShell commands, all five app views, expected totals, third-business creation, reset and a blank results template. The app still starts with the same two fictional businesses and baseline figures; create Example Workshop through Businesses to exercise the third profile.
 
@@ -169,7 +178,10 @@ Optional public subscriptions, payment execution, payroll and broader legal prof
 
 ### Next bounded work
 
-The current packet is **P0.C05 only**, Blocked pending installed Windows/actual Android build and measurement evidence. Follow [PLATFORM_SPIKE.md](docs/PLATFORM_SPIKE.md) for this same checkpoint; P0.C06 has not started. The earlier reviews remain pending. The separate probe does not add financial persistence, tax output, protected recovery or paired transfer to the main app.
+This replacement is **P0.C06 + P0.C07 only**. Both are In review; earlier reviews
+and browser/device blockers remain. The next roadmap checkpoint is P1.C01, after
+P0 acceptance or a later explicit bounded owner continuation. No P1 work starts
+in this delivery. See [NEXT_WORK.md](docs/NEXT_WORK.md).
 
 These planned tasks alone represent **24–36 hours** of useful work, subject to the baseline inspection. They are not completed-task claims or a commitment to charge a fixed duration.
 
