@@ -51,9 +51,11 @@ journey evidence. Its baseline packet did not start another checkpoint.
 
 The owner subsequently deferred verification and authorized P0.C02's source
 comparison, followed by P0.C03's fictional profiles/platform matrix. Those two
-checkpoints are In review; the other 89 remain Planned. See
+checkpoints are In review. The later P0.C04 accounting/VAT definition is also
+In review; the other 88 remain Planned. See
 [CAPABILITY_AUDIT.md](CAPABILITY_AUDIT.md) and
-[SYNTHETIC_PROFILES.md](SYNTHETIC_PROFILES.md) for their own scopes, evidence and
+[SYNTHETIC_PROFILES.md](SYNTHETIC_PROFILES.md) and
+[ACCOUNTING_SCOPE.md](ACCOUNTING_SCOPE.md) for their own scopes, evidence and
 checks. P0.C01's original checkpoint evidence and browser blocker are unchanged.
 No new browser result is implied by continuing these definition packets.
 
@@ -81,3 +83,12 @@ No manual browser layout review, hosted GitHub CI run, installed Windows app,
 actual Android device, durable storage/recovery, authentication/encryption,
 legal mapping, government transmission or repository-history/privacy audit
 was certified. DOM checks and mobile emulation do not provide that evidence.
+
+## Owner feedback after P0.C03
+
+On 31 October 2026 the owner reported **“it works”** and authorized continuing.
+This is recorded as a working-result confirmation with unspecified test scope.
+No command log, six-journey report, filled checklist or actual-device details
+were supplied with that message. It does not establish which automated/manual
+checks ran, so no detailed results or earlier checkpoint states were fabricated.
+P0.C04 proceeds under that continuation request; the prior records are retained.

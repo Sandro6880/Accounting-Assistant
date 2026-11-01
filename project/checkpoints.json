@@ -132,8 +132,39 @@
       "phase": "P0",
       "summary": "Define the supported Austrian accounting method and synthetic VAT cases, including unknown status. Cover domestic, EU business, direct EU consumer digital and non-EU cases; select the first report/year adapter.",
       "proof": "a versioned case inventory states support and exclusions.",
-      "status": "planned",
-      "evidence": null
+      "status": "in-review",
+      "evidence": {
+        "revision": "ca8e73d876c881b8631e20b5e6ff212c62e1b2f2",
+        "recordedOn": "2026-10-31",
+        "record": "docs/ACCOUNTING_SCOPE.md",
+        "inventory": "project/accounting-scope.json",
+        "inventoryVersion": "p0-c04-v1",
+        "inputTree": "72c1468e9b5080172e85e088a99caf1fce94e3bb",
+        "inputSourceFingerprint": "01a12dcf32075e5a1363f9a641d61d07c8d2d7e5e78177dfb8effa561a66dfdf",
+        "objective": "Define the initial Austrian E/A actual-expense method, fictional VAT cases, support/exclusions and first report/year target using current official sources.",
+        "dependencies": ["Owner's checkpoint 3 commit and fictional profile definitions"],
+        "dependencyDecision": "Owner reported the previous delivery working and requested continuation; exact prior test scope was not supplied, so earlier checkpoint evidence/statuses are preserved.",
+        "fixtureVersion": "synthetic-v1",
+        "sourceReviewDate": "2026-10-31",
+        "commands": ["git fetch origin", "npm ci", "npm run check", "npm run progress -- --json"],
+        "results": {
+          "inputCoreChecks": "passed: 26 Node/DOM tests, typecheck, build and all 92 manifest IDs",
+          "officialSources": "12 Austrian/EU guidance/reference URLs with checked dates; not an exhaustive legal consolidation or adviser sign-off",
+          "caseInventory": "18 definition-only cases: 11 candidates, 4 unresolved and 3 deferred",
+          "method": "Ordinary Austrian E/A with actual expenses and explicit hypothetical net/gross contexts",
+          "firstReportTarget": "E1a/2026 preparation target selected; exact official 2026 artifact and field mapping unverified; implementation/output disabled",
+          "runtime": "Current business VAT statuses and all money/posting/storage behavior unchanged; no tax engine or government output added"
+        },
+        "review": "Source-backed inventory covers unknown, domestic, EU B2B, direct EU consumer digital and non-EU cases. Foreign schemes, special services, goods, rates/registrations and unsupported deductions remain explicit limits. Positive case assumptions are fictional and require later rule review before enabling any tax-final output.",
+        "manualEvidence": "Official-source review, versioned case definitions and recorded owner feedback; no new Windows/Android/browser execution result is claimed.",
+        "limitations": [
+          "Candidate case coverage is not implemented or legally validated tax behavior.",
+          "A 2025 BMF form listing was observed; it is not proof of a 2026 form/schema and cannot be relabelled as one.",
+          "Unknown VAT/customer/location facts remain unresolved; UID, OSS and EX facts are distinct.",
+          "Input revision/tree/fingerprint describe the clean starting source; final packet runs record their own dirty state/fingerprint."
+        ],
+        "nextDecision": "Review the P0.C04 method/case definitions. The next separate checkpoint is P0.C05, the measured Windows/Android platform spike; it has not been started."
+      }
     },
     {
       "id": "P0.C05",

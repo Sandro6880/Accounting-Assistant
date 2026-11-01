@@ -1,0 +1,712 @@
+{
+  "schemaVersion": 1,
+  "inventoryVersion": "p0-c04-v1",
+  "checkpointId": "P0.C04",
+  "dataMode": "synthetic",
+  "effectiveCaseYear": 2026,
+  "sourcesCheckedOn": "2026-10-31",
+  "reviewStatus": "in-review",
+  "provenance": "Wholly fictional case assumptions, not live registration, UID validation or adviser approval.",
+  "runtime": {
+    "classifierImplemented": false,
+    "taxCalculationEnabled": false,
+    "officialExportEnabled": false,
+    "governmentTransmissionEnabled": false,
+    "modifiesDemoVatStatus": false
+  },
+  "accountingMethod": {
+    "id": "at-ea-actual-v1",
+    "label": "Ordinary Austrian Einnahmen-Ausgaben-Rechnung with actual expenses",
+    "jurisdiction": "AT",
+    "taxpayerScope": "Fictional natural-person sole trader eligible for E/A; no compulsory/voluntary accrual books assumed",
+    "recognition": "Actual receipt/disbursement subject to separately reviewed statutory exceptions",
+    "initialCaseScope": "Ordinary one-off service receipts and reviewed operating costs; no assets, stock, payroll, recurring-year-boundary or special allowance cases",
+    "vatBookkeepingChoices": [
+      {
+        "id": "regular-net-assumed",
+        "choice": "net",
+        "requires": [
+          "explicit net-method selection",
+          "confirmed regular VAT and appropriate deduction eligibility"
+        ],
+        "status": "hypothetical-case-context-only"
+      },
+      {
+        "id": "domestic-exempt-gross-assumed",
+        "choice": "gross",
+        "requires": [
+          "confirmed domestic exemption",
+          "non-deductible input VAT reflected in eligible costs"
+        ],
+        "status": "hypothetical-case-context-only"
+      },
+      {
+        "id": "vat-unconfirmed",
+        "choice": "unresolved",
+        "requires": [
+          "effective-dated profile review"
+        ],
+        "status": "blocks-tax-final-output"
+      }
+    ],
+    "notSelected": [
+      "accrual or company accounts",
+      "income-tax or input-VAT flat-rate deductions",
+      "payroll",
+      "asset/depreciation schedules",
+      "full income-tax return calculation"
+    ],
+    "requiredFutureInputs": [
+      "payment evidence and financial dates",
+      "reviewed business allocation and deduction treatment",
+      "original currency and purpose-specific EUR valuation",
+      "tax-year membership",
+      "VAT profile and bookkeeping election evidence"
+    ],
+    "sourceIds": [
+      "AT-EA",
+      "AT-NET-GROSS",
+      "AT-SME"
+    ]
+  },
+  "vatContexts": [
+    {
+      "id": "vat-unconfirmed",
+      "hypothetical": true,
+      "vatStatus": "unconfirmed",
+      "establishment": "AT",
+      "taxOutput": "blocked"
+    },
+    {
+      "id": "regular-net-assumed",
+      "hypothetical": true,
+      "vatStatus": "regular-assumed-reviewed",
+      "establishment": "AT-only",
+      "otherFixedEstablishments": "none-assumed",
+      "foreignExScheme": "not-used-confirmed-unless-case-is-explicitly-deferred",
+      "bookkeepingElection": "net-assumed-confirmed",
+      "liveUid": "not-supplied"
+    },
+    {
+      "id": "domestic-exempt-gross-assumed",
+      "hypothetical": true,
+      "vatStatus": "domestic-exemption-assumed-reviewed",
+      "establishment": "AT-only",
+      "otherFixedEstablishments": "none-assumed",
+      "foreignExScheme": "not-used-confirmed-unless-case-is-explicitly-deferred",
+      "bookkeepingElection": "gross",
+      "inputVatDeduction": "not-available-under-assumed-exemption",
+      "liveUid": "not-supplied"
+    }
+  ],
+  "firstReportAdapter": {
+    "id": "AT-E1A-2026-preparation",
+    "form": "E1a",
+    "taxYear": 2026,
+    "parentReturn": "E1",
+    "target": "Business-income preparation contract only",
+    "status": "selected-not-implemented",
+    "official2026Artifact": "not-verified",
+    "fieldMapping": "not-reviewed",
+    "schemaValidation": "not-implemented",
+    "outputGenerationEnabled": false,
+    "transmissionEnabled": false,
+    "observedReference": {
+      "sourceId": "AT-FORM-2025",
+      "year": 2025,
+      "purpose": "Reference listing only; never a substitute for the selected 2026 form/schema"
+    },
+    "readinessRequires": [
+      "verified official form/year and applicable instructions",
+      "reviewed method and VAT profile",
+      "complete supported records, deductions/assets and EUR valuations",
+      "field mapping and external validation where required"
+    ],
+    "exclusions": [
+      "E1a-K adapter",
+      "complete E1 including salary/personal items",
+      "UVA/ZM/OSS/EX output adapters",
+      "upload or direct government submission"
+    ]
+  },
+  "boundaryExamples": [
+    {
+      "id": "EA-PAYMENT-YEAR",
+      "kind": "fictional-definition-only",
+      "invoiceDate": "2025-12-10",
+      "paymentDate": "2026-01-20",
+      "transaction": "one-off EUR service receipt; recurring-payment and other exceptions expressly excluded",
+      "expectedEaYear": 2026,
+      "vatPeriod": "separate-rule-not-derived-from-EA-year",
+      "sourceIds": [
+        "AT-EA"
+      ]
+    },
+    {
+      "id": "USD-UNVALUED",
+      "kind": "fictional-definition-only",
+      "originalCurrency": "USD",
+      "eurValuation": null,
+      "expected": "preserve original currency; EUR report remains incomplete",
+      "sourceIds": []
+    }
+  ],
+  "exclusions": [
+    "Automatic exemption or business-status inference from an unknown profile or a UID",
+    "Automatic SME/EX eligibility or threshold calculators, tolerance/waiver/effective-date transitions",
+    "Foreign-country tax rates, sales taxes, registrations and place-of-use exceptions",
+    "Goods/imports/IOSS, special-place services and unreviewed platform responsibility",
+    "Mixed business/private deductions, assets, payroll, year-boundary exceptions and flat-rate methods",
+    "VAT timing inferred from E/A dates or bank settlement rates",
+    "Any tax-final, legal certification, government-ready file or transmission in this checkpoint"
+  ],
+  "caseCoverage": [
+    "unknown",
+    "domestic",
+    "eu-business",
+    "eu-consumer-digital",
+    "non-eu",
+    "excluded"
+  ],
+  "cases": [
+    {
+      "id": "UNKNOWN-PROFILE",
+      "coverage": "unknown",
+      "direction": "outgoing",
+      "context": "vat-unconfirmed",
+      "service": "ordinary-software-service",
+      "disposition": "unresolved",
+      "facts": {
+        "customerCountry": "AT",
+        "customerStatus": "business-assumed"
+      },
+      "expected": {
+        "place": "unresolved",
+        "vat": "unresolved-no-presumed-exemption",
+        "reporting": "blocked-for-profile-review"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SME",
+        "AT-SERVICES"
+      ]
+    },
+    {
+      "id": "UNKNOWN-EU-CUSTOMER",
+      "coverage": "unknown",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "ordinary-software-service",
+      "disposition": "unresolved",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "unknown",
+        "businessStatusEvidence": "missing"
+      },
+      "expected": {
+        "place": "unresolved",
+        "vat": "unresolved-no-presumed-reverse-charge",
+        "reporting": "blocked-for-customer-evidence"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SERVICES",
+        "AT-ZM"
+      ]
+    },
+    {
+      "id": "AT-DOM-REG",
+      "coverage": "domestic",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "standard-rated-software-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "AT",
+        "customerStatus": "business-assumed",
+        "specialPlaceOrExemption": "none-assumed"
+      },
+      "expected": {
+        "place": "AT",
+        "vat": "Austrian-standard-rate-reference-20-percent",
+        "reporting": "domestic-VAT-route-to-be-mapped"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SERVICES",
+        "AT-RATE"
+      ]
+    },
+    {
+      "id": "AT-DOM-EXEMPT",
+      "coverage": "domestic",
+      "direction": "outgoing",
+      "context": "domestic-exempt-gross-assumed",
+      "service": "ordinary-software-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "AT",
+        "customerStatus": "business-assumed",
+        "exemptionEligibility": "assumed-confirmed-for-fictional-case"
+      },
+      "expected": {
+        "place": "AT",
+        "vat": "domestic-small-business-exemption-not-zero-rating",
+        "inputVat": "no-deduction-under-assumed-exemption"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SME"
+      ]
+    },
+    {
+      "id": "EU-B2B-REG",
+      "coverage": "eu-business",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "general-rule-B2B-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "business-assumed-confirmed",
+        "customerEvidence": "fictional-reviewed-status-establishment-and-UID-proof",
+        "relevantRecipientEstablishment": "DE"
+      },
+      "expected": {
+        "place": "DE",
+        "vat": "outside-Austrian-VAT-scope",
+        "recipientLiability": "EU-reverse-charge-under-case-assumptions",
+        "zm": "outgoing-service-applicable"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SERVICES",
+        "AT-ZM"
+      ]
+    },
+    {
+      "id": "EU-B2B-EXEMPT",
+      "coverage": "eu-business",
+      "direction": "outgoing",
+      "context": "domestic-exempt-gross-assumed",
+      "service": "general-rule-B2B-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "business-assumed-confirmed",
+        "customerEvidence": "fictional-reviewed-status-establishment-and-UID-proof",
+        "relevantRecipientEstablishment": "DE"
+      },
+      "expected": {
+        "place": "DE",
+        "vat": "outside-Austrian-VAT-scope",
+        "recipientLiability": "EU-reverse-charge-under-case-assumptions",
+        "zm": "outgoing-service-applicable-despite-domestic-exemption"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SERVICES",
+        "AT-ZM",
+        "AT-SME"
+      ]
+    },
+    {
+      "id": "EU-DIGITAL-BELOW",
+      "coverage": "eu-consumer-digital",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "consumer-assumed-confirmed",
+        "locationEvidence": "fictional-consistent-DE-proof",
+        "combinedCrossBorderTbeAndDistanceSalesNetEUR": {
+          "current": "8000.00",
+          "previous": "6000.00"
+        },
+        "destinationOption": "not-exercised-confirmed",
+        "foreignExScheme": "not-used-confirmed"
+      },
+      "expected": {
+        "place": "AT",
+        "vat": "Austrian-standard-rate-reference-for-this-software-case",
+        "oss": "not-for-this-domestic-place-of-supply"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "EU-OSS",
+        "AT-TBE",
+        "AT-RATE"
+      ]
+    },
+    {
+      "id": "EU-DIGITAL-ABOVE",
+      "coverage": "eu-consumer-digital",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "consumer-assumed-confirmed",
+        "locationEvidence": "fictional-consistent-DE-proof",
+        "combinedCrossBorderTbeAndDistanceSalesNetEUR": {
+          "current": "12000.00",
+          "previous": "6000.00"
+        },
+        "transactionPosition": "after-threshold-exceeded",
+        "ossRegistration": "assumed-confirmed",
+        "foreignExScheme": "not-used-confirmed"
+      },
+      "expected": {
+        "place": "DE",
+        "vat": "destination-VAT-rate-mapping-not-provided",
+        "reporting": "EU-OSS-under-assumed-registration",
+        "zm": "not-an-outgoing-B2B-ZM-service"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "EU-OSS",
+        "AT-TBE"
+      ]
+    },
+    {
+      "id": "EU-DIGITAL-OPTION",
+      "coverage": "eu-consumer-digital",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "consumer-assumed-confirmed",
+        "locationEvidence": "fictional-consistent-DE-proof",
+        "combinedCrossBorderTbeAndDistanceSalesNetEUR": {
+          "current": "6000.00",
+          "previous": "4000.00"
+        },
+        "destinationOption": "effective-confirmed",
+        "ossRegistration": "assumed-confirmed",
+        "foreignExScheme": "not-used-confirmed"
+      },
+      "expected": {
+        "place": "DE",
+        "vat": "destination-VAT-rate-mapping-not-provided",
+        "reporting": "EU-OSS-under-assumed-registration"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "EU-OSS",
+        "AT-TBE"
+      ]
+    },
+    {
+      "id": "EU-DIGITAL-UNKNOWN",
+      "coverage": "unknown",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "unresolved",
+      "facts": {
+        "customerCountry": "DE",
+        "customerStatus": "consumer-assumed",
+        "locationEvidence": "missing",
+        "combinedCrossBorderTbeAndDistanceSalesNetEUR": {
+          "current": null,
+          "previous": null
+        },
+        "destinationOption": "unknown"
+      },
+      "expected": {
+        "place": "unresolved",
+        "vat": "unresolved-no-domestic-threshold-default",
+        "reporting": "blocked-for-location-and-threshold-proof"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "EU-OSS",
+        "AT-TBE"
+      ]
+    },
+    {
+      "id": "NON-EU-B2B",
+      "coverage": "non-eu",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "general-rule-B2B-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "US",
+        "customerStatus": "business-assumed-confirmed",
+        "relevantRecipientEstablishment": "US",
+        "customerEvidence": "fictional-reviewed-business-and-location-proof",
+        "sourceCurrency": "USD"
+      },
+      "expected": {
+        "place": "US",
+        "vat": "outside-Austrian-VAT-scope",
+        "zm": "not-an-EU-ZM-service",
+        "foreignTax": "not-determined-no-blanket-reverse-charge-claim",
+        "eurReporting": "blocked-until-purpose-specific-EUR-valuation"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SERVICES",
+        "AT-ZM"
+      ]
+    },
+    {
+      "id": "NON-EU-DIGITAL",
+      "coverage": "non-eu",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "customerCountry": "US",
+        "customerStatus": "consumer-assumed-confirmed",
+        "locationEvidence": "fictional-consistent-US-proof",
+        "channel": "direct-supplier"
+      },
+      "expected": {
+        "place": "US",
+        "vat": "outside-Austrian-VAT-scope",
+        "foreignTax": "jurisdiction-review-required",
+        "oss": "EU-OSS-not-for-this-US-place-of-supply"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-TBE",
+        "EU-OSS"
+      ]
+    },
+    {
+      "id": "INCOMING-EU-EXEMPT",
+      "coverage": "eu-business",
+      "direction": "incoming",
+      "context": "domestic-exempt-gross-assumed",
+      "service": "general-rule-business-cloud-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "supplierCountry": "IE",
+        "supplierEstablishmentInAT": "none-assumed",
+        "recipientBusinessEstablishment": "AT",
+        "invoiceTreatment": "assumed-correct-reverse-charge"
+      },
+      "expected": {
+        "place": "AT",
+        "vat": "Austrian-recipient-reverse-charge-liability",
+        "inputVat": "no-deduction-under-assumed-domestic-exemption",
+        "zm": "not-an-outgoing-ZM-service",
+        "reporting": "Austrian-declaration-payment-mapping-review-required"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-RC",
+        "AT-SME",
+        "AT-ZM"
+      ]
+    },
+    {
+      "id": "INCOMING-NON-EU-REG",
+      "coverage": "non-eu",
+      "direction": "incoming",
+      "context": "regular-net-assumed",
+      "service": "general-rule-business-cloud-service",
+      "disposition": "candidate-for-later-rule-review",
+      "facts": {
+        "supplierCountry": "US",
+        "supplierEstablishmentInAT": "none-assumed",
+        "recipientBusinessEstablishment": "AT",
+        "sourceCurrency": "EUR",
+        "businessUse": "wholly-business-assumed",
+        "invoiceTreatment": "assumed-correct-reverse-charge"
+      },
+      "expected": {
+        "place": "AT",
+        "vat": "Austrian-recipient-reverse-charge-liability",
+        "inputVat": "deduction-only-with-required-eligibility-proof-and-separate-timing",
+        "zm": "not-an-outgoing-ZM-service"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-RC",
+        "AT-ZM"
+      ]
+    },
+    {
+      "id": "PLATFORM-ROLE-UNKNOWN",
+      "coverage": "unknown",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "unresolved",
+      "facts": {
+        "customerCountry": "DE",
+        "channel": "platform",
+        "supplierOfRecord": "unknown",
+        "platformContractEvidence": "missing"
+      },
+      "expected": {
+        "place": "unresolved",
+        "vat": "unresolved-no-assumed-platform-VAT-responsibility",
+        "reporting": "blocked-for-contract-review"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-TBE"
+      ]
+    },
+    {
+      "id": "FOREIGN-EX-SCHEME",
+      "coverage": "excluded",
+      "direction": "outgoing",
+      "context": "domestic-exempt-gross-assumed",
+      "service": "automated-software-subscription",
+      "disposition": "deferred",
+      "facts": {
+        "customerCountry": "DE",
+        "foreignExScheme": "requested-or-claimed-without-reviewed-country-eligibility"
+      },
+      "expected": {
+        "place": "requires-case-review",
+        "vat": "foreign-small-business-exemption-not-enabled",
+        "reporting": "separate-EX-scheme-eligibility-review"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-EX"
+      ]
+    },
+    {
+      "id": "SPECIAL-PLACE",
+      "coverage": "excluded",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "property-related-service",
+      "disposition": "deferred",
+      "facts": {
+        "propertyCountry": "DE",
+        "customerCountry": "US",
+        "customerStatus": "business-assumed"
+      },
+      "expected": {
+        "place": "special-rule-not-mapped",
+        "vat": "do-not-apply-general-B2B-case",
+        "reporting": "outside-initial-service-inventory"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-SERVICES"
+      ]
+    },
+    {
+      "id": "PHYSICAL-GOODS",
+      "coverage": "excluded",
+      "direction": "outgoing",
+      "context": "regular-net-assumed",
+      "service": "physical-goods",
+      "disposition": "deferred",
+      "facts": {
+        "customerCountry": "DE",
+        "transportOrImportFacts": "not-modelled"
+      },
+      "expected": {
+        "place": "not-mapped",
+        "vat": "goods-supply-rules-not-covered-by-service-cases",
+        "reporting": "outside-initial-service-inventory"
+      },
+      "taxFinalOutputAllowed": false,
+      "sourceIds": [
+        "AT-EA"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "AT-EA",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Einnahmen-Ausgaben-Rechnung",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/steuerliche-gewinnermittlung/einnahmen-ausgaben-rechnung.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-NET-GROSS",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Pauschalierung overview — net/gross distinction only",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/steuerliche-gewinnermittlung/weitere-informationen-zur-steuerlichen-gewinnermittlung/pauschalierung-weitere-infos/est-pauschalierung-ueberblick.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-SME",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Kleinunternehmen — rules from 2025",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/weitere-steuertatbestaende-und-befreiungen/kleinunternehmen.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-SERVICES",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Grenzueberschreitende Dienstleistungen",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/umsaetze-mit-auslandsbezug/grenzueberschreitende-dienstleistungen.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-ZM",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Zusammenfassende Meldung",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/umsaetze-mit-auslandsbezug/zusammenfassende-meldung-zm.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-TBE",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Electronically supplied services",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/umsaetze-mit-auslandsbezug/grenzueberschreitende-dienstleistungen/elektronisch-erbrachte-dienstleistungen_telekommunikations_rundfunk--und-fernsehdienstleistungen.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "EU-OSS",
+      "publisher": "European Commission",
+      "title": "One Stop Shop — destination and EUR 10000 threshold",
+      "url": "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop_en",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "EU-DIGITAL",
+      "publisher": "EUR-Lex / Council",
+      "title": "Implementing Regulation 282/2011, Article 7 definition",
+      "url": "https://eur-lex.europa.eu/eli/reg/2011/282/oj",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-RC",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Reverse Charge System",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/umsaetze-mit-auslandsbezug/reverse-charge.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-RATE",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "VAT rates and exemptions",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/steuersaetze-und-steuerbefreiungen-der-umsatzsteuer.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-EX",
+      "publisher": "USP / Austrian Ministry of Finance",
+      "title": "Small-business exemption in other EU Member States",
+      "url": "https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/weitere-steuertatbestaende-und-befreiungen/kleinunternehmerbefreiung-in-anderen-mitgliedstaaten.html",
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "AT-FORM-2025",
+      "publisher": "Austrian Ministry of Finance",
+      "title": "Published E1a 2025 listing — reference only",
+      "url": "https://service.bmf.gv.at/service/anwend/formulare/show_det.asp?MIdVal=46795&STyp=&Typ=SD&s=E1",
+      "checkedOn": "2026-10-31"
+    }
+  ]
+}

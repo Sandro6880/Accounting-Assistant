@@ -12,8 +12,8 @@ its complete **Accounting-Assistant** subfolder. It contains `package.json`,
 `src`, `tests` and `ROADMAP.md`; dependencies are installed in step 2. Open
 PowerShell in that subfolder.
 
-For your existing Git checkout, apply the included P0.C03 patch instead, based
-on commit `e681732ec7f301a761efd4427eeea2b706e4172c` (your checkpoint 1/2 commit).
+For your existing Git checkout, apply the included P0.C04 patch instead, based
+on commit `ca8e73d876c881b8631e20b5e6ff212c62e1b2f2` (your checkpoint 3 commit).
 Follow the ZIP's instructions and preserve `.git` and unrelated work. The two
 paths contain the same code. Use your checkout for revision-linked evidence;
 the standalone source folder has no Git history, so its recorded Git revision
@@ -42,8 +42,8 @@ Expected: **26 Node/DOM tests pass**, typecheck/build pass, all **92** roadmap
 IDs validate, and progress reports `localChecks.status: passed` with
 `fresh: true`. Core scope explicitly leaves browser tests `not-run`.
 
-Progress should have one blocked checkpoint (P0.C01), two in review
-(P0.C02/P0.C03), 89 planned and none verified. A successful run does not change
+Progress should have one blocked checkpoint (P0.C01), three in review
+(P0.C02/P0.C03/P0.C04), 88 planned and none verified. A successful run does not change
 those statuses automatically. Use the JSON form; the short human summary omits
 blocked/in-review counts.
 
@@ -170,7 +170,7 @@ expecting the deterministic Node fixture ID `demo-workshop`.
   **Run browser checks**: expect **9/9** pass. These are isolated assertions,
   separate from the 26 Node/DOM tests and 6 Playwright journeys.
 - Open **Roadmap**, expand **P0**, and check P0.C01 Blocked,
-  P0.C02/P0.C03 In review. Switch to DE and check translated state labels.
+  P0.C02/P0.C03/P0.C04 In review. Switch to DE and check translated state labels.
   Test Lab results must not promote any checkpoint to Verified.
 - Return to EN, click **Reset demo** and confirm. Workshop and its entries
   disappear, leaving the two initial businesses and baseline amounts. The
@@ -185,7 +185,7 @@ Prepare an ignored copy of the blank result sheet:
 
 ```powershell
 New-Item -ItemType Directory -Force .\outputs | Out-Null
-Copy-Item .\docs\TEST_REPORT_TEMPLATE.md .\outputs\P0_C03_manual.md
+Copy-Item .\docs\TEST_REPORT_TEMPLATE.md .\outputs\local_manual.md
 ```
 
 Fill in actual versions, revision/dirty state, passed/failed/not-run steps and
@@ -213,3 +213,9 @@ server exposure or real account setup is needed for the checks above.
 Missing receipts, import, reconciliation, financial export, installed durability
 and tax outputs are recorded in the [capability audit](CAPABILITY_AUDIT.md).
 Their absence is not a failed implementation test for this checkpoint.
+
+P0.C04 adds a source-backed [accounting/VAT definition](ACCOUNTING_SCOPE.md) and
+`project/accounting-scope.json`. Review those documents for the selected method,
+18 reference cases and the unverified E1a/2026 target. The app still has no VAT
+calculator or official export, and all demo VAT profiles remain unconfirmed.
+The 26 core tests are application regressions, not legal validation of the cases.

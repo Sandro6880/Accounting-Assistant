@@ -1,6 +1,6 @@
-# P0.C03 local test record — blank template
+# Current prototype local test record — blank template
 
-Copy this to ignored `outputs/P0_C03_manual.md` before entering results.
+Copy this to ignored `outputs/local_manual.md` before entering results.
 Initial statuses are deliberately **Not run**. Expected outcomes in the guide
 are not execution evidence. Use wholly fictional data and screenshots.
 
@@ -31,6 +31,7 @@ are not execution evidence. Use wholly fictional data and screenshots.
 | Third business / draft totals / EUR 280.25 / USD 40.10 / isolation | Not run | |
 | In-app Test Lab — nine isolated assertions | Not run | |
 | Roadmap statuses and EN/DE labels | Not run | |
+| P0.C04 method, case/source inventory and disabled report-target review | Not run | Document review; no tax engine exists |
 | Reset/refresh restore two baseline businesses | Not run | |
 | Installed Windows offline/restart/recovery | Not run | Not implemented in this build |
 | Actual Android capture/camera/restart | Not run | Not implemented in this build |
@@ -41,5 +42,6 @@ features as Not implemented in the outcome column. A failed/blocked browser run
 does not erase a separately recorded core pass. Neither automatically verifies
 the roadmap. Record the exact failing command and error when a step fails.
 
-P0.C01 browser evidence, P0.C02 audit acceptance and P0.C03 profile/matrix review
-remain independent review decisions. No genuine records are needed.
+P0.C01 browser evidence, P0.C02 audit acceptance, P0.C03 profile/matrix review
+and P0.C04 accounting/VAT-scope review remain independent decisions. No genuine
+records are needed.

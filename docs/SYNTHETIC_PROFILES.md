@@ -174,3 +174,8 @@ P0.C03 remains **In review**, with P0.C01/P0.C02 evidence preserved and all 92
 IDs retained. No personal business setup or real account data is necessary to
 exercise these cases. The next checkpoint is **P0.C04**, the supported accounting
 method and synthetic VAT-case inventory; it has not been started.
+
+Subsequent continuation: P0.C04's [accounting/VAT inventory](ACCOUNTING_SCOPE.md)
+is now prepared for review. It uses separate hypothetical tax contexts and
+does not change the unconfirmed VAT status of these demo profiles or the
+results of the P0.C03 catalog cases.

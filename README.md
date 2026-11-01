@@ -8,7 +8,7 @@ The goal is to make a recorded amount traceable: annual report → entry or asse
 
 Version **0.1.0** is a runnable React/TypeScript/Vite application with fictional records in session memory. It includes draft creation, posting, full reversals, separate EUR/USD totals, English/German controls, fictional business creation, an executable browser Test Lab and a roadmap view.
 
-Checkpoint **P0.C01** recorded the original baseline and 24 passing Node/DOM tests; its browser verification remains blocked and deferred. **P0.C02** is In review with a source-backed capability comparison. The owner then authorized **P0.C03**: fictional profiles, EUR/USD scenarios and the Windows/Android test matrix, now prepared for review. The current core has **26 tests**, including two catalog scenarios; the other 89 checkpoints remain Planned. See [the baseline](docs/BASELINE.md), [verification record](docs/VERIFICATION.md), [audit](docs/CAPABILITY_AUDIT.md) and [profile/matrix definition](docs/SYNTHETIC_PROFILES.md).
+Checkpoint **P0.C01** recorded the original baseline and 24 passing Node/DOM tests; its detailed browser verification remains blocked/deferred. **P0.C02/P0.C03** are In review with the source audit and fictional profiles/platform matrix. Following the owner's working-result confirmation and continuation request, **P0.C04** now supplies the accounting/VAT scope for review: ordinary E/A with actual expenses, 18 fictional reference cases and an E1a/2026 preparation target. The core still has **26 tests**; the other 88 checkpoints remain Planned. See [verification](docs/VERIFICATION.md), [the audit](docs/CAPABILITY_AUDIT.md), [profiles](docs/SYNTHETIC_PROFILES.md) and [accounting scope](docs/ACCOUNTING_SCOPE.md).
 
 For testing on your own Windows machine, follow [LOCAL_TESTING.md](docs/LOCAL_TESTING.md): exact PowerShell commands, all five app views, expected totals, third-business creation, reset and a blank results template. The app still starts with the same two fictional businesses and baseline figures; create Example Workshop through Businesses to exercise the third profile.
 
@@ -43,6 +43,7 @@ Full tax preparation, installed offline apps and production access controls rema
 | [docs/LOCAL_TESTING.md](docs/LOCAL_TESTING.md) | Windows commands and current-app manual testing walkthrough |
 | [docs/TEST_REPORT_TEMPLATE.md](docs/TEST_REPORT_TEMPLATE.md) | Blank result sheet to copy into ignored outputs |
 | [tests/fixtures/p0-c03/profiles.json](tests/fixtures/p0-c03/profiles.json) | Versioned fictional profile/currency catalog exercised through the existing application boundary |
+| [docs/ACCOUNTING_SCOPE.md](docs/ACCOUNTING_SCOPE.md) / [project/accounting-scope.json](project/accounting-scope.json) | P0.C04 method, case coverage/exclusions, official source register and disabled report-target contract |
 
 These files are already part of this repository. Preserve the existing Git history, MPL-2.0 notices and active npm lockfile when applying changes. The full `.gitignore` supersedes the earlier additions-only checklist. A source or update ZIP does not replace repository history.
 
@@ -153,7 +154,7 @@ Optional public subscriptions, payment execution, payroll and broader legal prof
 
 ### Next bounded work
 
-The current packet is **P0.C03 only**; its [fictional profiles and test matrix](docs/SYNTHETIC_PROFILES.md) are prepared for review. P0.C01 browser verification and P0.C02 acceptance remain pending. The next checkpoint is **P0.C04**, not started in this packet. See [the handoff](docs/AGENT_HANDOFF.md) and [local test guide](docs/LOCAL_TESTING.md). The T01–T06 ideas below are future packet outlines subject to roadmap dependencies; they do not override checkpoint order.
+The current packet is **P0.C04 only**; its [accounting/VAT inventory](docs/ACCOUNTING_SCOPE.md) is prepared for review and does not activate tax calculations or official output. Earlier detailed evidence/reviews remain pending. The next checkpoint is **P0.C05**, not started in this packet. See [the handoff](docs/AGENT_HANDOFF.md) and [local test guide](docs/LOCAL_TESTING.md). The T01–T06 ideas below are future packet outlines subject to roadmap dependencies; they do not override checkpoint order.
 
 These planned tasks alone represent **24–36 hours** of useful work, subject to the baseline inspection. They are not completed-task claims or a commitment to charge a fixed duration.
 
