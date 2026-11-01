@@ -1,0 +1,12 @@
+{
+  "identifier": "synthetic-probe",
+  "description": "Local synthetic probe folder only; no remote origin or general filesystem access.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default", "fs:allow-exists", "fs:allow-mkdir", "fs:allow-read-dir",
+    "fs:allow-read-text-file", "fs:allow-write-text-file",
+    { "identifier": "fs:scope", "allow": [{ "path": "$APPLOCALDATA/p0-c05" }, { "path": "$APPLOCALDATA/p0-c05/*" }] },
+    "notification:allow-is-permission-granted", "notification:allow-request-permission",
+    "notification:allow-notify", "notification:allow-create-channel", "notification:allow-cancel"
+  ]
+}

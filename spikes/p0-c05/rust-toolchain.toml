@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: MPL-2.0
+[toolchain]
+channel = "1.99.1"
+profile = "minimal"

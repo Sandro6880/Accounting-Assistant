@@ -91,7 +91,7 @@ const en = {
   checkpoints: "Checkpoints",
   proof: "Required proof",
   workingOn:
-    "P0.C04: accounting and VAT reference cases prepared for review. Tax calculations and official output remain unavailable.",
+    "P0.C05: separate platform probe prepared. Windows/Android device measurements remain blocked. See the testing guide.",
   error: "The action could not be completed. Review the input and try again.",
 } as const;
 export type TranslationKey = keyof typeof en;
@@ -186,7 +186,7 @@ const de: Record<TranslationKey, string> = {
   checkpoints: "Checkpoints",
   proof: "Erforderlicher Nachweis",
   workingOn:
-    "P0.C04: Buchhaltungs- und Umsatzsteuerfälle zur Prüfung vorbereitet. Steuerberechnung und amtliche Ausgabe sind noch nicht umgesetzt.",
+    "P0.C05: Getrennter Plattformtest vorbereitet. Windows-/Android-Gerätemessungen sind noch blockiert. Siehe Testanleitung.",
   error:
     "Die Aktion konnte nicht abgeschlossen werden. Eingaben prüfen und erneut versuchen.",
 };

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Accounting P0 C05 Synthetic Spike",
+  "version": "0.0.0",
+  "identifier": "com.accountingassistant.p0c05spike",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{ "label": "main", "title": "P0.C05 — synthetic platform spike", "width": 1000, "height": 800 }],
+    "security": { "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; style-src 'self'; img-src 'self' blob: data:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" }
+  },
+  "bundle": { "active": true, "targets": ["nsis"], "icon": ["icons/icon.png", "icons/icon.ico"] }
+}

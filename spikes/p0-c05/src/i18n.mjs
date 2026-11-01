@@ -1,0 +1,43 @@
+// SPDX-License-Identifier: MPL-2.0
+export const messages = {
+  en: {
+    title: "Platform capability probe", intro: "A separate disposable app for fictional data. It does not save or change the accounting workspace.",
+    language: "Language", native: "Native bridge available. Device results still need observation.", preview: "Browser preview: native storage and notification probes are blocked. No browser storage fallback.",
+    saveTitle: "1. Local save and reload", business: "Fictional business", cases: "Three fixed cases: EUR 300.20 income, EUR 19.95 expense, USD 40.10 income. Expected EUR net 280.25; separate USD 40.10. No tax treatment.",
+    save: "Save a new fictional capture", list: "List saved captures", localFiles: "Saved file", load: "Read and verify selected capture",
+    cameraTitle: "2. Camera and original bytes", cameraHelp: "Photograph only this fictional card. Live capture produces a derived PNG. The file/capture chooser preserves selected bytes; it may offer only a picker. Record which path actually works. Saving is a separate action.",
+    camera: "Request live camera", snapshot: "Take PNG snapshot", stop: "Stop camera", original: "Capture/select fictional PNG or JPEG (max 3 MiB)", fixture: "Use built-in fictional text receipt", fixtureSelected: "Built-in fictional text receipt selected.", receiptSelected: "Receipt selected; save a new capture to retain these bytes.",
+    transferTitle: "3. Raw transport probe", transferHelp: "Load a saved capture, export its raw JSON, move it by USB, then import into this isolated probe on the other device. Hash checks detect accidental changes; the package has no encryption, trusted sender or pairing.",
+    export: "Export loaded capture to text", download: "Download JSON (if supported)", package: "Raw synthetic package", importFile: "Read transferred JSON file", import: "Validate and save into probe", importScope: "The selected business must match the package. Importing twice retains one capture. This creates no accounting entry or acknowledgement protocol.",
+    notificationTitle: "4. Notifications", notificationHelp: "API requests do not prove delivery. Observe denied/granted permission and actual arrival. Android: schedule, close the app, then record the result. Desktop scheduling is unavailable in this plugin. Record reboot separately.",
+    notify: "Request immediate test notification", schedule: "Android: request one in 60 seconds", cancel: "Cancel scheduled test",
+    evidenceTitle: "5. Save observations", evidenceHelp: "Record actual device/OS/WebView, offline state, close/reopen method, notification arrival and errors. A prior JavaScript session is not proof of a native process restart. Report download does not verify a checkpoint.",
+    device: "Device and versions (no serial numbers)", observation: "Actual observations, including results after restart/reboot", report: "Download this session report", busy: "Working…", done: "Recorded below.", failed: "Failed or blocked; see the error below.",
+    errors: {
+      NATIVE_REQUIRED: "Open the installed native spike for this operation.", UNMARKED_STORE: "Probe folder exists without its exact synthetic marker. Nothing was overwritten.",
+      DESKTOP_SCHEDULE_UNSUPPORTED: "Scheduled notifications are mobile-only in this plugin.", CAMERA_UNAVAILABLE: "This WebView has no live camera API. Record the limitation and try the capture/file chooser.",
+      CAMERA_NOT_READY: "Start the camera and wait for a video frame first.", NO_CAPTURE: "Load a saved capture first.", NO_FILE: "Select a saved file first.",
+      BUSINESS_MISMATCH: "Select the business belonging to the transferred package.", IMAGE_SIZE: "Use a fictional PNG/JPEG no larger than 3 MiB.", PACKAGE_SIZE: "Package is missing or too large.",
+    },
+  },
+  de: {
+    title: "Plattform-Funktionstest", intro: "Eine getrennte Test-App für vollständig fiktive Daten. Sie speichert oder ändert keine Buchhaltungsdaten.",
+    language: "Sprache", native: "Native Schnittstelle vorhanden. Geräteergebnisse müssen noch beobachtet werden.", preview: "Browser-Vorschau: Nativer Speicher und Benachrichtigungen sind blockiert. Kein Ersatz durch Browserspeicher.",
+    saveTitle: "1. Lokal speichern und laden", business: "Fiktiver Betrieb", cases: "Drei feste Fälle: EUR 300,20 Einnahme, EUR 19,95 Ausgabe, USD 40,10 Einnahme. Erwarteter EUR-Saldo 280,25; getrennt USD 40,10. Keine Steuerberechnung.",
+    save: "Neue fiktive Erfassung speichern", list: "Gespeicherte Erfassungen auflisten", localFiles: "Gespeicherte Datei", load: "Gewählte Erfassung lesen und prüfen",
+    cameraTitle: "2. Kamera und Originalbytes", cameraHelp: "Nur diese fiktive Karte fotografieren. Die Live-Aufnahme erzeugt eine abgeleitete PNG-Datei. Die Datei-/Kameraauswahl erhält gewählte Bytes; eventuell öffnet sie nur die Dateiauswahl. Tatsächlichen Ablauf festhalten. Speichern ist ein eigener Schritt.",
+    camera: "Live-Kamera anfordern", snapshot: "PNG-Aufnahme erstellen", stop: "Kamera stoppen", original: "Fiktives PNG/JPEG aufnehmen oder wählen (max. 3 MiB)", fixture: "Fiktiven Textbeleg verwenden", fixtureSelected: "Fiktiver Textbeleg ausgewählt.", receiptSelected: "Beleg ausgewählt; zum Aufbewahren eine neue Erfassung speichern.",
+    transferTitle: "3. Einfacher Übertragungstest", transferHelp: "Gespeicherte Erfassung laden, JSON exportieren, über USB übertragen und in dieser getrennten Test-App am anderen Gerät importieren. Hash-Prüfungen erkennen Änderungen; das Paket ist unverschlüsselt und ohne vertrauenswürdigen Absender oder Kopplung.",
+    export: "Geladene Erfassung als Text exportieren", download: "JSON herunterladen (falls unterstützt)", package: "Unverschlüsseltes fiktives Paket", importFile: "Übertragene JSON-Datei lesen", import: "Prüfen und im Testbereich speichern", importScope: "Der gewählte Betrieb muss zum Paket passen. Zweimaliger Import erhält eine Erfassung. Keine Buchung und kein Bestätigungsprotokoll entstehen.",
+    notificationTitle: "4. Benachrichtigungen", notificationHelp: "API-Aufrufe belegen keine Zustellung. Verweigerte/erteilte Berechtigung und tatsächliches Eintreffen beobachten. Android: planen, App schließen und Ergebnis festhalten. Desktop-Planung unterstützt dieses Plugin nicht. Geräte-Neustart getrennt prüfen.",
+    notify: "Sofortige Testmeldung anfordern", schedule: "Android: Meldung in 60 Sekunden anfordern", cancel: "Geplante Testmeldung abbrechen",
+    evidenceTitle: "5. Beobachtungen speichern", evidenceHelp: "Gerät, OS, WebView, Offline-Zustand, Art des Schließens/Öffnens, Zustellung und Fehler erfassen. Eine frühere JavaScript-Sitzung belegt keinen nativen Prozessneustart. Der Bericht bestätigt keinen Checkpoint.",
+    device: "Gerät und Versionen (keine Seriennummern)", observation: "Tatsächliche Beobachtungen, einschließlich App-/Geräte-Neustart", report: "Sitzungsbericht herunterladen", busy: "Wird ausgeführt…", done: "Unten aufgezeichnet.", failed: "Fehlgeschlagen oder blockiert; Fehler siehe unten.",
+    errors: {
+      NATIVE_REQUIRED: "Diese Funktion in der installierten nativen Test-App öffnen.", UNMARKED_STORE: "Testordner ohne genaue Fiktiv-Markierung gefunden. Nichts wurde überschrieben.",
+      DESKTOP_SCHEDULE_UNSUPPORTED: "Geplante Meldungen unterstützt dieses Plugin nur auf Mobilgeräten.", CAMERA_UNAVAILABLE: "Diese WebView hat keine Live-Kamera-API. Grenze festhalten und Kamera-/Dateiauswahl versuchen.",
+      CAMERA_NOT_READY: "Zuerst Kamera starten und auf ein Videobild warten.", NO_CAPTURE: "Zuerst eine gespeicherte Erfassung laden.", NO_FILE: "Zuerst eine gespeicherte Datei wählen.",
+      BUSINESS_MISMATCH: "Den zum übertragenen Paket gehörenden Betrieb wählen.", IMAGE_SIZE: "Fiktives PNG/JPEG mit höchstens 3 MiB verwenden.", PACKAGE_SIZE: "Paket fehlt oder ist zu groß.",
+    },
+  },
+};

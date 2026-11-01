@@ -1,82 +1,68 @@
 # Agent handoff
 
-Work on **one checkpoint at a time**, using the repository roadmap. Read root
-AGENTS.md, README.md, ROADMAP.md, SECURITY.md and
-[ARCHITECTURE.md](ARCHITECTURE.md).
+Work on one checkpoint at a time from ROADMAP.md. Read AGENTS.md, README.md,
+SECURITY.md and [ARCHITECTURE.md](ARCHITECTURE.md).
 
-## Current checkpoint: P0.C04, in review
+## Current checkpoint: P0.C05, blocked / unverified
 
-The [accounting/VAT scope](ACCOUNTING_SCOPE.md) and versioned
-`project/accounting-scope.json` define ordinary Austrian E/A with actual
-expenses, explicit hypothetical net/gross contexts, 18 fictional cases,
-support/exclusions and the first report/year target. Twelve official source
-URLs were checked on 31 October 2026. Definitions are prepared for review;
-they are not an implemented classifier or legally validated tax mapping.
+The [isolated platform probe](../spikes/p0-c05/) and
+[device guide](PLATFORM_SPIKE.md) prepare local save, camera, restart, raw transfer
+and notification measurements. The separate ten-test portable runner and build
+pass alongside the existing 26-test accounting core. The main app's financial
+source, fixture, tax definitions, tests and lockfile are unchanged.
 
-The selected target is E1a/2026 business-income preparation. Its exact official
-2026 artifact, field mapping and schema remain unverified/unimplemented.
-The observed BMF E1a/2025 listing must not be relabelled as the 2026 form.
-Generation, upload and transmission remain disabled. Later P6A/P9 work must
-review actual rule versions, evidence and the matching form/year before enabling
-tax-final output.
+Native compilation remains blocked: `cargo check --locked` fails at missing
+system pkg-config/GLib; Tauri reports missing Linux WebKitGTK/rsvg. Android setup
+fails because SDK/NDK are absent. No Windows desktop or actual Android device is
+available. No installer/APK or native-device result is claimed. A fresh Linux
+Node process reopening files is portable discovery, not the Tauri storage adapter.
 
-The default demo, money/posting/storage behavior, 26-test core and P0.C03 profile
-catalog remain unchanged. Demo VAT is still unconfirmed. Reference-case tax
-statuses are isolated fictional assumptions, never registration or UID results.
-[LOCAL_TESTING.md](LOCAL_TESTING.md) still describes the current app walkthrough.
+The candidate has no financial adapter, protected recovery, encryption, trusted
+pairing or production reminder engine. Live camera PNG is derived; chooser
+original bytes and actual camera fallback need device observations. Notification
+requests never prove delivery; the pinned plugin schedules on mobile only.
+Do not replace missing native evidence with emulation or a changed JavaScript
+session ID. Use [the blank device sheet](PLATFORM_SPIKE_RESULTS_TEMPLATE.md).
+P0.C06 has not started; gather and review this same checkpoint's device results.
 
-The packet starts at the owner's checkpoint 3 commit
-`ca8e73d876c881b8631e20b5e6ff212c62e1b2f2`. Its input tree and fingerprint are
-recorded in the scope document/manifest. New local changes do not imply a push.
+## Rebuilt source packet
 
-## Deferred evidence and continuation
+The prior ZIP/workspace was removed by automatic maintenance. The owner then
+committed checkpoint 4 as `e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8`, tree
+`8ea87fda2acbd80191316d89c1a3a427f229c242`. This exactly matches the earlier P0.C05
+input tree. The restored probe is regenerated and retested; the new ZIP is not
+claimed byte-identical to the old archive. `P0_C05.patch` now targets checkpoint
+4 directly. Preserve Git history and unrelated work; run `git apply --check` first.
+No commit or push is implied by this source delivery.
 
-The owner explicitly deferred verification and requested successive next
-checkpoints, one at a time. After P0.C03 the owner reported “it works”, with no
-specific command/device breakdown. P0.C01 remains Blocked/unverified and
-P0.C02/P0.C03 remain In review, with their original records retained. Feedback
-is recorded without inventing detailed run results. This continuation supersedes
-the earlier instruction to finish P0.C01 before definition work. See
-[BASELINE.md](BASELINE.md) and
-[VERIFICATION.md](VERIFICATION.md) for the browser installation/launch blocker.
-The earlier saved-draft implementation suggestion remains deferred until its
-roadmap dependencies are ready.
+Earlier records stay intact: P0.C01 Blocked, P0.C02/P0.C03/P0.C04 In review.
+The owner deferred detailed verification and explicitly authorized continuation.
+Do not invent earlier browser/device results. P0.C04's 18 VAT cases remain
+reference definitions; E1a/2026 artifact/mapping is unverified and output disabled.
+Counts: 2 blocked, 3 in review, 87 planned, none verified; all 92 stable IDs remain.
 
-When verification resumes, review the audit, profile/matrix and accounting-scope
-definitions against their source snapshots. Follow the local guide for core,
-browser and manual results; keep device measurements and legal-rule review
-separate. A static reference-case integrity check does not execute tax rules.
-Core success or a general working-result confirmation does not manufacture
-those separate results. Do not repeat blocked browser setup for unrelated
-definition-only work while detailed verification remains deferred.
+## Commands and evidence
 
-## Next separate checkpoint: P0.C05
+```sh
+npm ci
+npm run check
+npm run spike:install
+npm run spike:check
+npm run progress -- --json
+```
 
-On the next request to continue, take **P0.C05 only**: run the Windows/Android
-platform spike for local save, camera, restart, transfer and notifications.
-Use the existing P0.C03 matrix and wholly fictional data. The current Vite/memory
-app cannot establish installed durability or native capability support.
-Provide concrete reproducible spike artifacts and distinguish actual measurements
-from blocked/not-run device checks. Do not treat desktop emulation or the owner's
-general confirmation as a measured native result. P0.C05 has not been started.
+Use `npm.cmd` in Windows PowerShell. Main results: `outputs/checks.json`.
+Portable probe: `outputs/p0-c05-checks.json`. Their fingerprints/scopes are
+separate; the main runner does not cover `spikes/`. The probe fingerprints source,
+configuration, icons, toolchain and lockfiles, excluding docs/generated binaries.
+Record generated manifest/APK/installer hashes and device versions separately.
+The human progress summary omits blocked/in-review counts; use JSON or Roadmap.
 
-Use Node 24.22.1 / npm 11.9.0, run applicable checks and report progress
-separately with `npm run progress -- --json`. Preserve pending evidence and all
-92 IDs. The existing human progress summary omits blocked/in-review counts;
-the JSON output, manifest and in-app labels expose the current states.
+## Next bounded task
 
-## Copyable next task
-
-> Read AGENTS.md and the linked project docs. Continue only P0.C05 from
-> ROADMAP.md, using the P0.C03 profiles/platform matrix and wholly fictional
-> records/originals. Prepare and execute a bounded reproducible capability spike
-> for Windows/Android local save, camera, restart, transfer and notifications.
-> Record actual device/OS versions, measurements, blockers and unavailable
-> features. Do not substitute emulation or expected results for real execution.
-> Preserve earlier evidence, stable IDs and data boundaries; do not implement
-> the full later production adapter, tax outputs or online services. Stop after
-> this one checkpoint.
-
-Durable Windows/Android operation, evidence archives, valuations, tax rules,
-online services and full history/privacy review retain their own future
-checkpoint requirements.
+> Continue P0.C05 only. Follow the guide on the proposed Windows and physical
+> Android devices using wholly fictional records. Measure offline save/readback,
+> camera permissions and original bytes, normal/force-stop restart, device reboot,
+> raw USB transport and actual notification delivery/cancellation. Preserve
+> blocked/unsupported/failed outcomes; fix only the probe if needed. Review the
+> measurements before changing status or accepting architecture in P0.C06.

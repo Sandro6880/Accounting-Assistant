@@ -1,0 +1,30 @@
+{
+  "name": "accounting-platform-spike",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "packageManager": "npm@11.9.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420 --strictPort",
+    "build": "vite build",
+    "test": "node --test tests/*.test.mjs",
+    "native:info": "tauri info",
+    "native:dev": "tauri dev",
+    "native:windows": "tauri build --bundles nsis",
+    "native:android:init": "tauri android init",
+    "native:android:build": "tauri android build --debug --apk --target aarch64"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.12.4",
+    "@tauri-apps/plugin-fs": "2.7.1",
+    "@tauri-apps/plugin-notification": "2.8.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4",
+    "vite": "8.3.5"
+  }
+}

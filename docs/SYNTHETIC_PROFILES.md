@@ -179,3 +179,8 @@ Subsequent continuation: P0.C04's [accounting/VAT inventory](ACCOUNTING_SCOPE.md
 is now prepared for review. It uses separate hypothetical tax contexts and
 does not change the unconfirmed VAT status of these demo profiles or the
 results of the P0.C03 catalog cases.
+
+P0.C05 continuation: the [separate probe](PLATFORM_SPIKE.md) uses the same fictional
+IDs and Workshop amounts with its own `p0-c05-v1` fixture. This catalog and the
+main `synthetic-v1` fixture are unchanged. Portable probe tests do not establish
+Windows/Android measurements or production capture capability.

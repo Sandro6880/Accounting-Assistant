@@ -19,7 +19,10 @@
     "check": "node scripts/check.mjs",
     "check:all": "node scripts/check.mjs --browser",
     "progress": "node scripts/progress.mjs",
-    "progress:validate": "node scripts/progress.mjs --validate"
+    "progress:validate": "node scripts/progress.mjs --validate",
+    "spike:install": "npm ci --prefix spikes/p0-c05",
+    "spike:check": "node spikes/p0-c05/scripts/check.mjs",
+    "spike:preview": "npm run dev --prefix spikes/p0-c05"
   },
   "dependencies": {
     "react": "19.3.1",

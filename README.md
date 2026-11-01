@@ -8,7 +8,7 @@ The goal is to make a recorded amount traceable: annual report → entry or asse
 
 Version **0.1.0** is a runnable React/TypeScript/Vite application with fictional records in session memory. It includes draft creation, posting, full reversals, separate EUR/USD totals, English/German controls, fictional business creation, an executable browser Test Lab and a roadmap view.
 
-Checkpoint **P0.C01** recorded the original baseline and 24 passing Node/DOM tests; its detailed browser verification remains blocked/deferred. **P0.C02/P0.C03** are In review with the source audit and fictional profiles/platform matrix. Following the owner's working-result confirmation and continuation request, **P0.C04** now supplies the accounting/VAT scope for review: ordinary E/A with actual expenses, 18 fictional reference cases and an E1a/2026 preparation target. The core still has **26 tests**; the other 88 checkpoints remain Planned. See [verification](docs/VERIFICATION.md), [the audit](docs/CAPABILITY_AUDIT.md), [profiles](docs/SYNTHETIC_PROFILES.md) and [accounting scope](docs/ACCOUNTING_SCOPE.md).
+**P0.C01** retains its deferred browser-verification blocker. **P0.C02/P0.C03/P0.C04** remain In review. The current **P0.C05** packet supplies a separate synthetic Tauri platform probe, ten portable probe tests and a Windows/Android device guide. The existing accounting core still has 26 tests. P0.C05 is Blocked pending native compilation and actual device measurements; no installer/APK or native pass is claimed. The other 87 checkpoints remain Planned, with none verified. See [the spike guide](docs/PLATFORM_SPIKE.md) and [verification](docs/VERIFICATION.md).
 
 For testing on your own Windows machine, follow [LOCAL_TESTING.md](docs/LOCAL_TESTING.md): exact PowerShell commands, all five app views, expected totals, third-business creation, reset and a blank results template. The app still starts with the same two fictional businesses and baseline figures; create Example Workshop through Businesses to exercise the third profile.
 
@@ -44,6 +44,8 @@ Full tax preparation, installed offline apps and production access controls rema
 | [docs/TEST_REPORT_TEMPLATE.md](docs/TEST_REPORT_TEMPLATE.md) | Blank result sheet to copy into ignored outputs |
 | [tests/fixtures/p0-c03/profiles.json](tests/fixtures/p0-c03/profiles.json) | Versioned fictional profile/currency catalog exercised through the existing application boundary |
 | [docs/ACCOUNTING_SCOPE.md](docs/ACCOUNTING_SCOPE.md) / [project/accounting-scope.json](project/accounting-scope.json) | P0.C04 method, case coverage/exclusions, official source register and disabled report-target contract |
+| [spikes/p0-c05/](spikes/p0-c05/) / [device guide](docs/PLATFORM_SPIKE.md) | Isolated native candidate, pinned dependencies, ten portable checks and actual device instructions |
+| [Device results template](docs/PLATFORM_SPIKE_RESULTS_TEMPLATE.md) | Blank Windows/Android measurement sheet; no native results prefilled |
 
 These files are already part of this repository. Preserve the existing Git history, MPL-2.0 notices and active npm lockfile when applying changes. The full `.gitignore` supersedes the earlier additions-only checklist. A source or update ZIP does not replace repository history.
 
@@ -107,6 +109,19 @@ Playwright runs three journeys in each of desktop Chromium and Pixel 7 Chromium 
 
 The in-app **Test Lab** executes nine isolated domain assertions. It does not read the local runner's results, export JSON or establish that Node, SQL, security or device tests ran. The `test:domain`, `test:integration` and `test:docs` scripts from earlier reference documentation do not exist in this checkout. The available Node script is `npm test`.
 
+For the separate synthetic platform probe:
+
+```powershell
+npm.cmd run spike:install
+npm.cmd run spike:check
+npm.cmd run spike:preview
+```
+
+Its interface preview is `http://127.0.0.1:1420`; native operations report blocked
+in a browser. Its independent report is `outputs/p0-c05-checks.json`. See the
+[Windows/Android guide](docs/PLATFORM_SPIKE.md) for actual native build/testing
+steps. The accounting app's memory storage and port 5173 remain unchanged.
+
 ### Result reporting and its limits
 
 The existing runner writes actual exit codes, command durations, Node version, Git revision/dirty state, selected scope and a checked-source fingerprint to ignored `outputs/checks.json`. `npm run progress` reports checkpoint counts separately and flags stale checked source. `npm run progress -- --json` prints the same progress data as JSON. A later runner invocation replaces `outputs/checks.json`, so retain a run externally when its evidence is needed.
@@ -154,7 +169,7 @@ Optional public subscriptions, payment execution, payroll and broader legal prof
 
 ### Next bounded work
 
-The current packet is **P0.C04 only**; its [accounting/VAT inventory](docs/ACCOUNTING_SCOPE.md) is prepared for review and does not activate tax calculations or official output. Earlier detailed evidence/reviews remain pending. The next checkpoint is **P0.C05**, not started in this packet. See [the handoff](docs/AGENT_HANDOFF.md) and [local test guide](docs/LOCAL_TESTING.md). The T01–T06 ideas below are future packet outlines subject to roadmap dependencies; they do not override checkpoint order.
+The current packet is **P0.C05 only**, Blocked pending installed Windows/actual Android build and measurement evidence. Follow [PLATFORM_SPIKE.md](docs/PLATFORM_SPIKE.md) for this same checkpoint; P0.C06 has not started. The earlier reviews remain pending. The separate probe does not add financial persistence, tax output, protected recovery or paired transfer to the main app.
 
 These planned tasks alone represent **24–36 hours** of useful work, subject to the baseline inspection. They are not completed-task claims or a commitment to charge a fixed duration.
 

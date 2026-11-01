@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>P0.C05 synthetic platform spike</title></head>
+<body><main>
+  <header><p>P0.C05 · SYNTHETIC / FIKTIV</p><h1 data-i18n="title"></h1><p data-i18n="intro"></p></header>
+  <label><span data-i18n="language"></span> <select id="language"><option value="en">English</option><option value="de">Deutsch</option></select></label>
+  <p id="mode" role="status"></p>
+  <section><h2 data-i18n="saveTitle"></h2>
+    <label><span data-i18n="business"></span> <select id="business"><option value="demo-consulting">Example Consulting</option><option value="demo-studio">Example Studio</option><option value="demo-workshop" selected>Example Workshop</option></select></label>
+    <p data-i18n="cases"></p><button id="save" data-i18n="save"></button><button id="list" data-i18n="list"></button>
+    <label><span data-i18n="localFiles"></span> <select id="files"></select></label>
+    <button id="load" data-i18n="load"></button><pre id="capture"></pre>
+  </section>
+  <section><h2 data-i18n="cameraTitle"></h2>
+    <div class="receipt">WHOLLY FICTIONAL / VOLLSTÄNDIG FIKTIV<br>Example Workshop · Materials<br>2026-02-01 · EUR 19.95<br>P0.C05 · No real supplier or customer</div>
+    <p data-i18n="cameraHelp"></p>
+    <button id="camera" data-i18n="camera"></button><button id="snapshot" data-i18n="snapshot"></button><button id="stop" data-i18n="stop"></button>
+    <video id="video" autoplay muted playsinline></video>
+    <label><span data-i18n="original"></span> <input id="original" type="file" accept="image/*" capture="environment"></label>
+    <p id="receipt"></p><button id="fixture" data-i18n="fixture"></button>
+  </section>
+  <section><h2 data-i18n="transferTitle"></h2><p data-i18n="transferHelp"></p>
+    <button id="export" data-i18n="export"></button><button id="download" data-i18n="download"></button>
+    <label><span data-i18n="package"></span><textarea id="package" rows="5" maxlength="5242880" spellcheck="false"></textarea></label>
+    <label><span data-i18n="importFile"></span> <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="import" data-i18n="import"></button><p data-i18n="importScope"></p>
+  </section>
+  <section><h2 data-i18n="notificationTitle"></h2><p data-i18n="notificationHelp"></p>
+    <button id="notify" data-i18n="notify"></button><button id="schedule" data-i18n="schedule"></button><button id="cancel" data-i18n="cancel"></button>
+  </section>
+  <section><h2 data-i18n="evidenceTitle"></h2><p data-i18n="evidenceHelp"></p>
+    <label><span data-i18n="device"></span><input id="device" maxlength="160" placeholder="Windows build / Android model + OS + WebView"></label>
+    <label><span data-i18n="observation"></span><textarea id="observation" rows="3" maxlength="2000"></textarea></label>
+    <button id="report" data-i18n="report"></button><textarea id="reportText" rows="5" readonly aria-label="Session report JSON / Sitzungsbericht JSON"></textarea>
+    <p id="status" role="status" aria-live="polite"></p><pre id="log"></pre>
+  </section>
+</main><script type="module" src="/src/main.mjs"></script></body></html>

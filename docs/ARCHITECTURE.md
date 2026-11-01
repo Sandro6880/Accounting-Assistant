@@ -62,3 +62,15 @@ The browser Test Lab executes nine isolated assertions, separately from Node
 and browser journey evidence. DOM interaction tests exercise real React
 handlers without claiming browser layout or installed-device coverage. Native
 installed-device checks are future work.
+
+## P0.C05 experiment — pending device evidence
+
+The [isolated Tauri probe](../spikes/p0-c05/) has its own identity and scoped
+synthetic app-local folder. Exclusive capture files and verified readback do not
+implement transactional financial storage, fsync, recovery, encryption or a
+repository adapter. Raw transport has no pairing/authentication/encryption.
+The probe measures WebView camera paths and native notification requests;
+desktop scheduling is explicitly unsupported by this plugin. Native builds and
+actual device measurements remain blocked here. See [PLATFORM_SPIKE.md](PLATFORM_SPIKE.md).
+This is an experiment, not P0.C06 architecture acceptance. P2/P3/P5/P6 retain
+their own production durability, recovery, capture and reminder requirements.

@@ -52,7 +52,7 @@ journey evidence. Its baseline packet did not start another checkpoint.
 The owner subsequently deferred verification and authorized P0.C02's source
 comparison, followed by P0.C03's fictional profiles/platform matrix. Those two
 checkpoints are In review. The later P0.C04 accounting/VAT definition is also
-In review; the other 88 remain Planned. See
+In review. P0.C05 is Blocked pending device measurements; the other 87 remain Planned. See
 [CAPABILITY_AUDIT.md](CAPABILITY_AUDIT.md) and
 [SYNTHETIC_PROFILES.md](SYNTHETIC_PROFILES.md) and
 [ACCOUNTING_SCOPE.md](ACCOUNTING_SCOPE.md) for their own scopes, evidence and
@@ -92,3 +92,20 @@ No command log, six-journey report, filled checklist or actual-device details
 were supplied with that message. It does not establish which automated/manual
 checks ran, so no detailed results or earlier checkpoint states were fabricated.
 P0.C04 proceeds under that continuation request; the prior records are retained.
+
+## Rebuilt P0.C05 packet — 1 November 2026
+
+The owner committed checkpoint 4 as `e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8`.
+Its tree matches the previous P0.C05 input. After the prior ZIP/workspace was
+removed by automatic maintenance, this packet was regenerated from that exact
+checkpoint 4 source and retested. Its new patch targets checkpoint 4 directly;
+no earlier checkpoint files or evidence are replaced with invented history.
+
+See [PLATFORM_SPIKE.md](PLATFORM_SPIKE.md) for commands, actual results and limits.
+The 26-test accounting core and separate ten-test portable probe pass. Linux
+Node file reopen is not native-device storage proof. Cargo resolution succeeds;
+Linux compilation stops at missing system pkg-config/GLib, and Android setup
+stops at missing SDK/NDK. No installer/APK, camera observation, real device
+transfer, delivered notification or native restart/reboot result is claimed.
+Counts: 2 blocked, 3 in review, 87 planned, none verified. Earlier evidence is
+preserved. P0.C06 has not started; gather/review P0.C05 device evidence next.

@@ -45,3 +45,8 @@ the roadmap. Record the exact failing command and error when a step fails.
 P0.C01 browser evidence, P0.C02 audit acceptance, P0.C03 profile/matrix review
 and P0.C04 accounting/VAT-scope review remain independent decisions. No genuine
 records are needed.
+
+For the separate P0.C05 probe, use
+[PLATFORM_SPIKE_RESULTS_TEMPLATE.md](PLATFORM_SPIKE_RESULTS_TEMPLATE.md).
+Its native operations are experiments; the accounting app's financial storage
+and future platform availability above are unchanged.

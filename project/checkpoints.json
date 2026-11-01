@@ -171,8 +171,58 @@
       "phase": "P0",
       "summary": "Run the Windows/Android platform spike for local save, camera, restart, transfer and notifications.",
       "proof": "measured behavior and limitations recorded on supported devices.",
-      "status": "planned",
-      "evidence": null
+      "status": "blocked",
+      "evidence": {
+        "revision": "e37f46fe3a3a58cfb8f4cb0d60d9190da906cee8",
+        "recordedOn": "2026-11-01",
+        "record": "docs/PLATFORM_SPIKE.md",
+        "objective": "Rebuild the missing P0.C05 packet from the owner-committed checkpoint 4 and execute portable capability checks; retain native platform build/device blockers honestly.",
+        "inputTree": "8ea87fda2acbd80191316d89c1a3a427f229c242",
+        "inputSourceFingerprint": "822f5e9949dfb89d13d6de2532caf4e8fa6657fa41f95044da68a8a20615590c",
+        "dependencies": [
+          "P0.C03 fictional platform matrix",
+          "Owner-committed P0.C04; earlier reviews remain pending"
+        ],
+        "dependencyDecision": "Owner requested the next checkpoint, then asked to recreate its failed download from checkpoint 4 on GitHub. Earlier verification stays deferred; no user device results were supplied.",
+        "fixtureVersion": "synthetic-v1",
+        "probeFixtureVersion": "p0-c05-v1",
+        "probe": "spikes/p0-c05",
+        "probeSourceFingerprint": "eb3d1a6a513ede003cbc085b8a266691b8bac7daa04f9defbc961a50c20e1b7e",
+        "commands": [
+          "git clone https://github.com/Sandro6880/Accounting-Assistant.git",
+          "npm ci",
+          "npm run check",
+          "npm run spike:install",
+          "npm run spike:check",
+          "cargo generate-lockfile --manifest-path spikes/p0-c05/src-tauri/Cargo.toml",
+          "cargo check --locked (from spike src-tauri)",
+          "npm run native:info (from spike)",
+          "npm run native:android:init -- --ci --skip-targets-install (from spike)",
+          "npm run progress -- --json"
+        ],
+        "results": {
+          "inputCore": "passed: 26 Node/DOM tests, typecheck, main build, 92 manifest IDs",
+          "portableProbe": "10 tests and separate Vite build passed: exact cents/receipt bytes, scope, corrupt data, duplicate/conflicting IDs, unmarked stores, failed saves and fresh Linux Node process readback",
+          "rustResolution": "Rust/Cargo 1.99.1; 453 locked packages; exact direct native/npm versions pinned",
+          "sourceChecks": "Pinned Rust plugin permission IDs inspected; Android preparation validated against a disposable template, not a device build",
+          "linuxCompilation": "blocked: cargo check --locked exits 101 at glib-sys; system pkg-config unavailable; WebKitGTK/rsvg also unavailable",
+          "androidInitialization": "blocked: exit 1, SDK/NDK not found; no ADB/device here",
+          "nativeDeviceRuns": "not-run: no installer/APK or Windows/Android measurements claimed",
+          "runtime": "Main financial source, tests, fixture, accounting/VAT inventory and root lockfile unchanged"
+        },
+        "review": "Recreated isolated synthetic Tauri source, portable checks and device guide. This rebuilt archive is not claimed byte-identical to the missing ZIP. Native acceptance is blocked pending actual supported-device evidence.",
+        "manualEvidence": "Source/configuration review and blank device result sheet. No actual camera, device transfer, delivered notification, native restart or reboot measurement asserted.",
+        "limitations": [
+          "Portable Linux Node readback is not a Tauri storage or Windows/Android result.",
+          "No successful native compilation, installer/APK or approved device/version list.",
+          "File readback does not provide financial transactions, fsync, protected recovery or encryption.",
+          "Raw transport has no authenticated pairing, accounting import or acknowledgement protocol.",
+          "Live camera PNG is derived; selected original retention and permission/fallback behavior need device evidence.",
+          "Notification requests are not delivery proof; desktop scheduling is unsupported by this plugin.",
+          "Main/probe checks and fingerprints are separate; generated native artifacts/device state need separate hashes and observations."
+        ],
+        "nextDecision": "Run and review P0.C05 on proposed Windows and physical Android devices. Keep unverified until evidence supports a decision; P0.C06 has not started."
+      }
     },
     {
       "id": "P0.C06",

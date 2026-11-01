@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MPL-2.0
+[package]
+name = "accounting-platform-spike"
+version = "0.0.0"
+description = "Isolated wholly fictional P0.C05 capability probe"
+edition = "2021"
+rust-version = "1.90"
+license = "MPL-2.0"
+
+[lib]
+name = "accounting_platform_spike_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.7.4", features = [] }
+
+[dependencies]
+tauri = { version = "=2.12.5", features = [] }
+tauri-plugin-fs = "=2.7.1"
+tauri-plugin-notification = "=2.8.0"
