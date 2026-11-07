@@ -27,6 +27,7 @@ jobs:
           from pathlib import Path
 
           tag = "v0.2.0-synthetic-test-20261107"
+          release_id = 437440802
           name = "Accounting-Assistant-0.2.0-complete.zip"
           source_commit = "b0c2c8770ab0187ba72c401673a413cfd22350b3"
           expected_size = 159015587
@@ -46,8 +47,10 @@ jobs:
               with path.open("rb") as stream:
                   return hashlib.file_digest(stream, "sha256").hexdigest()
 
-          release = api(f"repos/{repo}/releases/tags/{tag}")
-          assert release["draft"] and release["target_commitish"] == source_commit
+          # GitHub's tag lookup only returns published releases. Use the
+          # existing draft ID, and check both its tag and tested source target.
+          release = api(f"repos/{repo}/releases/{release_id}")
+          assert release["draft"] and release["tag_name"] == tag and release["target_commitish"] == source_commit
           assert not any(a["name"] == name for a in release["assets"]), "Complete asset already exists; do not overwrite it"
           gh("release", "download", tag, "--pattern", name + ".part-*", "--pattern", manifest_name, "--dir", str(work))
           manifest = json.loads((work / manifest_name).read_text())
