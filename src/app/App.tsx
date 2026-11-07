@@ -8,18 +8,23 @@ import type { Language } from "../domain/money.ts";
 import { translator } from "./i18n.ts";
 import { modules } from "./modules.ts";
 import type { ModuleId } from "./modules.ts";
+import type { AccountingActions } from "../application/accounting.ts";
+import type { Workspace } from "../domain/ledger.ts";
 
-export function App() {
+export interface AppSession { application: AccountingActions; repository: { getSnapshot: () => Workspace; subscribe: (listener: () => void) => () => void } }
+export function App({ session, languageChanged }: { session?: AppSession; languageChanged?: (language: Language) => void } = {}) {
   const [repository, setRepository] = useState(
     () => new MemoryRepository(createSyntheticWorkspace()),
   );
-  const application = useMemo(
+  const memoryApplication = useMemo(
     () => new AccountingApplication(repository),
     [repository],
   );
+  const application = session?.application ?? memoryApplication;
+  const source = session?.repository ?? repository;
   const workspace = useSyncExternalStore(
-    repository.subscribe,
-    repository.getSnapshot,
+    source.subscribe,
+    source.getSnapshot,
   );
   const [businessId, setBusinessId] = useState("demo-consulting");
   const [active, setActive] = useState<ModuleId>("overview");
@@ -28,7 +33,8 @@ export function App() {
   const t = translator(language);
   useEffect(() => {
     document.documentElement.lang = language;
-  }, [language]);
+    languageChanged?.(language);
+  }, [language, languageChanged]);
   const context = {
     application,
     workspace,
@@ -47,7 +53,7 @@ export function App() {
             <small>WORKSPACE</small>
           </div>
         </div>
-        <p className="sidebar-caption">{t("synthetic")} / 0.1.0</p>
+        <p className="sidebar-caption">{t("synthetic")} / 0.2.0</p>
         <nav aria-label={t("title")}>
           {modules.map((module) => (
             <button
@@ -99,7 +105,7 @@ export function App() {
                 </button>
               ))}
             </div>
-            <button
+            {!session && <button
               type="button"
               onClick={() => {
                 assertSynthetic(workspace);
@@ -114,11 +120,11 @@ export function App() {
               }}
             >
               {t("reset")}
-            </button>
+            </button>}
           </div>
         </header>
         <div className="safety-banner" role="note">
-          <strong>{t("synthetic")}.</strong> {t("safety")}
+          <strong>{t("synthetic")}.</strong> {t(session ? "persistentSafety" : "safety")}
         </div>
         <main>
           {modules.map(({ id, View }) => (

@@ -101,6 +101,10 @@ node_modules/
 # Source .js, .ts, .tsx, .d.ts and configuration files remain available to commit.
 # -----------------------------------------------------------------------------
 dist/
+desktop-dist/
+desktop-stage/
+/core
+/core.[0-9]*
 /build/
 /out/
 .vinext/

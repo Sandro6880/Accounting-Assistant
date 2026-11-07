@@ -1,6 +1,6 @@
 {
   "name": "offline-accounting-workspace",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "license": "MPL-2.0",
@@ -14,7 +14,7 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test \"tests/*.test.ts\"",
+    "test": "node scripts/test.mjs",
     "test:e2e": "playwright test",
     "check": "node scripts/check.mjs",
     "check:all": "node scripts/check.mjs --browser",
@@ -22,13 +22,20 @@
     "progress:validate": "node scripts/progress.mjs --validate",
     "spike:install": "npm ci --prefix spikes/p0-c05",
     "spike:check": "node spikes/p0-c05/scripts/check.mjs",
-    "spike:preview": "npm run dev --prefix spikes/p0-c05"
+    "spike:preview": "npm run dev --prefix spikes/p0-c05",
+    "desktop:install": "install-electron",
+    "desktop:build": "npm run build && vite build --config desktop.vite.config.ts",
+    "desktop:dev": "npm run desktop:build && electron .",
+    "desktop:package": "npm run desktop:build && node scripts/package-desktop.mjs",
+    "test:desktop": "node scripts/test.mjs --desktop",
+    "check:desktop": "node scripts/check.mjs --browser --desktop"
   },
   "dependencies": {
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
   "devDependencies": {
+    "@electron/packager": "20.3.0",
     "@playwright/test": "1.62.1",
     "@testing-library/react": "16.3.0",
     "@types/jsdom": "27.0.0",
@@ -36,9 +43,11 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.2",
+    "electron": "45.2.3",
     "jsdom": "30.1.3",
     "tsx": "4.23.15",
     "typescript": "7.0.2",
     "vite": "8.3.5"
-  }
+  },
+  "main": "desktop-dist/main.js"
 }

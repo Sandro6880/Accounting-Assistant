@@ -16,7 +16,7 @@ if (
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
-  reporter: "list",
+  reporter: [["list"], ["json", { outputFile: "outputs/browser-tests.json" }]],
   use: {
     baseURL: "http://127.0.0.1:4173",
     trace: "retain-on-failure",

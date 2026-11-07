@@ -516,6 +516,10 @@ summary {
 [hidden] {
   display: none !important;
 }
+.vault-bar { padding: 16px 24px; display: flex; gap: 20px; align-items: center; justify-content: space-between; background: #173d30; color: white; }
+.vault-gate { max-width: 880px; margin: 6vh auto; padding: 24px; }
+.note-preview { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 360px; overflow: auto; padding: 16px; background: #f4f6f3; }
+.checkpoint .mono { overflow-wrap: anywhere; }
 @media (min-width: 1450px) {
   .workspace main {
     padding-top: 50px;

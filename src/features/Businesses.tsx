@@ -12,6 +12,8 @@ export function Businesses({
 }: ViewContext) {
   const [name, setName] = useState("");
   const [error, setError] = useState<unknown>(null);
+  const complete = (result: string) => { selectBusiness(result); setName(""); setError(null); };
+  const perform = (result: void | Promise<void>) => { if (result instanceof Promise) result.then(() => setError(null)).catch(setError); else setError(null); };
   return (
     <>
       <div className="section-title">
@@ -27,9 +29,7 @@ export function Businesses({
           event.preventDefault();
           try {
             const id = application.addBusiness(name);
-            selectBusiness(id);
-            setName("");
-            setError(null);
+            if (id instanceof Promise) id.then(complete).catch(setError); else complete(id);
           } catch (cause) {
             setError(cause);
           }
@@ -61,12 +61,27 @@ export function Businesses({
             <p className="muted">
               {business.legalForm === "planning"
                 ? t("planning")
-                : "Einzelunternehmen"}{" "}
+                : t("soleTrader")}{" "}
               · {t("vat")}
             </p>
             <button type="button" onClick={() => selectBusiness(business.id)}>
               {t("use")}
             </button>
+            {business.archivedAt ? <p className="muted">{t("archived")} · {business.archivedAt.slice(0, 10)}</p> : <button type="button" onClick={() => {
+              if (window.confirm(t("archiveConfirm"))) try { perform(application.archive(business.id)); } catch (cause) { setError(cause); }
+            }}>{t("archive")}</button>}
+            <details><summary>{t("profileHistory")}</summary>
+              {(workspace.ownership?.profiles ?? []).filter(p => p.businessId === business.id).map(p => <p key={p.effectiveFrom}>{p.effectiveFrom} · {t(p.vat === "unknown" ? "unknown" : p.vat === "exempt" ? "exempt" : "registered")} · {t(p.method === "unknown" ? "unknown" : "cashBasis")}</p>)}
+              {!business.archivedAt && <form className="business-form" onSubmit={event => {
+                event.preventDefault(); const data = new FormData(event.currentTarget);
+                try { perform(application.profile({ businessId: business.id, effectiveFrom: String(data.get("effective")), vat: data.get("vat") as "unknown" | "exempt" | "registered", method: data.get("method") as "unknown" | "cash-basis" })); } catch (cause) { setError(cause); }
+              }}>
+                <label>{t("effectiveFrom")}<input name="effective" type="date" required /></label>
+                <label>{t("vatProfile")}<select name="vat"><option value="unknown">{t("unknown")}</option><option value="exempt">{t("exempt")}</option><option value="registered">{t("registered")}</option></select></label>
+                <label>{t("accountingMethod")}<select name="method"><option value="unknown">{t("unknown")}</option><option value="cash-basis">{t("cashBasis")}</option></select></label>
+                <button>{t("saveProfile")}</button>
+              </form>}
+            </details>
           </article>
         ))}
       </div>

@@ -1,5 +1,43 @@
 # Architecture decisions — 0.1.0
 
+## 0.2.0 continuation decisions (for review)
+
+### ADR-013: Separate Electron Windows test shell, shared TypeScript core
+
+The user's P0–P3 continuation authorizes implementation while retaining earlier
+device/review gates. Use an isolated Electron 45.2.3 shell to exercise the same
+TypeScript use cases with Node's built-in SQLite and crypto. This avoids a
+second financial implementation and an untested JS-to-Rust domain translation.
+It is a Windows test candidate, not retroactive acceptance of P0.C05 or an
+Android platform decision. Keep the existing Tauri Android/device probe separate.
+The browser memory demo does not gain hidden browser persistence.
+
+Renderer code calls a narrow async command port. Domain functions remain portable.
+The main process owns SQLite, keys, paths, dialogs and authorization. A write
+transaction reads current state, checks scope/revision/replay identity, executes
+the portable command, validates/preserves history, writes encrypted state plus
+receipt, and commits before acknowledging. Lost acknowledgements reuse the same
+command ID. Original attachments use independent SQLite transactions; a failed
+attachment never claims a financial/file atomic commit. Snapshots contain exact
+tagged bigint cents, with no floating-point financial serialization.
+
+### ADR-014: Synthetic vault and independent encrypted logical backups
+
+Passphrase-derived scrypt keys and AES-256-GCM protect records/originals at rest.
+No key file/cloud dependency exists. SQLite metadata remains visible; do not
+describe this as whole-database encryption. Use WAL/synchronous FULL, purpose-
+specific authenticated data, main-process key lifetime, locked restarts, and a
+five-minute data-operation idle timeout. Backups use a separate passphrase/salt
+and a consistent inventory of state/originals. Restore only to a new explicitly
+synthetic directory after authenticating and validating all content; retain the
+source. A ciphertext recovery copy precedes the supported v0-to-v1 migration.
+
+Acceptance requires the regression suites, physical Windows cold/restart/low-disk
+checks, independent off-device recovery and security review. No signed updater,
+Android accounting release, forensic-erasure guarantee or genuine-data use is
+approved. [RECOVERY.md](RECOVERY.md) defines algorithms, supported formats and
+limits. Earlier ADRs below retain their original historical scope.
+
 ## ADR-001: React/TypeScript/Vite for a runnable first foundation
 
 Use pinned npm dependencies and loopback-only dev/preview servers, with no

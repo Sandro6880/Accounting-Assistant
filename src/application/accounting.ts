@@ -6,6 +6,17 @@ import {
   reversePosting,
 } from "../domain/ledger.ts";
 import type { DraftInput, Workspace } from "../domain/ledger.ts";
+import { archiveBusiness, changeProfile } from "../domain/ownership.ts";
+import type { ProfileChange } from "../domain/ownership.ts";
+
+export interface AccountingActions {
+  addBusiness(name: string): string | Promise<string>;
+  addDraft(businessId: string, input: DraftInput): string | Promise<string>;
+  post(businessId: string, entryId: string, revision: number): void | Promise<void>;
+  reverse(businessId: string, entryId: string, date: string): void | Promise<void>;
+  archive(businessId: string): void | Promise<void>;
+  profile(change: ProfileChange): void | Promise<void>;
+}
 
 export interface WorkspaceRepository {
   getSnapshot: () => Workspace;
@@ -49,4 +60,6 @@ export class AccountingApplication {
       reversePosting(state, businessId, entryId, date, id, this.now()),
     );
   }
+  archive(businessId: string): void { this.repository.transact(state => archiveBusiness(state, businessId, this.now())); }
+  profile(change: ProfileChange): void { this.repository.transact(state => changeProfile(state, change)); }
 }

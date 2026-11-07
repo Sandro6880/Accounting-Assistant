@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0
 import { DomainError, parseAmount } from "./money.ts";
 import type { Currency } from "./money.ts";
+import type { Ownership } from "./ownership.ts";
 
 export interface Business {
   readonly id: string;
@@ -8,6 +9,7 @@ export interface Business {
   readonly country: "AT";
   readonly legalForm: "sole-trader" | "planning";
   readonly vatStatus: "unconfirmed";
+  readonly archivedAt?: string;
 }
 export interface Entry {
   readonly id: string;
@@ -41,6 +43,7 @@ export interface Workspace {
   readonly entries: readonly Entry[];
   readonly journal: readonly JournalLine[];
   readonly audit: readonly AuditEvent[];
+  readonly ownership?: Ownership;
 }
 export interface DraftInput {
   description: string;
@@ -71,6 +74,18 @@ export function assertPreservedHistory(
       )
     )
       throw new DomainError("immutable");
+  }
+  for (const business of previous.businesses) {
+    const current = next.businesses.find(b => b.id === business.id);
+    if (!current || current.name !== business.name || current.country !== business.country || current.legalForm !== business.legalForm || current.vatStatus !== business.vatStatus || (business.archivedAt && current.archivedAt !== business.archivedAt)) throw new DomainError("immutable");
+  }
+  if (previous.ownership) {
+    const stable = (value: unknown) => JSON.stringify(value, (_, v) => typeof v === "bigint" ? v.toString() : v);
+    for (const key of Object.keys(previous.ownership) as (keyof Ownership)[]) {
+      const old = previous.ownership[key];
+      const current = next.ownership?.[key];
+      if (Array.isArray(old) && (!Array.isArray(current) || old.some((item, i) => stable(item) !== stable(current[i])))) throw new DomainError("immutable");
+    }
   }
   if (
     !previous.journal.every((line, index) => same(line, next.journal[index])) ||
@@ -122,7 +137,7 @@ export function createBusiness(
   name: string,
 ): Workspace {
   assertSynthetic(workspace);
-  if (!name.trim() || name.trim().length > 80)
+  if (typeof name !== "string" || !name.trim() || name.trim().length > 80)
     throw new DomainError("businessName");
   if (workspace.businesses.some((item) => item.id === id))
     throw new DomainError("duplicate");
@@ -148,10 +163,10 @@ export function createDraft(
   at: string,
 ): Workspace {
   assertSynthetic(workspace);
-  requireBusiness(workspace, businessId);
+  if (requireBusiness(workspace, businessId).archivedAt) throw new DomainError("archived");
   if (workspace.entries.some((item) => item.id === id))
     throw new DomainError("duplicate");
-  if (!input.description.trim() || input.description.trim().length > 200)
+  if (typeof input.description !== "string" || !input.description.trim() || input.description.trim().length > 200)
     throw new DomainError("description");
   if (input.currency !== "EUR" && input.currency !== "USD")
     throw new DomainError("currency");
@@ -201,6 +216,7 @@ export function postDraft(
   assertSynthetic(workspace);
   const entry = requireEntry(workspace, businessId, entryId);
   if (entry.status === "posted") return workspace; // Identical post retry creates no duplicate lines.
+  if (requireBusiness(workspace, businessId).archivedAt) throw new DomainError("archived");
   if (entry.revision !== revision) throw new DomainError("conflict");
   const posted: Entry = {
     ...entry,
@@ -226,6 +242,7 @@ export function reversePosting(
 ): Workspace {
   assertSynthetic(workspace);
   const original = requireEntry(workspace, businessId, entryId);
+  if (requireBusiness(workspace, businessId).archivedAt) throw new DomainError("archived");
   if (original.status !== "posted" || original.reverses)
     throw new DomainError("reversal");
   validateDate(date);

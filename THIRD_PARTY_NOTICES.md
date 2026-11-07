@@ -1,5 +1,22 @@
 # Third-party and source notice register
 
+## 0.2.0 desktop additions
+
+Electron **45.2.3** (MIT) and @electron/packager **20.3.0** (BSD-2-Clause) are pinned
+development dependencies in the active npm lockfile. The desktop package retains
+Electron's upstream LICENSE and Chromium license notices. The application
+resources include the unchanged MPL-2.0 project license, this register, and the
+installed React/React DOM/scheduler/Vite license texts for bundled/runtime helpers.
+Node's built-in SQLite and cryptography are part of the Electron runtime; preserve
+its bundled upstream notices. No new artwork, fonts or proprietary SDKs were added.
+The source ZIP excludes downloaded runtimes; the separate Windows test ZIP
+includes the Electron runtime. Full target/transitive rights and independent
+security/privacy acceptance remain pending; this is not a compatibility opinion.
+
+The inventory/counts below describe the original P0.C07 source review, not the
+expanded dependency tree in 0.2.0. Consult the current lockfile and actual package
+contents for the delivery's dependency versions and notices.
+
 This source packet retains the unchanged MPL-2.0 [LICENSE](LICENSE). Existing
 SPDX notices and genuine attribution remain. This register does not assert new
 copyright ownership or replace dependency licenses. It is a bounded P0.C07

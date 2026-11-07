@@ -80,3 +80,27 @@ test("browser lab starts not-run, executes checks, and refresh resets session da
   expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
   expect(await page.evaluate(() => Object.keys(sessionStorage))).toEqual([]);
 });
+
+test("P1.C07 fictional business profiles append and archival keeps history read-only", async ({ page }) => {
+  await page.goto("/"); page.on("dialog", dialog => dialog.accept());
+  await page.getByRole("button", { name: "Businesses", exact: true }).click();
+  await page.getByLabel("Fictional business name").fill("Fictional lifecycle business");
+  await page.getByRole("button", { name: "Create business", exact: true }).click();
+  const card = page.getByRole("article").filter({ has: page.getByRole("heading", { name: "Fictional lifecycle business", exact: true }) });
+  await card.locator("summary").filter({ hasText: "Profile history" }).click();
+  await card.getByLabel("Effective from").fill("2026-06-01");
+  await card.getByLabel("VAT profile").selectOption("registered");
+  await card.getByLabel("Accounting method").selectOption("cash-basis");
+  await card.getByRole("button", { name: "Append profile change", exact: true }).click();
+  await expect(card.getByText(/2026-06-01 · Registered/)).toBeVisible();
+  await page.getByRole("button", { name: "DE", exact: true }).click();
+  await expect(card.getByText(/2026-06-01 · Registriert/)).toBeVisible();
+  await page.getByRole("button", { name: "EN", exact: true }).click();
+  await card.getByRole("button", { name: "Archive business", exact: true }).click();
+  await expect(card.getByText(/Archived · history retained/)).toBeVisible();
+  await page.getByRole("button", { name: "Entries", exact: true }).click();
+  await page.getByLabel("Fictional description").fill("Fictional rejected archived draft");
+  await page.getByLabel("Amount", { exact: true }).fill("1.00");
+  await page.getByRole("button", { name: "Save draft", exact: true }).click();
+  await expect(page.getByRole("alert")).toHaveText("This business is archived. Its history is read-only.");
+});
