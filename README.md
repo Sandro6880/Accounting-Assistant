@@ -1,5 +1,38 @@
 # Offline Accounting Workspace
 
+## Current synthetic test delivery — 0.2.0
+
+The P0–P3 continuation adds portable ownership/command contracts and a separate
+Electron/SQLite desktop test build with local unlock/locking, authenticated
+encrypted records/originals, encrypted backup and separate-location restore.
+The browser demo still uses session memory. **P0/P2 device acceptance, rights,
+and independent security/recovery review remain outstanding; this is not a
+production release or approval for genuine records.**
+
+See [delivery and all checklist dispositions](docs/DELIVERY.md),
+[Windows/Android test instructions](docs/DESKTOP_TESTING.md), and
+[backup/recovery design](docs/RECOVERY.md). All 92 checkpoint IDs remain intact;
+passing tests does not mark them verified.
+
+With Node 24.22.1 and npm 11.9.0, from the root:
+
+```sh
+npm ci
+npm run desktop:install
+npm run desktop:dev
+```
+
+For the memory demo use `npm run dev`. For core/browser/desktop checks install
+Playwright Chromium then run `npm run check:desktop` and `npm run progress`.
+`npm run desktop:package -- win32` creates an unsigned portable Windows x64
+folder; physical execution remains a separate check. No account or backend is
+required. Keep passphrases out of source control and genuine records out of both
+applications.
+
+The remaining README records the **original 0.1.0 baseline** and its historical
+status. The current delivery guide supersedes its counts and missing-feature
+descriptions where the desktop test build now provides an implementation.
+
 An accounting workspace for freelancers and small businesses, with guided bookkeeping, organized evidence, annual history and obligation timelines. The first planned accounting profile is an Austrian sole trader, with applicable EU transaction rules, EUR reporting, EUR/USD source records and switchable English/German.
 
 The goal is to make a recorded amount traceable: annual report → entry or asset calculation → original supporting document. Offline Windows use and Android capture come before optional online synchronization. Development and every test use wholly fictional data.

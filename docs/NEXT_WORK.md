@@ -1,5 +1,12 @@
 # Bounded work after P0.C06/P0.C07
 
+**Current continuation:** The 7 November 2026 user request explicitly covers
+P0–P3 and supersedes the older single-checkpoint packet boundary for this task.
+See [DELIVERY.md](DELIVERY.md) for the implemented candidates, actual checks and
+remaining device/review gates, and [DESKTOP_TESTING.md](DESKTOP_TESTING.md) for
+the next Windows/Android measurements. No checkpoint is promoted by that request
+or by passing tests. The original packet plan below is retained as history.
+
 Replacement delivery dated 1 November 2026. Earlier acceptance remains deferred;
 this file does not promote checkpoints or start P1. P0.C06 and P0.C07 are In review.
 

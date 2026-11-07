@@ -34,10 +34,11 @@ export function Entries({
     setMessage("");
     setError(null);
   };
-  const perform = (action: () => void) => {
+  const perform = (action: () => unknown, success?: () => void) => {
     try {
-      action();
-      setError(null);
+      const result = action();
+      const done = () => { setError(null); success?.(); };
+      if (result instanceof Promise) result.then(done).catch(setError); else done();
     } catch (cause) {
       setError(cause);
     }
@@ -58,8 +59,7 @@ export function Entries({
         className="panel entry-form"
         onSubmit={(event) => {
           event.preventDefault();
-          perform(() => {
-            application.addDraft(businessId, form);
+          perform(() => application.addDraft(businessId, form), () => {
             setForms((current) => ({ ...current, [businessId]: emptyForm() }));
             setMessage("saved");
           });

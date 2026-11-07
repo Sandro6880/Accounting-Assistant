@@ -4,12 +4,16 @@ import { Entries } from "../features/Entries.tsx";
 import { Businesses } from "../features/Businesses.tsx";
 import { TestLab } from "../features/TestLab.tsx";
 import { Roadmap } from "../features/Roadmap.tsx";
+import { Storage } from "../features/Storage.tsx";
+import { foundationModules, validateModules } from "../domain/modules.ts";
+validateModules(foundationModules, foundationModules.map(m => m.id));
 
 // Typed navigation registry. Businesses are records, never separate pages.
 export const modules = [
   { id: "overview", symbol: "◈", View: Overview },
   { id: "entries", symbol: "≡", View: Entries },
   { id: "businesses", symbol: "▦", View: Businesses },
+  { id: "storage", symbol: "▣", View: Storage },
   { id: "lab", symbol: "✓", View: TestLab },
   { id: "roadmap", symbol: "→", View: Roadmap },
 ] as const;

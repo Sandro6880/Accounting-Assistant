@@ -1,5 +1,18 @@
 # Security and development data policy
 
+## 0.2.0 desktop test boundary
+
+The current desktop test build implements passphrase-derived keys, record-level
+AES-GCM encryption, guarded Electron IPC, local/idle locking, encrypted backup
+and separate-path restore. See [the precise design and recovery limits](docs/RECOVERY.md).
+This is not SQLCipher/whole-database encryption, a secure hosted identity adapter,
+or independent security acceptance. The original browser demo remains in memory.
+All development and both applications remain **fictional-data only**. No genuine
+record activation, legal certification or production security approval is provided.
+
+The controls described below as missing refer to the original 0.1.0 memory
+starter. Future production requirements and the synthetic-data policy still apply.
+
 This is the development policy and security target design for version 0.1.0. Genuine financial records are not supported during development.
 
 ## Current controls and limits

@@ -19,6 +19,7 @@
   },
   "include": [
     "src",
+    "desktop",
     "tests",
     "project",
     "vite.config.ts",

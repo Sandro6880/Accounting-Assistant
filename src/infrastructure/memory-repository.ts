@@ -2,6 +2,8 @@
 import { assertSynthetic, assertPreservedHistory } from "../domain/ledger.ts";
 import type { Workspace } from "../domain/ledger.ts";
 import type { WorkspaceRepository } from "../application/accounting.ts";
+import { migrateWorkspace } from "../domain/ownership.ts";
+import { validateWorkspace } from "../domain/codec.ts";
 
 function freeze<T>(value: T): T {
   if (value && typeof value === "object" && !Object.isFrozen(value)) {
@@ -16,7 +18,8 @@ export class MemoryRepository implements WorkspaceRepository {
   private readonly listeners = new Set<() => void>();
   constructor(initial: Workspace) {
     assertSynthetic(initial);
-    this.state = freeze(structuredClone(initial));
+    validateWorkspace(initial);
+    this.state = freeze(migrateWorkspace(structuredClone(initial)));
   }
   getSnapshot = (): Workspace => this.state;
   subscribe = (listener: () => void) => {
@@ -27,9 +30,10 @@ export class MemoryRepository implements WorkspaceRepository {
   };
   transact = (change: (current: Workspace) => Workspace): void => {
     assertSynthetic(this.state);
-    const next = change(this.state);
+    const next = migrateWorkspace(change(this.state));
     assertSynthetic(next);
     assertPreservedHistory(this.state, next);
+    validateWorkspace(next);
     if (next === this.state) return;
     this.state = freeze(next);
     for (const listener of this.listeners) listener();
